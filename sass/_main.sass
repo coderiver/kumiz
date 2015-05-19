@@ -1,1 +1,42 @@
-// Normally mainpage styles
+// header
+.header
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	padding: 62px 50px 0 
+	z-index: 9
+	.header__tools
+		float: right
+	
+// topper
+.topper
+	position: relative
+	height: 100vh
+	+vertical
+	.topper__video
+		position: absolute
+		top: 0
+		bottom: 0
+		right: 0
+		left: 0
+		background: url(../img/video-bg.jpg)
+		+cover
+		z-index: 1
+	.topper__in
+		position: relative
+		display: inline-block
+		vertical-align: middle
+		font-size: 14px
+		z-index: 2
+.menu
+	position: relative
+	float: left
+	.menu__text
+		display: inline-block
+		vertical-align: middle
+		font-size: 11px
+		letter-spacing: 1px 
+		text-transform: uppercase
+		+hb
+		color: $orange

@@ -34,27 +34,35 @@
 //     @each $s in a,b,c
 // 	    	#{$s}
 //				display: none
-// ## fonts 
-// Save fonts to /css/fonts, after that write (eot, woff, ttf):
-// +font(book, cytiapro-black-webfont)  
-// =book
-// 	font-family: "book", Arial, sans-serif 
-// insert pics into css
-// div
-// 	+pic("blabla.png")
-// span
-// 	+png(blabla)
-// p
-// 	+jpg(bla)
-
-
+// fonts 
++font(HelveticaNeueCyrRoman, HelveticaNeueCyrRoman)
+=hr
+	font-family: 'HelveticaNeueCyrRoman'
++font(HelveticaNeueCyrUltraLight, HelveticaNeueCyrUltraLight)
+=hul
+	font-family: 'HelveticaNeueCyrUltraLight'
++font(HelveticaNeueCyrLightItalic, HelveticaNeueCyrLightItalic)
+=hli
+	font-family: 'HelveticaNeueCyrLightItalic'	
++font(HelveticaNeueCyrBold, HelveticaNeueCyrBold)
+=hb
+	font-family: 'HelveticaNeueCyrBold'
++font(HelveticaNeueCyrBoldItalic, HelveticaNeueCyrBoldItalic)
+=hbi
+	font-family: 'HelveticaNeueCyrBoldItalic'	
+=pf
+	font-family: 'Playfair Display', serif	
+	
+html
+	font-size: 10px
 body
-	font-family: Arial, sans-serif 
-	font-size: 12px 
+	+hr
+	font-size: 1.3rem 
 	line-height: 1.4
 
 
-// common blocks      
+// vars
+$orange: #e8c29a      
 
 
 
