@@ -142,7 +142,10 @@ body { font-family: "HelveticaNeueCyrRoman"; font-size: 1.3rem; line-height: 1.4
 .system.system_stomach .system__title { color: #ee6f75; }
 .system.system_lungs { margin-right: 90px; }
 .system.system_lungs .system__title { color: #729ee7; }
-.system .system__left { float: left; margin-right: 10px; font-size: 0; }
+.system .system__left { float: left; border-radius: 50%; margin-right: 10px; font-size: 0; -moz-transition: -moz-transform 0.1s ease-out, background 0.2s; -o-transition: -o-transform 0.1s ease-out, background 0.2s; -webkit-transition: -webkit-transform 0.1s ease-out, background 0.2s; transition: transform 0.1s ease-out, background 0.2s; }
+.system .system__left:after { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 50%; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; pointer-events: none; padding: 0; box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1); opacity: 0; -ms-transform: scale(0.9); -webkit-transform: scale(0.9); transform: scale(0.9); z-index: -1; }
+.system .system__left:hover { background: rgba(255, 255, 255, 0.05); -ms-transform: scale(0.93); -webkit-transform: scale(0.93); transform: scale(0.93); color: #fff; }
+.system .system__left:hover:after { -webkit-animation: sonarEffect 1.3s ease-out 75ms; -moz-animation: sonarEffect 1.3s ease-out 75ms; -ms-animation: sonarEffect 1.3s ease-out 75ms; -o-animation: sonarEffect 1.3s ease-out 75ms; animation: sonarEffect 1.3s ease-out 75ms; }
 .system .system__right { overflow: hidden; }
 .system .system__title { display: inline; font-size: 1.2rem; font-family: "HelveticaNeueCyrBold"; text-transform: uppercase; border-bottom: 1px dotted; }
 .system .system__hint { display: none; margin-left: 70px; padding-top: 15px; color: #453b65; -moz-transition: opacity 200ms; -o-transition: opacity 200ms; -webkit-transition: opacity 200ms; transition: opacity 200ms; }
