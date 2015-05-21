@@ -1,6 +1,6 @@
 // header
 .header
-	position: absolute
+	position: fixed
 	top: 0
 	left: 0
 	right: 0
@@ -104,12 +104,15 @@
 		&:hover
 			border-color: transparent
 .scroll-down
-	position: absolute
+	position: fixed
 	bottom: 164px
 	left: 50%
 	background: transparent 
 	+transform(translateX(-50%))
-	z-index: 2			
+	+tr(transform 300ms)
+	z-index: 2
+	&.is-scrolled
+		+transform(translate(-50%, 40px))			
 
 //nav
 .nav
@@ -147,3 +150,116 @@
 .organism
 	padding: 9rem 0 12rem 
 	background: #ebece8 				
+.human
+	.human__topper
+		padding-top: 40px
+		margin-bottom: 40px
+		font-size: 2.4rem
+		text-align: center
+		+pf
+		font-style: italic
+		strong
+			font-weight: bold
+	.human__in
+		+clr
+		position: relative
+		padding-top: 90px
+		height: 755px
+		background: url(../img/man.png) 50% 0 no-repeat
+	.human__left
+		position: relative
+		float: left
+		z-index: 2
+		.human__item
+			height: 200px
+			padding-left: 110px
+	.human__right
+		position: relative
+		float: right
+		z-index: 2
+		.human__item
+			+clr
+			height: 200px
+			.system
+				float: right
+	.human__systems
+		position: absolute
+		top: 0
+		bottom: 0
+		right: 0
+		left: 0
+		font-size: 0
+		z-index: 1
+		& > div
+			position: absolute
+			opacity: 0
+			+tr(opacity 300ms)
+			&.is-visible
+				opacity: 1 
+			&.endo
+				top: 15%
+				left: 45.5%
+			&.skin
+				top: -1%
+				left: 38.5%
+			&.heart
+				top: 13%
+				left: 40%
+			&.brain
+				top: 0.5%
+				left: 39.9%
+			&.stomach
+				top: 18%
+				left: 45%
+			&.lungs
+				top: 12%
+				left: 45%			 							 		
+.system
+	width: 360px
+	+clr
+	+tr(opacity 300ms)
+	&.non-active
+		opacity: 0.5 		
+	&.system_endo
+		padding-left: 50px
+		.system__title
+			color: #55c977
+	&.system_skin 
+		.system__title
+			color: #eaae89
+	&.system_heart
+		padding-left: 50px
+		.system__title
+			color: #fb6e6d
+	&.system_brain
+		margin-right: 90px
+		.system__title
+			color: #eccd00
+	&.system_stomach
+		padding-right: 50px
+		.system__title
+			color: #ee6f75
+	&.system_lungs
+		margin-right: 90px
+		.system__title
+			color: #729ee7											
+	.system__left
+		float: left
+		margin-right: 10px
+		font-size: 0
+	.system__right
+		overflow: hidden
+	.system__title
+		display: inline
+		font-size: 1.2rem
+		+hb
+		text-transform: uppercase
+		border-bottom: 1px dotted
+	.system__hint
+		display: none
+		margin-left: 70px
+		padding-top: 15px
+		color: #453b65
+		+tr(opacity 200ms)
+		span
+			cursor: pointer	 	
