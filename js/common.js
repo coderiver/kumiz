@@ -109,10 +109,9 @@ head.ready(function() {
 				};
 
 				SVGButton.prototype.initEvents = function() {
-					this.el.addEventListener( 'mousedown', this.down.bind(this) );
+					this.el.addEventListener( 'mouseover', this.down.bind(this) );
 					this.el.addEventListener( 'touchstart', this.down.bind(this) );
 
-					this.el.addEventListener( 'mouseup', this.up.bind(this) );
 					this.el.addEventListener( 'touchend', this.up.bind(this) );
 
 					this.el.addEventListener( 'mouseout', this.up.bind(this) );

@@ -33,7 +33,7 @@
 .button
     background: none
     border: none
-    height: 40px
+    height: 50px
     outline: none
     position: relative
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
@@ -51,8 +51,8 @@
         position: relative
         z-index: 100
         padding: 0 18px 
-        font-size: 11px
-        color: $orange
+        font-size: 1.1rem
+        color: $orange-b
         letter-spacing: 1px
         text-transform: uppercase
         -webkit-touch-callout: none
@@ -70,16 +70,18 @@
 .button--line
     .morph-shape svg
         fill: none
-        stroke:  $orange
+        stroke:  $orange-b
         stroke-width: 2px
         stroke-linecap: round
     &:nth-child(2) .morph-shape svg
         fill: #938edc
 .button--fill
+    .button__text
+        color: #fff
     .morph-shape svg
-        fill: #44474D
+        fill: $orange-b
     &:nth-child(4) .morph-shape svg
-        fill: #202020
+        fill: $orange-b
 
 .button--round .morph-shape svg
     stroke-width: 7px

@@ -4,7 +4,7 @@
 	top: 0
 	left: 0
 	right: 0
-	padding: 62px 50px 0 
+	padding: 58px 50px 0 
 	z-index: 9
 	.header__tools
 		float: right
@@ -13,7 +13,6 @@
 .topper
 	position: relative
 	height: 100vh
-	+vertical
 	.topper__video
 		position: absolute
 		top: 0
@@ -25,18 +24,126 @@
 		z-index: 1
 	.topper__in
 		position: relative
-		display: inline-block
-		vertical-align: middle
-		font-size: 14px
+		padding-top: 170px
+		max-width: 768px
+		margin: 0 auto 
+		text-align: center
+		font-size: 1.4rem
 		z-index: 2
 .menu
 	position: relative
 	float: left
+	padding-top: 5px
 	.menu__text
 		display: inline-block
 		vertical-align: middle
-		font-size: 11px
+		font-size: 1.1rem
 		letter-spacing: 1px 
 		text-transform: uppercase
 		+hb
-		color: $orange
+		color: $orange-b
+.video-btn
+	margin-top: 60px 		
+	.video-btn__icon
+		position: relative
+		left: 7px
+		display: inline-block
+		margin-bottom: 45px
+		& > i
+			position: absolute
+			top: 0
+			left: 0
+			width: 4px
+			height: 4px
+			border-radius: 50%
+			background: $orange
+			+tr(transform 300ms)
+			&.video-btn__dot1
+				+translate(7px, -17px)
+			&.video-btn__dot2
+				+translate(29px, -8px)
+			&.video-btn__dot3
+				+translate(39px, 14px)
+			&.video-btn__dot4
+				+translate(29px, 36px)
+			&.video-btn__dot5
+				+translate(8px, 47px)
+			&.video-btn__dot6
+				+translate(-16px, 36px)
+			&.video-btn__dot7
+				+translate(-24px, 14px)
+			&.video-btn__dot8
+				+translate(-16px, -8px)
+		&:hover
+			& > i
+				&.video-btn__dot1
+					+translate(7px, -20px)
+				&.video-btn__dot2
+					+translate(32px, -11px)
+				&.video-btn__dot3
+					+translate(42px, 14px)
+				&.video-btn__dot4
+					+translate(32px, 39px)
+				&.video-btn__dot5
+					+translate(8px, 50px)
+				&.video-btn__dot6
+					+translate(-19px, 39px)
+				&.video-btn__dot7
+					+translate(-27px, 14px)
+				&.video-btn__dot8
+					+translate(-19px, -11px)
+	.video-btn__text
+		padding-bottom: 2px
+		+hb
+		color: $dark
+		text-transform: uppercase
+		font-size: 1.1rem
+		text-decoration: none
+		border-bottom: 1px solid #d6d6d5
+		+tr(border-color 300ms)
+		&:hover
+			border-color: transparent
+.scroll-down
+	position: absolute
+	bottom: 164px
+	left: 50%
+	background: transparent 
+	+transform(translateX(-50%))
+	z-index: 2			
+
+//nav
+.nav
+	position: fixed
+	bottom: 0
+	left: 0
+	right: 0
+	height: 92px
+	background: #fff
+	z-index: 3
+	ul
+		font-size: 0
+		text-align: center
+		li
+			display: inline-block
+			vertical-align: middle
+			height: 92px
+			+vertical
+			margin: 0 16px 
+			a
+				display: inline-block
+				vertical-align: middle
+				line-height: 1.1
+				+pf
+				color: $dark
+				font-size: 1.8rem
+				text-decoration: none
+				border-bottom: 1px solid #d6d6d5
+				+transition(border-color 200ms, color 200ms)
+				&:hover, &.is-active
+					border-color: transparent
+					color: $orange
+
+// orgamism
+.organism
+	padding: 9rem 0 12rem 
+	background: #ebece8 				

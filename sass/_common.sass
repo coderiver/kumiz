@@ -60,14 +60,61 @@ body
 	font-size: 1.3rem 
 	line-height: 1.4
 
+.center
+	max-width: 1280px
+	margin: 0 auto 
 
 // vars
-$orange: #e8c29a      
+$orange-b: #e8c29a
+$orange: #ff9000
+$dark: #1a142f
 
+.h1
+	font-size: 6rem
+	+pf
+	color: $dark
+	font-weight: bold
+.h2
+	text-transform: uppercase
+	text-align: center
+	font-size: 5rem
+	color: $dark
+	+hul
+	letter-spacing: 0.3rem  
+.h3
+	font-size: 3rem
+	color: $dark
+	+hul
+	text-transform: uppercase
+	letter-spacing: 0.3rem 
+.subtitle
+	font-size: 4rem
+	+pf
+	font-style: italic
+.separate
+	margin: 50px auto
+	width: 265px
+	font-size: 0
+	hr
+		display: inline-block
+		vertical-align: middle
+		width: 93px
+		height: 1px
+		border: none
+		background: $orange-b
+	span
+		margin: 0 13px 	
 
-
-
-
+// icons
+[class^=icon-]
+	display: inline-block
+	vertical-align: middle
+.icon-horse
+	+s(horse)		
+.icon-play
+	+s(play)
+.icon-down
+	+s(down)
 
 
 
