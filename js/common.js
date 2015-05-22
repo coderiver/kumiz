@@ -197,6 +197,42 @@ head.ready(function() {
 		} );
 
 	})();			
+
+	// popups
+
+	(function() {
+			
+		$('.js-sysmem-info').on( 'click', function () {
+			var somedialog = $(this).data('dialog'),
+
+			somedialog = $('#' + somedialog);
+			
+
+			var morphEl = somedialog.find( '.morph-shape' ),
+				morphElSvg = morphEl.find('svg');
+
+			var s = Snap( morphElSvg[0] ),
+			path = s.select( 'path' ),
+			steps = { 
+				open : morphEl.attr( 'data-morph-open' ),
+				close : morphEl.attr( 'data-morph-close' )
+			},
+			dlg = new DialogFx( somedialog[0], {
+				onOpenDialog : function( instance ) {
+					// animate path
+					path.stop().animate( { 'path' : steps.open }, 400, mina.easeinout );
+				},
+				onCloseDialog : function( instance ) {
+					// animate path
+					path.stop().animate( { 'path' : steps.close }, 400, mina.easeinout );
+				}
+			} );
+
+			dlg.toggle();
+		});
+		
+
+	})();
 		
 
 });

@@ -110,7 +110,7 @@
 										<div class="system__title">эндокринная<br> система</div>
 									</div>
 								</div>
-								<div class="system__hint">Укрепляет кишечную микрофлору, стимулируя образование полезных бактерий в ней. <span class="icon-info js-sysmem-info" data-type="endo"></span></div>
+								<div class="system__hint">Укрепляет кишечную микрофлору, стимулируя образование полезных бактерий в ней. <span class="icon-info js-sysmem-info" data-dialog="endo-popup"></span></div>
 							</div>
 						</div>
 						<div class="human__item">
@@ -123,7 +123,7 @@
 										<div class="system__title">эндокринная<br> система</div>
 									</div>
 								</div>
-								<div class="system__hint">Укрепляет кишечную микрофлору, стимулируя образование полезных бактерий в ней. <span class="icon-info js-sysmem-info" data-type="skin"></span></div>
+								<div class="system__hint">Укрепляет кишечную микрофлору, стимулируя образование полезных бактерий в ней. <span class="icon-info js-sysmem-info" data-dialog="skin-popup"></span></div>
 							</div>
 						</div>
 						<div class="human__item">
@@ -136,7 +136,7 @@
 										<div class="system__title">эндокринная<br> система</div>
 									</div>
 								</div>
-								<div class="system__hint">Укрепляет кишечную микрофлору, стимулируя образование полезных бактерий в ней. <span class="icon-info js-sysmem-info" data-type="heart"></span></div>
+								<div class="system__hint">Укрепляет кишечную микрофлору, стимулируя образование полезных бактерий в ней. <span class="icon-info js-sysmem-info" data-dialog="heart-popup"></span></div>
 							</div>
 						</div>
 					</div>
@@ -151,7 +151,7 @@
 										<div class="system__title">эндокринная<br> система</div>
 									</div>
 								</div>
-								<div class="system__hint">Укрепляет кишечную микрофлору, стимулируя образование полезных бактерий в ней. <span class="icon-info js-sysmem-info" data-type="brain"></span></div>
+								<div class="system__hint">Укрепляет кишечную микрофлору, стимулируя образование полезных бактерий в ней. <span class="icon-info js-sysmem-info" data-dialog="brain-popup"></span></div>
 							</div>
 						</div>
 						<div class="human__item">
@@ -164,7 +164,7 @@
 										<div class="system__title">эндокринная<br> система</div>
 									</div>
 								</div>
-								<div class="system__hint">Укрепляет кишечную микрофлору, стимулируя образование полезных бактерий в ней. <span class="icon-info js-sysmem-info" data-type="brain"></span></div>
+								<div class="system__hint">Укрепляет кишечную микрофлору, стимулируя образование полезных бактерий в ней. <span class="icon-info js-sysmem-info" data-dialog="stomach-popup"></span></div>
 							</div>
 						</div>
 						<div class="human__item">
@@ -177,7 +177,7 @@
 										<div class="system__title">эндокринная<br> система</div>
 									</div>
 								</div>
-								<div class="system__hint">Укрепляет кишечную микрофлору, стимулируя образование полезных бактерий в ней. <span class="icon-info js-sysmem-info" data-type="brain"></span></div>
+								<div class="system__hint">Укрепляет кишечную микрофлору, стимулируя образование полезных бактерий в ней. <span class="icon-info js-sysmem-info" data-dialog="lungs-popup"></span></div>
 							</div>
 						</div>
 					</div>
@@ -209,6 +209,223 @@
 	<footer class="footer">
 		
 	</footer>
+<!-- popups -->
+<div id="endo-popup" class="dialog dialog_endo">
+	<div class="dialog__overlay"></div>
+	<div class="dialog__content">
+		<div class="morph-shape" data-morph-open="M0,0h80c0,0,0,9.977,0,29.834c0,19.945,0,30.249,0,30.249H0c0,0,0-10.055,0-30.332C0,8.219,0,0,0,0z" data-morph-close="M0,29.75h80c0,0-3.083,0.014-3.083,0.041c0,0.028,3.083,0.042,3.083,0.042H0c0,0,3.084-0.014,3.084-0.042 C3.084,29.762,0,29.75,0,29.75z">
+			<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 80 60" preserveAspectRatio="none">
+				<path d="M0,29.75h80c0,0-3.083,0.014-3.083,0.041c0,0.028,3.083,0.042,3.083,0.042H0c0,0,3.084-0.014,3.084-0.042 C3.084,29.762,0,29.75,0,29.75z"></path>
+			</svg>
+		</div>
+		<div class="dialog-inner influence">
+			<button class="dialog-close" data-dialog-close>Close</button>
+			<div class="influence__img">
+				<img src="img/endo-pict.png" alt="">
+			</div>
+			<div class="influence__in">
+				<article class="influence__article">
+					<div class="influence__title">Пищеварительная система</div>
+					<p>
+						Укрепляет кишечную микрофлору, стимулируя образование полезных бактерий в ней. Обладает бактерицидными свойствами в отношении патогенной микрофлоры. Улучшает пищеварение: нормализует секреторную деятельность желудка и поджелудочной железы, регулирует образование желчи. Повышает защитную функцию печени. Уменьшает процессы гниения и брожения в кишечнике.
+					</p>
+					<div class="influence__more">
+						<a href="#">Читать полностью в блоге</a>
+					</div>
+				</article>
+				<a href="#" class="video-link">
+					<div class="video-link__preview">
+						<img src="img/video-preview.jpg" alt="">
+					</div>
+					<div class="video-link__in">
+						<p>Видео о влиянии кумыса на пищеварительную систему</p>
+						<span class="video-link__duration">10:45</span>
+					</div>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="skin-popup" class="dialog dialog_skin">
+	<div class="dialog__overlay"></div>
+	<div class="dialog__content">
+		<div class="morph-shape" data-morph-open="M0,0h80c0,0,0,9.977,0,29.834c0,19.945,0,30.249,0,30.249H0c0,0,0-10.055,0-30.332C0,8.219,0,0,0,0z" data-morph-close="M0,29.75h80c0,0-3.083,0.014-3.083,0.041c0,0.028,3.083,0.042,3.083,0.042H0c0,0,3.084-0.014,3.084-0.042 C3.084,29.762,0,29.75,0,29.75z">
+			<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 80 60" preserveAspectRatio="none">
+				<path d="M0,29.75h80c0,0-3.083,0.014-3.083,0.041c0,0.028,3.083,0.042,3.083,0.042H0c0,0,3.084-0.014,3.084-0.042 C3.084,29.762,0,29.75,0,29.75z"></path>
+			</svg>
+		</div>
+		<div class="dialog-inner influence">
+			<button class="dialog-close" data-dialog-close>Close</button>
+			<div class="influence__img">
+				<img src="img/endo-pict.png" alt="">
+			</div>
+			<div class="influence__in">
+				<article class="influence__article">
+					<div class="influence__title">Пищеварительная система</div>
+					<p>
+						Укрепляет кишечную микрофлору, стимулируя образование полезных бактерий в ней. Обладает бактерицидными свойствами в отношении патогенной микрофлоры. Улучшает пищеварение: нормализует секреторную деятельность желудка и поджелудочной железы, регулирует образование желчи. Повышает защитную функцию печени. Уменьшает процессы гниения и брожения в кишечнике.
+					</p>
+					<div class="influence__more">
+						<a href="#">Читать полностью в блоге</a>
+					</div>
+				</article>
+				<a href="#" class="video-link">
+					<div class="video-link__preview">
+						<img src="img/video-preview.jpg" alt="">
+					</div>
+					<div class="video-link__in">
+						<p>Видео о влиянии кумыса на пищеварительную систему</p>
+						<span class="video-link__duration">10:45</span>
+					</div>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>	
+<div id="heart-popup" class="dialog dialog_heart">
+	<div class="dialog__overlay"></div>
+	<div class="dialog__content">
+		<div class="morph-shape" data-morph-open="M0,0h80c0,0,0,9.977,0,29.834c0,19.945,0,30.249,0,30.249H0c0,0,0-10.055,0-30.332C0,8.219,0,0,0,0z" data-morph-close="M0,29.75h80c0,0-3.083,0.014-3.083,0.041c0,0.028,3.083,0.042,3.083,0.042H0c0,0,3.084-0.014,3.084-0.042 C3.084,29.762,0,29.75,0,29.75z">
+			<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 80 60" preserveAspectRatio="none">
+				<path d="M0,29.75h80c0,0-3.083,0.014-3.083,0.041c0,0.028,3.083,0.042,3.083,0.042H0c0,0,3.084-0.014,3.084-0.042 C3.084,29.762,0,29.75,0,29.75z"></path>
+			</svg>
+		</div>
+		<div class="dialog-inner influence">
+			<button class="dialog-close" data-dialog-close>Close</button>
+			<div class="influence__img">
+				<img src="img/endo-pict.png" alt="">
+			</div>
+			<div class="influence__in">
+				<article class="influence__article">
+					<div class="influence__title">Пищеварительная система</div>
+					<p>
+						Укрепляет кишечную микрофлору, стимулируя образование полезных бактерий в ней. Обладает бактерицидными свойствами в отношении патогенной микрофлоры. Улучшает пищеварение: нормализует секреторную деятельность желудка и поджелудочной железы, регулирует образование желчи. Повышает защитную функцию печени. Уменьшает процессы гниения и брожения в кишечнике.
+					</p>
+					<div class="influence__more">
+						<a href="#">Читать полностью в блоге</a>
+					</div>
+				</article>
+				<a href="#" class="video-link">
+					<div class="video-link__preview">
+						<img src="img/video-preview.jpg" alt="">
+					</div>
+					<div class="video-link__in">
+						<p>Видео о влиянии кумыса на пищеварительную систему</p>
+						<span class="video-link__duration">10:45</span>
+					</div>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>	
+<div id="brain-popup" class="dialog dialog_brain">
+	<div class="dialog__overlay"></div>
+	<div class="dialog__content">
+		<div class="morph-shape" data-morph-open="M0,0h80c0,0,0,9.977,0,29.834c0,19.945,0,30.249,0,30.249H0c0,0,0-10.055,0-30.332C0,8.219,0,0,0,0z" data-morph-close="M0,29.75h80c0,0-3.083,0.014-3.083,0.041c0,0.028,3.083,0.042,3.083,0.042H0c0,0,3.084-0.014,3.084-0.042 C3.084,29.762,0,29.75,0,29.75z">
+			<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 80 60" preserveAspectRatio="none">
+				<path d="M0,29.75h80c0,0-3.083,0.014-3.083,0.041c0,0.028,3.083,0.042,3.083,0.042H0c0,0,3.084-0.014,3.084-0.042 C3.084,29.762,0,29.75,0,29.75z"></path>
+			</svg>
+		</div>
+		<div class="dialog-inner influence">
+			<button class="dialog-close" data-dialog-close>Close</button>
+			<div class="influence__img">
+				<img src="img/endo-pict.png" alt="">
+			</div>
+			<div class="influence__in">
+				<article class="influence__article">
+					<div class="influence__title">Пищеварительная система</div>
+					<p>
+						Укрепляет кишечную микрофлору, стимулируя образование полезных бактерий в ней. Обладает бактерицидными свойствами в отношении патогенной микрофлоры. Улучшает пищеварение: нормализует секреторную деятельность желудка и поджелудочной железы, регулирует образование желчи. Повышает защитную функцию печени. Уменьшает процессы гниения и брожения в кишечнике.
+					</p>
+					<div class="influence__more">
+						<a href="#">Читать полностью в блоге</a>
+					</div>
+				</article>
+				<a href="#" class="video-link">
+					<div class="video-link__preview">
+						<img src="img/video-preview.jpg" alt="">
+					</div>
+					<div class="video-link__in">
+						<p>Видео о влиянии кумыса на пищеварительную систему</p>
+						<span class="video-link__duration">10:45</span>
+					</div>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>	
+<div id="stomach-popup" class="dialog dialog_stomach">
+	<div class="dialog__overlay"></div>
+	<div class="dialog__content">
+		<div class="morph-shape" data-morph-open="M0,0h80c0,0,0,9.977,0,29.834c0,19.945,0,30.249,0,30.249H0c0,0,0-10.055,0-30.332C0,8.219,0,0,0,0z" data-morph-close="M0,29.75h80c0,0-3.083,0.014-3.083,0.041c0,0.028,3.083,0.042,3.083,0.042H0c0,0,3.084-0.014,3.084-0.042 C3.084,29.762,0,29.75,0,29.75z">
+			<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 80 60" preserveAspectRatio="none">
+				<path d="M0,29.75h80c0,0-3.083,0.014-3.083,0.041c0,0.028,3.083,0.042,3.083,0.042H0c0,0,3.084-0.014,3.084-0.042 C3.084,29.762,0,29.75,0,29.75z"></path>
+			</svg>
+		</div>
+		<div class="dialog-inner influence">
+			<button class="dialog-close" data-dialog-close>Close</button>
+			<div class="influence__img">
+				<img src="img/endo-pict.png" alt="">
+			</div>
+			<div class="influence__in">
+				<article class="influence__article">
+					<div class="influence__title">Пищеварительная система</div>
+					<p>
+						Укрепляет кишечную микрофлору, стимулируя образование полезных бактерий в ней. Обладает бактерицидными свойствами в отношении патогенной микрофлоры. Улучшает пищеварение: нормализует секреторную деятельность желудка и поджелудочной железы, регулирует образование желчи. Повышает защитную функцию печени. Уменьшает процессы гниения и брожения в кишечнике.
+					</p>
+					<div class="influence__more">
+						<a href="#">Читать полностью в блоге</a>
+					</div>
+				</article>
+				<a href="#" class="video-link">
+					<div class="video-link__preview">
+						<img src="img/video-preview.jpg" alt="">
+					</div>
+					<div class="video-link__in">
+						<p>Видео о влиянии кумыса на пищеварительную систему</p>
+						<span class="video-link__duration">10:45</span>
+					</div>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>	
+<div id="lungs-popup" class="dialog dialog_lungs">
+	<div class="dialog__overlay"></div>
+	<div class="dialog__content">
+		<div class="morph-shape" data-morph-open="M0,0h80c0,0,0,9.977,0,29.834c0,19.945,0,30.249,0,30.249H0c0,0,0-10.055,0-30.332C0,8.219,0,0,0,0z" data-morph-close="M0,29.75h80c0,0-3.083,0.014-3.083,0.041c0,0.028,3.083,0.042,3.083,0.042H0c0,0,3.084-0.014,3.084-0.042 C3.084,29.762,0,29.75,0,29.75z">
+			<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 80 60" preserveAspectRatio="none">
+				<path d="M0,29.75h80c0,0-3.083,0.014-3.083,0.041c0,0.028,3.083,0.042,3.083,0.042H0c0,0,3.084-0.014,3.084-0.042 C3.084,29.762,0,29.75,0,29.75z"></path>
+			</svg>
+		</div>
+		<div class="dialog-inner influence">
+			<button class="dialog-close" data-dialog-close>Close</button>
+			<div class="influence__img">
+				<img src="img/endo-pict.png" alt="">
+			</div>
+			<div class="influence__in">
+				<article class="influence__article">
+					<div class="influence__title">Пищеварительная система</div>
+					<p>
+						Укрепляет кишечную микрофлору, стимулируя образование полезных бактерий в ней. Обладает бактерицидными свойствами в отношении патогенной микрофлоры. Улучшает пищеварение: нормализует секреторную деятельность желудка и поджелудочной железы, регулирует образование желчи. Повышает защитную функцию печени. Уменьшает процессы гниения и брожения в кишечнике.
+					</p>
+					<div class="influence__more">
+						<a href="#">Читать полностью в блоге</a>
+					</div>
+				</article>
+				<a href="#" class="video-link">
+					<div class="video-link__preview">
+						<img src="img/video-preview.jpg" alt="">
+					</div>
+					<div class="video-link__in">
+						<p>Видео о влиянии кумыса на пищеварительную систему</p>
+						<span class="video-link__duration">10:45</span>
+					</div>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>	
 <!-- load scripts -->
 <script src="js/lib/head.js" data-headjs-load="js/init.js"></script>
 </body>

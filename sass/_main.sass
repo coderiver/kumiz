@@ -217,30 +217,73 @@
 .system
 	width: 360px
 	+clr
+	padding-bottom: 30px
 	+tr(opacity 300ms)
 	&.non-active
 		opacity: 0.5 		
 	&.system_endo
 		padding-left: 50px
+		&:hover
+			.system__left
+				background: rgba(255,255,255,0.05)
+				+scale(0.93)
+				color: #fff
+				&:after
+					+animation(sonarEffect1 1.3s ease-out 75ms)
 		.system__title
 			color: #55c977
-	&.system_skin 
+	&.system_skin
+		&:hover
+			.system__left
+				background: rgba(255,255,255,0.05)
+				+scale(0.93)
+				color: #fff
+				&:after
+					+animation(sonarEffect2 1.3s ease-out 75ms)
 		.system__title
 			color: #eaae89
 	&.system_heart
 		padding-left: 50px
+		&:hover
+			.system__left
+				background: rgba(255,255,255,0.05)
+				+scale(0.93)
+				color: #fff
+				&:after
+					+animation(sonarEffect3 1.3s ease-out 75ms)
 		.system__title
 			color: #fb6e6d
 	&.system_brain
 		margin-right: 90px
+		&:hover
+			.system__left
+				background: rgba(255,255,255,0.05)
+				+scale(0.93)
+				color: #fff
+				&:after
+					+animation(sonarEffect4 1.3s ease-out 75ms)
 		.system__title
 			color: #eccd00
 	&.system_stomach
 		padding-right: 50px
+		&:hover
+			.system__left
+				background: rgba(255,255,255,0.05)
+				+scale(0.93)
+				color: #fff
+				&:after
+					+animation(sonarEffect5 1.3s ease-out 75ms)
 		.system__title
 			color: #ee6f75
 	&.system_lungs
 		margin-right: 90px
+		&:hover
+			.system__left
+				background: rgba(255,255,255,0.05)
+				+scale(0.93)
+				color: #fff
+				&:after
+					+animation(sonarEffect6 1.3s ease-out 75ms)
 		.system__title
 			color: #729ee7											
 	.system__left
@@ -266,12 +309,6 @@
 			opacity: 0
 			+scale(0.9)
 			z-index: -1
-		&:hover
-			background: rgba(255,255,255,0.05)
-			+scale(0.93)
-			color: #fff
-			&:after
-				+animation(sonarEffect 1.3s ease-out 75ms)
 	.system__right
 		overflow: hidden
 	.system__title
@@ -287,4 +324,131 @@
 		color: #453b65
 		+tr(opacity 200ms)
 		span
-			cursor: pointer	 	
+			cursor: pointer
++keyframes(sonarEffect1)
+	0%
+		opacity: 0.3
+	40%
+		opacity: 0.5
+		box-shadow: 0 0 0 1px rgba(255,255,255,0.1), 0 0 5px 5px #55c977, 0 0 0 5px rgba(255,255,255,0.5)
+	100%
+		box-shadow: 0 0 0 1px rgba(255,255,255,0.1), 0 0 5px 5px #55c977, 0 0 0 5px rgba(255,255,255,0.5)
+		transform: scale(1.4)
+		opacity: 0		
++keyframes(sonarEffect2)
+	0%
+		opacity: 0.3
+	40%
+		opacity: 0.5
+		box-shadow: 0 0 0 1px rgba(255,255,255,0.1), 0 0 5px 5px #eaae89, 0 0 0 5px rgba(255,255,255,0.5)
+	100%
+		box-shadow: 0 0 0 1px rgba(255,255,255,0.1), 0 0 5px 5px #eaae89, 0 0 0 5px rgba(255,255,255,0.5)
+		transform: scale(1.4)
+		opacity: 0		
++keyframes(sonarEffect3)
+	0%
+		opacity: 0.3
+	40%
+		opacity: 0.5
+		box-shadow: 0 0 0 1px rgba(255,255,255,0.1), 0 0 5px 5px #fd4040, 0 0 0 5px rgba(255,255,255,0.5)
+	100%
+		box-shadow: 0 0 0 1px rgba(255,255,255,0.1), 0 0 5px 5px #fd4040, 0 0 0 5px rgba(255,255,255,0.5)
+		transform: scale(1.4)
+		opacity: 0	
++keyframes(sonarEffect4)
+	0%
+		opacity: 0.3
+	40%
+		opacity: 0.5
+		box-shadow: 0 0 0 1px rgba(255,255,255,0.1), 0 0 5px 5px #f3db53, 0 0 0 5px rgba(255,255,255,0.5)
+	100%
+		box-shadow: 0 0 0 1px rgba(255,255,255,0.1), 0 0 5px 5px #f3db53, 0 0 0 5px rgba(255,255,255,0.5)
+		transform: scale(1.4)
+		opacity: 0	
++keyframes(sonarEffect5)
+	0%
+		opacity: 0.3
+	40%
+		opacity: 0.5
+		box-shadow: 0 0 0 1px rgba(255,255,255,0.1), 0 0 5px 5px #ee6f75, 0 0 0 5px rgba(255,255,255,0.5)
+	100%
+		box-shadow: 0 0 0 1px rgba(255,255,255,0.1), 0 0 5px 5px #ee6f75, 0 0 0 5px rgba(255,255,255,0.5)
+		transform: scale(1.4)
+		opacity: 0
++keyframes(sonarEffect6)
+	0%
+		opacity: 0.3
+	40%
+		opacity: 0.5
+		box-shadow: 0 0 0 1px rgba(255,255,255,0.1), 0 0 5px 5px #b5cbef, 0 0 0 5px rgba(255,255,255,0.5)
+	100%
+		box-shadow: 0 0 0 1px rgba(255,255,255,0.1), 0 0 5px 5px #b5cbef, 0 0 0 5px rgba(255,255,255,0.5)
+		transform: scale(1.4)
+		opacity: 0		
+		
+// influence
+.influence
+	+clr
+	.influence__img
+		float: left
+		width: 33.3%
+		margin-right: 5.7%
+		font-size: 0
+		img
+			width: 100% 
+	.influence__in
+		float: right
+		width: 61%
+		text-align: left
+		padding-right: 5rem 		
+	.influence__article
+		margin-bottom: 20px
+		border-bottom: 1px solid #f3f3f3
+		padding-bottom: 35px
+		font-size: 1.4rem    	
+	.influence__title
+		font-size: 2rem
+		margin-bottom: 25px
+	.influence__more
+		padding-top: 25px
+		a
+			position: relative
+			display: inline-block
+			color: $orange
+			&:after
+				content: ""
+				display: inline-block
+				margin-left: 9px
+				vertical-align: middle 
+				+s(more-orange)
+			&:hover
+				text-decoration: none
+.video-link
+	position: relative
+	display: block
+	color: $dark
+	font-size: 1.4rem
+	text-decoration: none
+	+clr
+	.video-link__preview
+		position: relative
+		float: left
+		width: 84px
+		margin-right: 22px
+		font-size: 0
+		&:before
+			content: ""
+			position: absolute
+			top: 50%
+			left: 50%
+			+transform(translate(-50%, -50%))
+			+arr(16, 19, $orange, r)
+		img
+			width: 100%
+	.video-link__in
+		overflow: hidden
+		& > p
+			text-decoration: underline
+	.video-link__duration
+		color: #767676
+		font-size: 1.2rem			 					
