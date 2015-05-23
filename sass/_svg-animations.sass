@@ -109,7 +109,7 @@
     -webkit-transition: opacity 0.3s
     transition: opacity 0.3s
     -webkit-backface-visibility: hidden
-    .dialog_endo &
+    .dialog_endo &, .dialog_chemistry &
         background: rgba(#55c977, 0.8)
     .dialog_skin &
         background: rgba(#eaae89, 0.8) 
@@ -138,6 +138,8 @@
     position: relative
     z-index: 5
     opacity: 0
+    &.dialog_chemistry
+        max-width: 660px
 
 .dialog--open
     .dialog__content

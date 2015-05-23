@@ -41,6 +41,9 @@
 +font(HelveticaNeueCyrUltraLight, HelveticaNeueCyrUltraLight)
 =hul
 	font-family: 'HelveticaNeueCyrUltraLight'
++font(HelveticaNeueCyrLight, HelveticaNeueCyrLight)
+=hl
+	font-family: 'HelveticaNeueCyrLight'		
 +font(HelveticaNeueCyrLightItalic, HelveticaNeueCyrLightItalic)
 =hli
 	font-family: 'HelveticaNeueCyrLightItalic'	
@@ -50,6 +53,9 @@
 +font(HelveticaNeueCyrBoldItalic, HelveticaNeueCyrBoldItalic)
 =hbi
 	font-family: 'HelveticaNeueCyrBoldItalic'	
++font(HelveticaNeueCyrBlack, HelveticaNeueCyrBlack)
+=hbl
+	font-family: 'HelveticaNeueCyrBlack'	
 =pf
 	font-family: 'Playfair Display', serif	
 	
@@ -87,7 +93,16 @@ body
 	color: $dark
 	+hul
 	text-transform: uppercase
-	letter-spacing: 0.3rem 
+	letter-spacing: 0.3rem
+.title
+	padding-top: 40px
+	margin-bottom: 40px
+	font-size: 2.4rem
+	text-align: center
+	+pf
+	font-style: italic
+	strong
+		font-weight: bold	 
 .subtitle
 	font-size: 4rem
 	+pf
@@ -106,6 +121,24 @@ body
 	span
 		margin: 0 13px 	
 
+// parallax img
+.parallax-img
+	position: absolute
+	z-index: 0
+	+r(1280)
+		display: none
+	&.parallax-img_1
+		+transform(translateY(200px))
+		.consist &
+			+transform(translateY(0px))
+	&.parallax-img_2
+		+transform(translateY(-80px))
+		.consist &
+			+transform(translateY(-280px))
+	&.parallax-img_3
+		+transform(translateY(600px))
+		.consist &
+			+transform(translateY(300px))		
 // icons
 [class^=icon-]
 	display: inline-block
@@ -117,7 +150,9 @@ body
 .icon-down
 	+s(down)
 .icon-info
-	+s(info)	
+	+s(info)
+.icon-info-white
+	+s(info-white)		
 
 
 

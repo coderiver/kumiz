@@ -13,6 +13,7 @@
 .topper
 	position: relative
 	height: 100vh
+	z-index: 1
 	.topper__video
 		position: absolute
 		top: 0
@@ -148,18 +149,11 @@
 
 // orgamism
 .organism
+	position: relative
 	padding: 9rem 0 12rem 
-	background: #ebece8 				
+	background: #ebece8
+	z-index: 2 				
 .human
-	.human__topper
-		padding-top: 40px
-		margin-bottom: 40px
-		font-size: 2.4rem
-		text-align: center
-		+pf
-		font-style: italic
-		strong
-			font-weight: bold
 	.human__in
 		+clr
 		position: relative
@@ -384,7 +378,17 @@
 	100%
 		box-shadow: 0 0 0 1px rgba(255,255,255,0.1), 0 0 5px 5px #b5cbef, 0 0 0 5px rgba(255,255,255,0.5)
 		transform: scale(1.4)
-		opacity: 0		
+		opacity: 0
++keyframes(sonarEffect7)
+	0%
+		opacity: 0.3
+	40%
+		opacity: 0.5
+		box-shadow: 0 0 0 1px rgba(255,255,255,0.1), 0 0 5px 5px #fff, 0 0 0 5px rgba(255,255,255,0.5)
+	100%
+		box-shadow: 0 0 0 1px rgba(255,255,255,0.1), 0 0 5px 5px #fff, 0 0 0 5px rgba(255,255,255,0.5)
+		transform: scale(1.4)
+		opacity: 0				
 		
 // influence
 .influence
@@ -452,3 +456,259 @@
 	.video-link__duration
 		color: #767676
 		font-size: 1.2rem			 					
+
+// consist
+.consist
+	position: relative
+	padding: 12rem 0
+	background: #9deeb4
+	.consist__in
+		position: relative
+		z-index: 2
+
+// tabs
+.tabs
+	margin-bottom: 65px
+	.tabs__nav
+		font-size: 0
+		text-align: center
+		li
+			display: inline-block
+			vertical-align: middle
+			margin: 0 14px
+			height: 41px
+			padding: 0 24px 
+			border-radius: 20px
+			+vertical
+			&.is-active
+				background: #fff
+				a
+					color: $dark
+					border-color: transparent 
+			a
+				display: inline-block
+				vertical-align: middle
+				border-bottom: 1px dotted 
+				font-size: 1.1rem
+				text-transform: uppercase
+				+hb
+				text-decoration: none
+				color: $dark
+				+transition(color 200ms, border-color 200ms)
+				&:hover
+					color: $orange
+					border-color: $orange
+.chemistry
+	max-width: 746px
+	margin: 0 auto
+	overflow-x: auto
+	.chemistry__table
+		width: 746px
+		padding: 50px 
+	.chemistry__in
+		box-shadow: 0 0 50px rgba(17,76,34,.36)
+		background: #fff
+	.chemistry__title
+		height: 105px
+		padding-left: 40px
+		+vertical
+		text-align: left
+		border: 1px solid #a9a4b8
+		border-width: 0 1px 1px 0
+		span
+			display: inline-block
+			vertical-align: middle
+			font-size: 1.1rem
+			+hb
+			color: #453b65
+			letter-spacing: 1px
+			line-height: 2
+	.chemistry__subtitle
+		height: 50px
+		padding-left: 32px
+		padding-top: 17px
+		color: #fff
+		text-transform: uppercase
+		font-size: 11px
+		letter-spacing: 1px 
+		&.red
+			background: #fd4040
+		&.green
+			background: #55c977
+	.chemistry__type
+		+clr
+	.chemistry__type-col
+		position: relative
+		float: left
+		width: 50%
+		height: 55px
+		padding-top: 18px
+		text-align: center
+		+hb
+		border-bottom: 1px solid #a9a4b8
+		color: #453b65
+		font-size: 11px
+		text-transform: uppercase
+		letter-spacing: 1px
+		p
+			text-transform: none
+			+hl
+		&.highlighted
+			position: relative
+			+hbl
+			border-color: #dad8e0
+			box-shadow: 3px 0 5px 0px rgba(41, 36, 55, 0.2), -3px 0 5px rgba(41, 36, 55, 0.2)
+			&:after
+				content: ""
+				position: absolute
+				bottom: 0
+				right: 0
+				left: 0
+				height: 4px
+				background: #fff
+				z-index: 9
+	.chemistry__details
+		position: absolute
+		top: 0
+		right: -45px
+		bottom: 0
+		width: 45px
+		background: #f89a36
+		+vertical
+		cursor: pointer
+		visibility: hidden				 		   
+.row
+	position: relative
+	+clr
+	[class^="col"]
+		float: left
+		.span
+			+clr
+			height: 55px
+			color: $dark
+			text-transform: uppercase
+			.span__col
+				position: relative
+				float: left
+				width: 50%
+				height: 55px
+				line-height: 55px
+				border-bottom: 1px solid #f6f5f7
+				text-align: center
+				span
+					font-size: 11px
+				&.highlighted
+					position: relative
+					+hbl
+					border-color: transparent
+					box-shadow: 3px 0 5px 0px rgba(41, 36, 55, 0.2), -3px 0 5px rgba(41, 36, 55, 0.2)	
+					&:before
+						content: ""
+						position: absolute
+						top: 0
+						left: 0
+						right: 0
+						height: 4px
+						background: #fff
+					&:after
+						content: ""
+						position: absolute
+						bottom: -1px
+						right: 0
+						left: 0
+						height: 4px
+						background: #fff
+						z-index: 9 
+	&.row_in
+		&:hover
+			.span
+				background: #f4f3f6
+			.span__col
+				&.highlighted
+					&:before, &:after
+						background: #f4f3f6
+			.chemistry__details
+				visibility: visible			  
+
+.col1
+	width: 175px
+	.span
+		position: relative
+		+vertical
+		padding-left: 40px
+		text-align: left
+		border-right: 1px solid #a29db2
+		border-bottom: 1px solid #f6f5f7
+		&:after
+			content: ""
+			position: absolute
+			bottom: -1px
+			right: -1px
+			width: 1px
+			height: 1px
+			background: #a29db2  
+		span
+			display: inline-block
+			vertical-align: middle
+			font-size: 11px
+		&.span_sub
+			padding-left: 60px
+			span
+				font-size: 13px
+				text-transform: none
+				+hli 	
+.col2
+	width: 232px 			
+.col3
+	width: 239px
+
+.vitamins
+	position: relative
+	max-width: 746px
+	height: 474px
+	margin: 40px auto 0
+	padding: 90px 0 70px
+	background: url(../img/glass.png) 53% 50% no-repeat
+	.vitamins__btn
+		position: absolute
+		width: 53px
+		height: 53px
+		border-radius: 50%
+		font-size: 18px
+		color: #fff
+		margin-left: -26px
+		will-change: transform, background
+		+transition(transform ease-out 0.1s, background 0.2s)
+		&:after
+			content: ""
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			border-radius: 50%
+			-webkit-box-sizing: content-box
+			-moz-box-sizing: content-box
+			box-sizing: content-box
+			pointer-events: none
+			padding: 0
+			box-shadow: 0 0 0 2px rgba(255,255,255,0.5)
+			opacity: 0
+			+scale(0.9)
+			z-index: -1
+		&:before
+			content: ""
+			position: absolute
+			top: 5px
+			left: 5px
+			right: 5px
+			bottom: 5px
+			border-radius: 50%
+			background: transparent
+			border: 1px solid #fff
+		&:hover
+			+scale(0.93)
+			color: #fff
+			&:after
+				+animation(sonarEffect7 1.3s ease-out 75ms)	
+			 
