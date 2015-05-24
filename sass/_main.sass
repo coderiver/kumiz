@@ -784,3 +784,77 @@
 		left: 50%
 		+transform(translateX(-50%))
 		+s(horse)	
+
+// hygiene
+.hygiene
+	text-align: center
+	padding: 9.5rem 0 10rem
+	background: url(../img/hygiene-bg.jpg)		
+	.h2, .title
+		color: #fff
+.room
+	position: relative
+	max-width: 1024px
+	display: inline-block
+	overflow: hidden
+	padding: 0 175px
+	margin: 0 auto
+	.room__in
+		position: relative
+		display: inline-block
+		padding: 22px 0 45px 
+	.room__clear
+		position: relative
+		z-index: 2
+		overflow: hidden
+		max-width: 85%
+		min-width: 15%
+		font-size: 0
+		img
+			width: 675px
+	.room__dirty
+		position: absolute
+		top: 22px
+		left: 0
+		right: 0
+		bottom: 0
+		z-index: 1
+		&:before
+			content: ""
+			position: absolute
+			bottom: 63px
+			left: 50%
+			width: 44%
+			margin-left: -20%
+			height: 34%
+			+transform(rotate(30deg) skew(-30deg))
+			box-shadow: 0 0 40px 20px rgba(0,0,0,0.7)
+			z-index: -1
+	.room__line
+		position: absolute
+		top: 0
+		bottom: 0
+		width: 2px
+		background: #f3db53
+		z-index: 4
+	.room__text-l, .room__text-r
+		visibility: hidden
+		opacity: 0
+		position: absolute
+		top: 108px
+		left: -175px
+		width: 327px
+		padding: 2rem 3rem
+		border-radius: 20px
+		background: #fff
+		box-shadow: 0 5px 16px rgba(43,43,42,.3)
+		font-size: 1.4rem
+		+transition(opacity 200ms)
+		z-index: 5
+		&.is-visible
+			visibility: visible
+			opacity: 1
+	.room__text-r
+		left: auto
+		right: -175px
+			

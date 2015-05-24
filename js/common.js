@@ -1,5 +1,30 @@
 head.ready(function() {
 
+	// room animation
+        
+        $(".js-room").mousemove( function(e) {
+            var h_width = $(".js-room-dirty").width();
+            var pos = e.pageX;
+            var pos_pers = (100 - (pos/h_width)*100) + 56;
+
+            if(pos_pers < 15){
+            	$(".js-room-clean").css('width', '15%');
+            	$(".js-room-line").css('left', '15%');
+            	$('.js-room-text-l').addClass('is-visible');
+            }
+            else if(pos_pers > 85){
+            	$(".js-room-clean").css('width', '85%');
+            	$(".js-room-line").css('left', '85%');
+            	$('.js-room-text-r').addClass('is-visible');
+            }
+            else {
+            	$(".js-room-clean").css('width', pos_pers+'%');
+            	$(".js-room-line").css('left', pos_pers+'%');
+            	$('.js-room-text-l').removeClass('is-visible');
+            	$('.js-room-text-r').removeClass('is-visible');
+            }
+        });
+
 	// tabs
 	
 	function tab() {
