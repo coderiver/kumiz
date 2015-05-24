@@ -857,4 +857,115 @@
 	.room__text-r
 		left: auto
 		right: -175px
-			
+.immunity
+	position: relative
+	padding: 9.5rem 0 10rem
+	.immunity__wrap
+		max-width: 800px		
+	.immunity__in
+		padding-top: 50px
+	.immunity__text
+		width: 50%
+		margin-bottom: 65px
+		h4
+			+hb
+			margin-bottom: 10px 			
+	.immunity__list
+		+clr
+	.immunity__item
+		position: relative
+		float: left
+		margin-left: 75px
+		&:before
+			content: ""
+			position: absolute
+			top: 153px
+			left: -40px
+			+s(plus)
+		&:first-child
+			margin-left: 0
+			&:before
+				display: none
+		& > p
+			font-size: 12px
+			text-transform: uppercase
+			+hb	
+	.immunity__img
+		height: 145px
+		font-size: 0
+		text-align: center
+		img
+			max-width: 100%
+
+// usage
+.usage
+	position: relative
+	padding: 9.5rem 0
+	background: #ffe5ff 			
+	.usage__list
+		max-width: 940px
+		margin: 0 auto 50px
+		+clr
+	.usage__item
+		position: relative
+		float: left
+		width: 31%
+		padding: 41px 
+		margin-left: 3.5%
+		&:before
+			content: ""
+			position: absolute
+			top: 0
+			bottom: 0
+			right: 0
+			left: 0
+			background: url(../img/border.png)
+			-webkit-background-size: 100% 100% 
+			-o-background-size: 100% 100% 
+			background-size: 100% 100%
+			opacity: 0
+			+tr(opacity 200ms) 
+		a
+			visibility: hidden
+			color: #b151b0
+			opacity: 0
+			+tr(opacity 200ms) 
+			&:hover
+				text-decoration: none
+		&:hover
+			&:before
+				opacity: 1
+			a
+				visibility: visible 
+				opacity: 1		
+		&:first-child
+			margin-left: 0
+	.usage__title
+		+hb
+		font-size: 2rem
+		margin-bottom: 2rem
+	.usage__text
+		margin-bottom: 10px
+		font-size: 1.4rem	  			
+	.usage__alarm
+		max-width: 840px
+		margin: 0 auto 30px
+		text-align: center
+		font-size: 2rem
+		+pf
+		font-style: italic
+	.usage__btn
+		text-align: center 	
+
+// philosophy
+.philosophy
+	position: relative
+	height: 100vh
+	.philosophy__video
+		position: absolute
+		top: 0
+		bottom: 0
+		right: 0
+		left: 0
+		background: url(../img/video-preview2.jpg)
+		+cover 

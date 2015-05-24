@@ -1,30 +1,36 @@
 head.ready(function() {
 
 	// room animation
+
+    if ($('.js-room').length) {
+    	$(".js-room").mousemove( function(e) {
+    	    var l = $(window).width(),
+    	    	w = $('.js-room').width(),
+    	    	x = e.pageX;
+
+    	    	var m = (l - w)/2;
+    	    	var delta = (x - m);
+    	    	var koef = (100 - (delta/w)*100);
+    	    
+    	    if(koef < 15){
+    	    	$(".js-room-clean").css('width', '15%');
+    	    	$(".js-room-line").css('left', '15%');
+    	    	$('.js-room-text-l').addClass('is-visible');
+    	    }
+    	    else if(koef > 85){
+    	    	$(".js-room-clean").css('width', '85%');
+    	    	$(".js-room-line").css('left', '85%');
+    	    	$('.js-room-text-r').addClass('is-visible');
+    	    }
+    	    else {
+    	    	$(".js-room-clean").css('width', koef+'%');
+    	    	$(".js-room-line").css('left', koef+'%');
+    	    	$('.js-room-text-l').removeClass('is-visible');
+    	    	$('.js-room-text-r').removeClass('is-visible');
+    	    }
+    	});
+    };    
         
-        $(".js-room").mousemove( function(e) {
-            var h_width = $(".js-room-dirty").width();
-            var pos = e.pageX;
-            var pos_pers = (100 - (pos/h_width)*100) + 56;
-
-            if(pos_pers < 15){
-            	$(".js-room-clean").css('width', '15%');
-            	$(".js-room-line").css('left', '15%');
-            	$('.js-room-text-l').addClass('is-visible');
-            }
-            else if(pos_pers > 85){
-            	$(".js-room-clean").css('width', '85%');
-            	$(".js-room-line").css('left', '85%');
-            	$('.js-room-text-r').addClass('is-visible');
-            }
-            else {
-            	$(".js-room-clean").css('width', pos_pers+'%');
-            	$(".js-room-line").css('left', pos_pers+'%');
-            	$('.js-room-text-l').removeClass('is-visible');
-            	$('.js-room-text-r').removeClass('is-visible');
-            }
-        });
-
 	// tabs
 	
 	function tab() {
@@ -49,16 +55,18 @@ head.ready(function() {
   	tab();	
 
 	// parallax effect for bg-images
-	function parallax(){
-		$('.js-parallax').each(function(){
-			var cloud = $(this),
-				yPos = ($(window).scrollTop() / 4);
+	// function parallax(){
+	// 	$('.js-parallax').each(function(){
+	// 		var	top = $(this).position().top,
+	// 			yPos = $(window).scrollTop();
 
-				cloud.css('top', yPos);
+	// 		var diff = (yPos - top);
+	// 			console.log(top, yPos, diff);
+	// 		$(this).css('transform', 'translateY('+diff+'px)');
 
-		});
-	}
-	parallax();
+	// 	});
+	// }
+	// parallax();
 	
 
 	// human block
@@ -118,9 +126,9 @@ head.ready(function() {
 		if ($('.js-scroll-down').length) {
 			scrollBtn();
 		};
-		if ($('.js-parallax').length) {
-			parallax();
-		};
+		// if ($('.js-parallax').length) {
+		// 	parallax();
+		// };
 	});
 
 	// svg snap animations

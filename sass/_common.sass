@@ -143,21 +143,22 @@ body
 // parallax img
 .parallax-img
 	position: absolute
+	top: 0 
 	z-index: 0
 	+r(1280)
 		display: none
-	&.parallax-img_1
-		+transform(translateY(200px))
-		.consist &
-			+transform(translateY(0px))
-	&.parallax-img_2
-		+transform(translateY(-80px))
-		.consist &
-			+transform(translateY(-280px))
-	&.parallax-img_3
-		+transform(translateY(600px))
-		.consist &
-			+transform(translateY(152px))		
+// btn
+.btn
+	height: 41px
+	padding: 0 27px
+	background: $orange
+	color: #fff
+	font-size: 1.1rem
+	text-transform: uppercase
+	border-radius: 19px  
+	&.btn_violet
+		background: #b151b0  		
+
 // icons
 [class^=icon-]
 	display: inline-block
