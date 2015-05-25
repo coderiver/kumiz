@@ -451,6 +451,24 @@ body { font-family: "HelveticaNeueCyrRoman"; font-size: 1.3rem; line-height: 1.4
 .philosophy .philosophy__video { position: absolute; top: 0; bottom: 0; right: 0; left: 0; background: url(../img/video-preview2.jpg); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; z-index: 1; }
 .philosophy .philosophy__in { position: relative; text-align: center; z-index: 2; }
 
+.target { position: relative; padding: 9.5rem 0 7rem; text-align: center; }
+.target .target__in { position: relative; display: inline-block; max-width: 755px; width: 100%; }
+.target .target__bg { position: relative; display: block; width: 100%; z-index: 1; }
+.target .target__wrap { position: absolute; top: 0; bottom: 0; right: 0; left: 0; z-index: 2; }
+.target .target__mid { position: absolute; top: 35%; left: 50%; -moz-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); font-size: 4rem; font-family: "Playfair Display", serif; font-weight: bold; font-style: italic; }
+.target .target__list { position: absolute; top: 0; bottom: 0; left: 0; right: 0; }
+.target .target__item { position: absolute; width: 180px; text-align: center; }
+.target .target__item.target__item_1 { top: 30px; left: 40%; }
+.target .target__item.target__item_2 { top: 13%; right: 9%; }
+.target .target__item.target__item_3 { top: 35%; right: 7%; }
+.target .target__item.target__item_4 { top: 56%; right: 23%; }
+.target .target__item.target__item_5 { top: 56%; left: 23%; }
+.target .target__item.target__item_6 { top: 35%; left: 7%; }
+.target .target__item.target__item_7 { top: 13%; left: 9%; }
+.target .target__img { display: inline-block; width: 120px; height: 120px; line-height: 120px; overflow: hidden; border-radius: 50%; background: #fff; box-shadow: 0 5px 18px rgba(37, 87, 43, 0.6); font-size: 0; }
+.target .target__img img { border-radius: 50%; max-width: 100%; max-height: 100%; }
+.target .target__text { font-size: 12px; font-family: "HelveticaNeueCyrBold"; text-transform: uppercase; letter-spacing: 1px; }
+
 .slick-slider { position: relative; display: block; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; -ms-touch-action: pan-y; touch-action: pan-y; -webkit-tap-highlight-color: transparent; }
 
 .slick-list { position: relative; overflow: hidden; display: block; margin: 0; padding: 0; }
