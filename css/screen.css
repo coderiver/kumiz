@@ -122,7 +122,7 @@ body { font-family: "HelveticaNeueCyrRoman"; font-size: 1.3rem; line-height: 1.4
 .l .l-col1 { float: left; width: 20%; }
 .l .l-col2 { float: right; width: 70%; }
 
-.header { position: fixed; top: 0; left: 0; right: 0; padding: 58px 50px 0; z-index: 9; }
+.header { position: fixed; top: 0; left: 50px; right: 50px; padding: 58px 0 0; z-index: 9; }
 .header .header__tools { float: right; }
 
 .topper { position: relative; height: 100vh; z-index: 1; }
