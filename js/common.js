@@ -1,5 +1,15 @@
 head.ready(function() {
 
+	// mobile menu
+
+	$('.container, .js-mob-close').on('click', function(){
+		$('.out').removeClass('open-menu');
+		
+	});
+	$('#hamburger').on('click', function(event){
+		$('.out').addClass('open-menu');
+		event.stopPropagation();
+	});
 
 	// slick slider
 
@@ -109,8 +119,7 @@ head.ready(function() {
 		else {
 			$('.js-scroll-down').removeClass('is-scrolled');
 		}
-
-		if ($('.nav li:last-child a.is-active').length) {
+		if ($(window).scrollTop() > $('#bussiness').offset().top ) {
 			$('.js-scroll-down').addClass('is-hidden');
 		}
 		else {

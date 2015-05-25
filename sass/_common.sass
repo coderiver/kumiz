@@ -92,6 +92,45 @@ body
 	vertical-align: top
 	font-size: 12px
 
+.out
+	position: relative
+	overflow: hidden
+	height: 100% 
+	&.open-menu
+		.container
+			&:after
+				width: 100%
+				height: 100%
+				opacity: 1
+				+tr(opacity 500ms)
+		.mob, .mob-close
+			+transform(translate3d(0, 0, 0))
+		.mob-close
+			visibility: visible		
+.container
+	position: relative
+	left: 0
+	z-index: 99
+	height: 100%
+	perspective: 1000px
+	+tr(transform 500ms)
+	&:after
+		content: ""
+		position: absolute
+		top: 0
+		right: 0
+		width: 0
+		height: 0
+		background: rgba(#483c31, 0.6)
+		opacity: 0
+		+transition(opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s)
+		z-index: 1
+		
+.main
+	position: relative
+	overflow-y: scroll
+	height: 100%
+	z-index: 1				 	
 .center
 	max-width: 1280px
 	margin: 0 auto
@@ -178,8 +217,91 @@ body
 	+s(info-white)
 @for $i from 1 through 9
 	.icon-medical#{$i}
-		+s(medical#{$i})			
+		+s(medical#{$i})
 
+// mobile menu
+.mob
+	position: absolute
+	top: 0
+	left: 0
+	width: 320px
+	height: 100%
+	padding: 40px 0
+	background: #fff
+	overflow-y: auto
+	text-align: center
+	z-index: 100
+	+transform(translate3d(-100%, 0, 0))
+	+tr(transform 500ms)				
+	.mob__logo
+		display: inline-block
+		margin-bottom: 40px
+		+s(logo)
+	.mob__nav
+		position: relative
+		margin-bottom: 30px
+	.mob__link
+		display: inline-block
+		margin-bottom: 10px
+		font-size: 1.8rem
+		color: #4c4369
+		+pf
+		text-decoration: none
+		
+		&:hover, &.is-active
+			text-decoration: none
+	.mob__menu
+		li
+			margin-bottom: 10px
+			a
+				+pf
+				font-size: 1.8rem
+				color: $orange-b
+	.mob__order
+		font-size: 1.8rem
+		color: #4c4369
+		+pf
+		font-weight: bold
+		&:hover
+			text-decoration: none
+.mob-close
+	position: absolute
+	top: 60px
+	left: 340px
+	font-size: 0
+	cursor: pointer
+	visibility: hidden
+	+transform(translate3d(-320px, 0, 0))
+	+tr(transform 500ms)
+	z-index: 100
+	span
+		display: inline-block
+		vertical-align: middle
+		font-size: 1.1rem
+		color: #fff
+		letter-spacing: 1px
+		text-transform: uppercase  
+	i
+		position: relative
+		margin-right: 40px
+		&:before
+			content: ""
+			position: absolute
+			top: 0
+			left: 0
+			width: 35px
+			height: 2px
+			background: #fff
+			+rotate(45)
+		&:after
+			content: ""
+			position: absolute
+			top: 0
+			left: 0
+			width: 35px
+			height: 2px
+			background: #fff
+			+rotate(-45)	  											
 
 
 
