@@ -1,5 +1,18 @@
 head.ready(function() {
 
+
+	// slick slider
+
+	$('.js-federations').slick({
+		arrows: false,
+		slidesToShow: 3
+	});
+
+	$('.js-doctors').slick({
+		slidesToShow: 3,
+		infinite: false
+	});
+
 	// room animation
 
     if ($('.js-room').length) {

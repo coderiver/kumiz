@@ -75,34 +75,33 @@
 .slick-prev,
 .slick-next
 	position: absolute
-	top: 50%
-	margin-top: -14px
+	top: 50px
 	+hide-text
-	height: 50px
 	background: none
 	&:focus
 		outline: none
 	&.slick-disabled
-		opacity: 0.2
+		opacity: 0
+		visibility: hidden
 	&:before
 		height: 50px
 		line-height: 50px
+	+r(768)
+		+scale(0.5)	
 .slick-prev
-	left: 0
+	left: -60px
 	&:before
-		content: "←"
+		content: ""
 		display: inline-block
 		vertical-align: middle
-		font-size: 61px
-		color: #fff 
+		+s(prev) 
 .slick-next
-	right: 0
+	right: -60px
 	&:before
-		content: "→"
+		content: ""
 		display: inline-block
 		vertical-align: middle
-		font-size: 61px
-		color: #fff 
+		+s(next)
 .slick-dots
 	text-align: center
 	position: absolute
