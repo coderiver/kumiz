@@ -134,10 +134,13 @@
 	left: 50%
 	background: transparent 
 	+transform(translateX(-50%))
-	+tr(transform 300ms)
+	+transition(transform 300ms, opacity 300ms)
 	z-index: 2
 	&.is-scrolled
-		+transform(translate(-50%, 40px))			
+		+transform(translate(-50%, 40px))
+	&.is-hidden
+		opacity: 0
+		visibility: hidden 		
 
 //nav
 .nav
@@ -1164,3 +1167,93 @@
 		font-size: 1.8rem
 		font-style: italic
 		color: #3da5c7
+		
+// labels
+.labels
+	position: relative
+	padding: 9rem 0 12rem
+	.labels__list
+		padding-top: 50px
+		font-size: 0
+		text-align: center
+	.labels__item
+		position: relative
+		display: inline-block
+		vertical-align: middle
+		width: 220px
+		margin: 0 40px 
+		margin-bottom: 70px
+		border-radius: 50%
+		&:hover
+			.labels__info
+				opacity: 1
+				visibility: visible
+		.labels__logo
+			font-size: 0
+		.labels__info
+			position: absolute
+			top: 50%
+			left: 50%
+			width: 220px
+			height: 220px
+			+transform(translate(-50%, -50%))
+			border-radius: 50%
+			background: #faf8f5
+			opacity: 0
+			+vertical
+			visibility: hidden
+			+tr(opacity 200ms)
+			z-index: 2
+		.labels__in
+			display: inline-block
+			vertical-align: middle
+			p
+				font-size: 1.4rem
+			a
+				color: #3da5c7
+				font-size: 1.4rem
+				&:hover
+					text-decoration: none
+					
+// footer
+.footer
+	position: relative
+	padding: 12rem 0 16.4rem
+	background: url(../img/footer-bg.jpg)
+	+cover 					
+	.footer__topper
+		margin-bottom: 100px
+		text-align: center
+		.title
+			color: #fff
+			margin-bottom: 0
+	.footer__link
+		display: inline-block
+		+pf
+		font-size: 4rem
+		font-weight: bold
+		color: #fff
+		text-decoration: none
+		border-bottom: 1px solid #fff
+		+tr(border-color 200ms)
+		&:hover
+			border-color: transparent
+	.footer__bottom
+		position: relative
+		+clr	
+		color: #fff
+	.footer__left
+		float: left
+	.footer__right
+		float: right
+		a
+			color: #fff
+			text-decoration: none
+			+tr(opacity 200ms)
+			&:hover
+				opacity: 0.7 
+	.footer__center
+		position: absolute
+		top: -16px
+		left: 50%
+		+transform(translateX(-50%)) 

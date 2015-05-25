@@ -134,8 +134,9 @@ body { font-family: "HelveticaNeueCyrRoman"; font-size: 1.3rem; line-height: 1.4
 .video-btn .video-btn__text { padding-bottom: 2px; font-family: "HelveticaNeueCyrBold"; color: #1a142f; text-transform: uppercase; font-size: 1.1rem; text-decoration: none; border-bottom: 1px solid #d6d6d5; -moz-transition: border-color 300ms; -o-transition: border-color 300ms; -webkit-transition: border-color 300ms; transition: border-color 300ms; }
 .video-btn .video-btn__text:hover { border-color: transparent; }
 
-.scroll-down { position: fixed; bottom: 164px; left: 50%; background: transparent; -moz-transform: translateX(-50%); -ms-transform: translateX(-50%); -webkit-transform: translateX(-50%); transform: translateX(-50%); -moz-transition: -moz-transform 300ms; -o-transition: -o-transform 300ms; -webkit-transition: -webkit-transform 300ms; transition: transform 300ms; z-index: 2; }
+.scroll-down { position: fixed; bottom: 164px; left: 50%; background: transparent; -moz-transform: translateX(-50%); -ms-transform: translateX(-50%); -webkit-transform: translateX(-50%); transform: translateX(-50%); -moz-transition: -moz-transform 300ms, opacity 300ms; -o-transition: -o-transform 300ms, opacity 300ms; -webkit-transition: -webkit-transform 300ms, opacity 300ms; transition: transform 300ms, opacity 300ms; z-index: 2; }
 .scroll-down.is-scrolled { -moz-transform: translate(-50%, 40px); -ms-transform: translate(-50%, 40px); -webkit-transform: translate(-50%, 40px); transform: translate(-50%, 40px); }
+.scroll-down.is-hidden { opacity: 0; visibility: hidden; }
 
 .nav { position: fixed; bottom: 0; left: 0; right: 0; height: 92px; background: #fff; box-shadow: 0 0 7px #ccc; z-index: 9; }
 .nav ul { font-size: 0; text-align: center; }
@@ -489,6 +490,31 @@ body { font-family: "HelveticaNeueCyrRoman"; font-size: 1.3rem; line-height: 1.4
 .doctors .doctors__name { margin-bottom: 1rem; font-size: 2rem; line-height: 1.2; font-family: "HelveticaNeueCyrBold"; }
 .doctors .doctors__info { font-size: 1.4rem; margin-bottom: 2rem; }
 .doctors .doctors__about { font-family: "Playfair Display", serif; font-size: 1.8rem; font-style: italic; color: #3da5c7; }
+
+.labels { position: relative; padding: 9rem 0 12rem; }
+.labels .labels__list { padding-top: 50px; font-size: 0; text-align: center; }
+.labels .labels__item { position: relative; display: inline-block; vertical-align: middle; width: 220px; margin: 0 40px; margin-bottom: 70px; border-radius: 50%; }
+.labels .labels__item:hover .labels__info { opacity: 1; visibility: visible; }
+.labels .labels__item .labels__logo { font-size: 0; }
+.labels .labels__item .labels__info { position: absolute; top: 50%; left: 50%; width: 220px; height: 220px; -moz-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); border-radius: 50%; background: #faf8f5; opacity: 0; text-align: center; font-size: 0; visibility: hidden; -moz-transition: opacity 200ms; -o-transition: opacity 200ms; -webkit-transition: opacity 200ms; transition: opacity 200ms; z-index: 2; }
+.labels .labels__item .labels__info:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
+.labels .labels__item .labels__in { display: inline-block; vertical-align: middle; }
+.labels .labels__item .labels__in p { font-size: 1.4rem; }
+.labels .labels__item .labels__in a { color: #3da5c7; font-size: 1.4rem; }
+.labels .labels__item .labels__in a:hover { text-decoration: none; }
+
+.footer { position: relative; padding: 12rem 0 16.4rem; background: url(../img/footer-bg.jpg); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; }
+.footer .footer__topper { margin-bottom: 100px; text-align: center; }
+.footer .footer__topper .title { color: #fff; margin-bottom: 0; }
+.footer .footer__link { display: inline-block; font-family: "Playfair Display", serif; font-size: 4rem; font-weight: bold; color: #fff; text-decoration: none; border-bottom: 1px solid #fff; -moz-transition: border-color 200ms; -o-transition: border-color 200ms; -webkit-transition: border-color 200ms; transition: border-color 200ms; }
+.footer .footer__link:hover { border-color: transparent; }
+.footer .footer__bottom { position: relative; *zoom: 1; color: #fff; }
+.footer .footer__bottom:after { content: " "; display: table; clear: both; }
+.footer .footer__left { float: left; }
+.footer .footer__right { float: right; }
+.footer .footer__right a { color: #fff; text-decoration: none; -moz-transition: opacity 200ms; -o-transition: opacity 200ms; -webkit-transition: opacity 200ms; transition: opacity 200ms; }
+.footer .footer__right a:hover { opacity: 0.7; }
+.footer .footer__center { position: absolute; top: -16px; left: 50%; -moz-transform: translateX(-50%); -ms-transform: translateX(-50%); -webkit-transform: translateX(-50%); transform: translateX(-50%); }
 
 .slick-slider { position: relative; display: block; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; -ms-touch-action: pan-y; touch-action: pan-y; -webkit-tap-highlight-color: transparent; }
 
