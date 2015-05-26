@@ -735,3 +735,44 @@ body { font-family: "HelveticaNeueCyrRoman"; font-size: 1.3rem; line-height: 1.4
 .pride .pride__item h4 { font-family: "HelveticaNeueCyrBold"; font-size: 2rem; margin-bottom: 10px; }
 .pride .pride__img { display: inline-block; width: 175px; height: 175px; margin-bottom: 40px; font-size: 0; border-radius: 50%; box-shadow: 0 0 29px rgba(24, 21, 50, 0.75); }
 .pride .pride__img img { border-radius: 50%; width: 100%; }
+
+.contacts { padding-top: 9rem; }
+
+.map { position: relative; width: 100%; height: 480px; }
+
+.animals { position: relative; padding: 9.5rem 0 8rem; }
+
+.horses { max-width: 768px; margin: 0 auto; font-size: 0; text-align: center; }
+.horses .horses__in { position: relative; display: inline-block; }
+.horses .horses__in img { max-width: 100%; }
+
+.tooltip { position: absolute; }
+.tooltip:hover .tooltip__content { pointer-events: auto; opacity: 1; -moz-transform: rotate(0); -ms-transform: rotate(0); -webkit-transform: rotate(0); transform: rotate(0); }
+.tooltip .tooltip__item { position: relative; width: 12px; height: 12px; border-radius: 50%; background: #ff9000; }
+.tooltip .tooltip__item:before { content: ""; position: absolute; top: 0; left: 0; width: 24px; height: 24px; margin: -6px 0 0 -6px; border-radius: 50%; border: 1px solid #ff9000; background: transparent; -moz-transition: -moz-transform 400ms; -o-transition: -o-transform 400ms; -webkit-transition: -webkit-transform 400ms; transition: transform 400ms; -webkit-animation: pulse 1s infinite; -moz-animation: pulse 1s infinite; -ms-animation: pulse 1s infinite; -o-animation: pulse 1s infinite; animation: pulse 1s infinite; }
+
+.tooltip_left .tooltip__content { -webkit-transform-origin: 100% -32px; transform-origin: 100% -32px; right: 78px; -moz-transform: rotate(-20deg); -ms-transform: rotate(-20deg); -webkit-transform: rotate(-20deg); transform: rotate(-20deg); }
+.tooltip_left .tooltip__content:before { content: ""; position: absolute; right: -44px; top: 32px; width: 0px; height: 0px; border-style: solid; border-width: 44px 64px 0 0; border-color: #ff9000 transparent transparent transparent; }
+
+.tooltip_right .tooltip__content { -webkit-transform-origin: -78px 32px; transform-origin: -78px 32px; left: 78px; -moz-transform: rotate(20deg); -ms-transform: rotate(20deg); -webkit-transform: rotate(20deg); transform: rotate(20deg); }
+.tooltip_right .tooltip__content:before { content: ""; position: absolute; left: -44px; top: 32px; width: 0px; height: 0px; border-style: solid; border-width: 0 64px 44px 0; border-color: transparent #ff9000 transparent transparent; }
+
+.tooltip__content { position: absolute; top: -11px; width: 240px; padding: 10px 35px 25px; border-radius: 20px; background: #ff9000; color: #fff; pointer-events: none; -webkit-font-smoothing: antialiased; -moz-transition: opacity 0.3s, -moz-transform 0.3s; -o-transition: opacity 0.3s, -o-transform 0.3s; -webkit-transition: opacity 0.3s, -webkit-transform 0.3s; transition: opacity 0.3s, transform 0.3s; opacity: 0; }
+.tooltip__content span { display: inline-block; margin-bottom: 15px; font-size: 6rem; line-height: 1; font-family: "Playfair Display", serif; }
+.tooltip__content p { font-size: 1.4rem; }
+
+@-moz-keyframes pulse { 0% { -ms-transform: scale(1); -webkit-transform: scale(1); transform: scale(1); }
+  50% { -ms-transform: scale(0.6); -webkit-transform: scale(0.6); transform: scale(0.6); }
+  100% { -ms-transform: scale(1); -webkit-transform: scale(1); transform: scale(1); } }
+@-webkit-keyframes pulse { 0% { -ms-transform: scale(1); -webkit-transform: scale(1); transform: scale(1); }
+  50% { -ms-transform: scale(0.6); -webkit-transform: scale(0.6); transform: scale(0.6); }
+  100% { -ms-transform: scale(1); -webkit-transform: scale(1); transform: scale(1); } }
+@-o-keyframes pulse { 0% { -ms-transform: scale(1); -webkit-transform: scale(1); transform: scale(1); }
+  50% { -ms-transform: scale(0.6); -webkit-transform: scale(0.6); transform: scale(0.6); }
+  100% { -ms-transform: scale(1); -webkit-transform: scale(1); transform: scale(1); } }
+@-ms-keyframes pulse { 0% { -ms-transform: scale(1); -webkit-transform: scale(1); transform: scale(1); }
+  50% { -ms-transform: scale(0.6); -webkit-transform: scale(0.6); transform: scale(0.6); }
+  100% { -ms-transform: scale(1); -webkit-transform: scale(1); transform: scale(1); } }
+@keyframes pulse { 0% { -ms-transform: scale(1); -webkit-transform: scale(1); transform: scale(1); }
+  50% { -ms-transform: scale(0.6); -webkit-transform: scale(0.6); transform: scale(0.6); }
+  100% { -ms-transform: scale(1); -webkit-transform: scale(1); transform: scale(1); } }

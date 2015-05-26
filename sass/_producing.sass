@@ -150,4 +150,102 @@
 		box-shadow: 0 0 29px rgba(24,21,50,.75)
 		img
 			border-radius: 50%
-			width: 100% 		 				
+			width: 100% 
+.contacts
+	padding-top: 9rem					 				
+.map
+	position: relative
+	width: 100%
+	height: 480px 
+.animals
+	position: relative 
+	padding: 9.5rem	0 8rem
+.horses
+	max-width: 768px
+	margin: 0 auto
+	font-size: 0
+	text-align: center
+	.horses__in
+		position: relative
+		display: inline-block
+		img
+			max-width: 100%	
+.tooltip
+	position: absolute
+	&:hover
+		.tooltip__content
+			pointer-events: auto
+			opacity: 1
+			+transform(rotate(0)) 
+	.tooltip__item
+		position: relative
+		width: 12px
+		height: 12px
+		border-radius: 50%
+		background: $orange
+		&:before
+			content: ""
+			position: absolute
+			top: 0
+			left: 0
+			width: 24px
+			height: 24px
+			margin: -6px 0 0 -6px 
+			border-radius: 50%
+			border: 1px solid $orange
+			background: transparent
+			+tr(transform 400ms) 
+			+animation(pulse 1s infinite)
+.tooltip_left
+	.tooltip__content
+		-webkit-transform-origin: 100% -32px
+		transform-origin: 100% -32px
+		right: 78px
+		+transform(rotate(-20deg))
+		&:before
+			content: ""
+			position: absolute
+			right: -44px
+			top: 32px
+			+arr(64, 44, $orange, tl)
+.tooltip_right
+	.tooltip__content
+		-webkit-transform-origin: -78px 32px
+		transform-origin: -78px 32px
+		left: 78px
+		+transform(rotate(20deg))
+		&:before
+			content: ""
+			position: absolute
+			left: -44px
+			top: 32px
+			+arr(64, 44, $orange, tr)				
+.tooltip__content
+	position: absolute
+	top: -11px
+	width: 240px
+	padding: 10px 35px 25px
+	border-radius: 20px
+	background: $orange
+	color: #fff
+	pointer-events: none
+	-webkit-font-smoothing: antialiased
+	+transition(opacity 0.3s, transform 0.3s)
+	opacity: 0 
+	span
+		display: inline-block
+		margin-bottom: 15px 
+		font-size: 6rem
+		line-height: 1
+		+pf
+	p
+		font-size: 1.4rem    		 
+			
++keyframes(pulse)
+	0%
+		+scale(1)
+	50%
+		+scale(0.6)
+	100%
+		+scale(1)	
+						
