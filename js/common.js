@@ -7,8 +7,17 @@ head.ready(function() {
 		
 	});
 	$('#hamburger').on('click', function(event){
+		var top = $(window).scrollTop();
 		$('.out').addClass('open-menu');
 		event.stopPropagation();
+	});
+
+	$('.container').on('scroll touchmove mousewheel', function(e){
+	  if ($('.out').hasClass('open-menu')) {
+	  	e.preventDefault();
+	  	e.stopPropagation();
+	  	return false;
+	  };
 	});
 
 	// slick slider
@@ -113,18 +122,24 @@ head.ready(function() {
 
 	// scroll down btn
 	function scrollBtn(){
+		var scroll = $(window).scrollTop(),
+			footer = $('.footer').offset().top,
+			footerHeight = $('.footer').outerHeight(),
+			height = $(window).height();
+
+		console.log(scroll, footer, footerHeight, height);
 		if ($(window).scrollTop() > 1) {
 			$('.js-scroll-down').addClass('is-scrolled');
 		}
 		else {
 			$('.js-scroll-down').removeClass('is-scrolled');
 		}
-		if ($(window).scrollTop() > $('#bussiness').offset().top ) {
-			$('.js-scroll-down').addClass('is-hidden');
-		}
-		else {
-			$('.js-scroll-down').removeClass('is-hidden');
-		}
+		//if ($(window).scrollTop() > $('#bussiness').offset().top ) {
+		//	$('.js-scroll-down').addClass('is-hidden');
+		//}
+		//else {
+		//	$('.js-scroll-down').removeClass('is-hidden');
+		//}
 	}	
 
 	function nav(){
@@ -178,9 +193,6 @@ head.ready(function() {
 			scrollBtn();
 		};
 		nav();
-		// if ($('.js-parallax').length) {
-		// 	parallax();
-		// };
 	});
 
 	// svg snap animations

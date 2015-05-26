@@ -36,15 +36,15 @@ html { font-size: 10px; }
 
 body { font-family: "HelveticaNeueCyrRoman"; font-size: 1.3rem; line-height: 1.4; color: #1a142f; }
 
-.out { position: relative; overflow: hidden; height: 100%; }
+.out { position: relative; }
 .out.open-menu .container:after { width: 100%; height: 100%; opacity: 1; -moz-transition: opacity 500ms; -o-transition: opacity 500ms; -webkit-transition: opacity 500ms; transition: opacity 500ms; }
 .out.open-menu .mob, .out.open-menu .mob-close { -moz-transform: translate3d(0, 0, 0); -ms-transform: translate3d(0, 0, 0); -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
 .out.open-menu .mob-close { visibility: visible; }
 
-.container { position: relative; left: 0; z-index: 99; height: 100%; perspective: 1000px; -moz-transition: -moz-transform 500ms; -o-transition: -o-transform 500ms; -webkit-transition: -webkit-transform 500ms; transition: transform 500ms; }
+.container { position: relative; left: 0; z-index: 99; -moz-transition: -moz-transform 500ms; -o-transition: -o-transform 500ms; -webkit-transition: -webkit-transform 500ms; transition: transform 500ms; }
 .container:after { content: ""; position: absolute; top: 0; right: 0; width: 0; height: 0; background: rgba(72, 60, 49, 0.6); opacity: 0; -moz-transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s; -o-transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s; -webkit-transition: opacity 0.5s, width 0.1s, height 0.1s; -webkit-transition-delay: 0s, 0.5s, 0.5s; transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s; z-index: 1; }
 
-.main { position: relative; overflow-y: scroll; height: 100%; z-index: 1; }
+.main { position: relative; z-index: 1; }
 
 .center { max-width: 1280px; margin: 0 auto; }
 
@@ -101,7 +101,8 @@ body { font-family: "HelveticaNeueCyrRoman"; font-size: 1.3rem; line-height: 1.4
 
 .icon-medical9 { background: url('../img/icons-s187da1f002.png') 0 -627px no-repeat; width: 36px; height: 36px; }
 
-.mob { position: absolute; top: 0; left: 0; width: 320px; height: 100%; padding: 40px 0; background: #fff; overflow-y: auto; text-align: center; z-index: 100; -moz-transform: translate3d(-100%, 0, 0); -ms-transform: translate3d(-100%, 0, 0); -webkit-transform: translate3d(-100%, 0, 0); transform: translate3d(-100%, 0, 0); -moz-transition: -moz-transform 500ms; -o-transition: -o-transform 500ms; -webkit-transition: -webkit-transform 500ms; transition: transform 500ms; }
+.mob { position: fixed; top: 0; left: 0; width: 320px; height: 100%; padding: 40px 0; background: #fff; overflow-y: auto; text-align: center; z-index: 100; -moz-transform: translate3d(-100%, 0, 0); -ms-transform: translate3d(-100%, 0, 0); -webkit-transform: translate3d(-100%, 0, 0); transform: translate3d(-100%, 0, 0); -moz-transition: -moz-transform 500ms; -o-transition: -o-transform 500ms; -webkit-transition: -webkit-transform 500ms; transition: transform 500ms; }
+@media only screen and (max-width: 360px) { .mob { width: 270px; } }
 .mob .mob__logo { display: inline-block; margin-bottom: 40px; background: url('../img/icons-s187da1f002.png') 0 -198px no-repeat; width: 100px; height: 74px; }
 .mob .mob__nav { position: relative; margin-bottom: 30px; }
 .mob .mob__link { display: inline-block; margin-bottom: 10px; font-size: 1.8rem; color: #4c4369; font-family: "Playfair Display", serif; text-decoration: none; }
@@ -112,7 +113,9 @@ body { font-family: "HelveticaNeueCyrRoman"; font-size: 1.3rem; line-height: 1.4
 .mob .mob__order:hover { text-decoration: none; }
 
 .mob-close { position: absolute; top: 60px; left: 340px; font-size: 0; cursor: pointer; visibility: hidden; -moz-transform: translate3d(-320px, 0, 0); -ms-transform: translate3d(-320px, 0, 0); -webkit-transform: translate3d(-320px, 0, 0); transform: translate3d(-320px, 0, 0); -moz-transition: -moz-transform 500ms; -o-transition: -o-transform 500ms; -webkit-transition: -webkit-transform 500ms; transition: transform 500ms; z-index: 100; }
+@media only screen and (max-width: 360px) { .mob-close { left: 280px; -moz-transform: translate3d(-270px, 0, 0); -ms-transform: translate3d(-270px, 0, 0); -webkit-transform: translate3d(-270px, 0, 0); transform: translate3d(-270px, 0, 0); } }
 .mob-close span { display: inline-block; vertical-align: middle; font-size: 1.1rem; color: #fff; letter-spacing: 1px; text-transform: uppercase; }
+@media only screen and (max-width: 360px) { .mob-close span { display: none; } }
 .mob-close i { position: relative; margin-right: 40px; }
 .mob-close i:before { content: ""; position: absolute; top: 0; left: 0; width: 35px; height: 2px; background: #fff; -ms-transform: rotate(45deg); -webkit-transform: rotate(45deg); transform: rotate(45deg); }
 .mob-close i:after { content: ""; position: absolute; top: 0; left: 0; width: 35px; height: 2px; background: #fff; -ms-transform: rotate(-45deg); -webkit-transform: rotate(-45deg); transform: rotate(-45deg); }
@@ -160,7 +163,7 @@ body { font-family: "HelveticaNeueCyrRoman"; font-size: 1.3rem; line-height: 1.4
 .video-btn .video-btn__text { padding-bottom: 2px; font-family: "HelveticaNeueCyrBold"; color: #1a142f; text-transform: uppercase; font-size: 1.1rem; text-decoration: none; border-bottom: 1px solid #d6d6d5; -moz-transition: border-color 300ms; -o-transition: border-color 300ms; -webkit-transition: border-color 300ms; transition: border-color 300ms; }
 .video-btn .video-btn__text:hover { border-color: transparent; }
 
-.scroll-down { position: fixed; bottom: 164px; left: 50%; background: transparent; -moz-transform: translateX(-50%); -ms-transform: translateX(-50%); -webkit-transform: translateX(-50%); transform: translateX(-50%); -moz-transition: -moz-transform 300ms, opacity 300ms; -o-transition: -o-transform 300ms, opacity 300ms; -webkit-transition: -webkit-transform 300ms, opacity 300ms; transition: transform 300ms, opacity 300ms; z-index: 2; }
+.scroll-down { position: fixed; bottom: 164px; left: 50%; background: transparent; -moz-transform: translateX(-50%); -ms-transform: translateX(-50%); -webkit-transform: translateX(-50%); transform: translateX(-50%); -moz-transition: -moz-transform 300ms, opacity 300ms; -o-transition: -o-transform 300ms, opacity 300ms; -webkit-transition: -webkit-transform 300ms, opacity 300ms; transition: transform 300ms, opacity 300ms; z-index: 99; }
 .scroll-down.is-scrolled { -moz-transform: translate(-50%, 40px); -ms-transform: translate(-50%, 40px); -webkit-transform: translate(-50%, 40px); transform: translate(-50%, 40px); }
 .scroll-down.is-hidden { opacity: 0; visibility: hidden; }
 

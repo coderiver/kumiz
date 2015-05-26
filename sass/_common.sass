@@ -94,8 +94,6 @@ body
 
 .out
 	position: relative
-	overflow: hidden
-	height: 100% 
 	&.open-menu
 		.container
 			&:after
@@ -111,8 +109,6 @@ body
 	position: relative
 	left: 0
 	z-index: 99
-	height: 100%
-	perspective: 1000px
 	+tr(transform 500ms)
 	&:after
 		content: ""
@@ -128,8 +124,6 @@ body
 		
 .main
 	position: relative
-	overflow-y: scroll
-	height: 100%
 	z-index: 1				 	
 .center
 	max-width: 1280px
@@ -221,7 +215,7 @@ body
 
 // mobile menu
 .mob
-	position: absolute
+	position: fixed
 	top: 0
 	left: 0
 	width: 320px
@@ -232,7 +226,9 @@ body
 	text-align: center
 	z-index: 100
 	+transform(translate3d(-100%, 0, 0))
-	+tr(transform 500ms)				
+	+tr(transform 500ms)
+	+r(360)
+		width: 270px				
 	.mob__logo
 		display: inline-block
 		margin-bottom: 40px
@@ -274,13 +270,18 @@ body
 	+transform(translate3d(-320px, 0, 0))
 	+tr(transform 500ms)
 	z-index: 100
+	+r(360)
+		left: 280px
+		+transform(translate3d(-270px, 0, 0))
 	span
 		display: inline-block
 		vertical-align: middle
 		font-size: 1.1rem
 		color: #fff
 		letter-spacing: 1px
-		text-transform: uppercase  
+		text-transform: uppercase
+		+r(360)
+			display: none  
 	i
 		position: relative
 		margin-right: 40px
@@ -301,7 +302,8 @@ body
 			width: 35px
 			height: 2px
 			background: #fff
-			+rotate(-45)	  											
+			+rotate(-45)
+				  											
 
 
 
