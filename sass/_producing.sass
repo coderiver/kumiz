@@ -1,0 +1,153 @@
+// farm
+.farm
+	padding-top: 9rem 
+	overflow: hidden
+	.title
+		margin-bottom: 60px
+	.farm__img
+		font-size: 0
+		img
+			width: 100%
+	.farm__in
+		position: absolute
+		top: 50%
+		left: 50%
+		max-width: 460px
+		border-radius: 20px
+		background: #fff 
+		padding: 40px
+		font-size: 1.4rem
+		h4
+			margin-bottom: 10px
+			+hb
+			font-size: 2rem
+			line-height: 1.2
+
+// pride
+.pride
+	position: relative
+	padding-top: 9rem
+	background: #746e9f
+	.h2, .title
+		color: #fff
+	.title
+		margin-bottom: 0
+	.pride__in
+		max-width: 980px
+		margin: 0 auto 		
+	.pride__nav-wrap
+		background: #4f497d 
+	.pride__nav
+		max-width: 1280px
+		margin: 0 auto
+		height: 200px
+		li
+			position: relative
+			float: left
+			width: 19%
+			margin-left: 1%
+			padding-top: 37px
+			text-align: center
+			&:first-child
+				margin-left: 0
+			&:before
+				content: ""
+				position: absolute
+				top: -10px
+				left: 50%
+				+transform(translateX(-50%))
+				+arr(26, 10, #4f497d, t)
+				opacity: 0 	
+			&.is-active
+				&:before
+					opacity: 1 
+				a
+					color: $orange
+					.pride__icon
+						box-shadow: 0 0 0 3px $orange
+						+scale(0.93)
+						&:after
+							+animation(sonarEffect7 1.3s ease-out 75ms)
+					& > span
+						border-color: transparent
+			a
+				display: inline-block
+				border-radius: 50%
+				font-size: 0
+				color: #fff
+				text-decoration: none
+				text-align: center
+				+tr(color 200ms)
+				&:hover
+					color: $orange
+					.pride__icon
+						box-shadow: 0 0 0 3px $orange
+						+scale(0.93)
+						&:after
+							+animation(sonarEffect7 1.3s ease-out 75ms)
+					& > span
+						border-color: transparent
+				& > span
+					font-size: 1.2rem
+					+hb
+					letter-spacing: 2px
+					text-transform: uppercase
+					border-bottom: 1px dotted #fff
+					line-height: 2
+					+tr(border-color 200ms)		
+	.pride__icon
+		position: relative
+		width: 63px
+		height: 63px
+		margin: 0 auto 15px 
+		border-radius: 50%
+		background: #fff
+		line-height: 62px
+		&:before
+			content: ""
+			position: absolute
+			top: 5px
+			left: 5px
+			width: 53px
+			height: 53px
+			background: transparent 
+			border-radius: 50%
+			border: 1px solid #6f6f6f
+		&.gray
+			&:before
+				border-color: #6f6f6f
+		&.green
+			&:before
+				border-color: #4cb972
+		&.yellow
+			&:before
+				border-color: #ffd646
+		&.red
+			&:before
+				border-color: #fa5748
+		&.blue
+			&:before
+				border-color: #419ad3												
+	.pride__content
+		padding-bottom: 70px
+	.pride__item
+		width: 280px
+		padding-top: 40px
+		text-align: center
+		color: #fff
+		font-size: 1.4rem
+		h4
+			+hb
+			font-size: 2rem
+			margin-bottom: 10px
+	.pride__img
+		display: inline-block
+		width: 175px
+		height: 175px 
+		margin-bottom: 40px
+		font-size: 0
+		border-radius: 50%
+		box-shadow: 0 0 29px rgba(24,21,50,.75)
+		img
+			border-radius: 50%
+			width: 100% 		 				

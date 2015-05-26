@@ -174,6 +174,32 @@ body
 	span
 		margin: 0 13px 	
 
+// sonar animation
+.sonar
+	will-change: transform, background, box-shadow
+	+transition(transform ease-out 0.2s, background 0.2s, box-shadow 0.2s)
+	&:after
+		content: ""
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		border-radius: 50%
+		-webkit-box-sizing: content-box
+		-moz-box-sizing: content-box
+		box-sizing: content-box
+		pointer-events: none
+		padding: 0
+		box-shadow: 0 0 0 2px rgba(255,255,255,0.5)
+		opacity: 0
+		+scale(0.9)
+		z-index: -1
+	&:hover
+		+scale(0.93)
+		&:after
+			+animation(sonarEffect7 1.3s ease-out 75ms)
+
 // parallax img
 .parallax-img
 	position: absolute
@@ -209,6 +235,16 @@ body
 	+s(info)
 .icon-info-white
 	+s(info-white)
+.icon-machine
+	+s(machine)
+.icon-plant
+	+s(plant)
+.icon-nipple
+	+s(nipple)
+.icon-camera
+	+s(camera)
+.icon-house
+	+s(house)					
 @for $i from 1 through 9
 	.icon-medical#{$i}
 		+s(medical#{$i})

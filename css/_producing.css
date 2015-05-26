@@ -1,0 +1,3 @@
+.farm { overflow: hidden; }
+.farm .farm__img { font-size: 0; }
+.farm .farm__img img { width: 100%; }

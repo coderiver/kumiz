@@ -87,35 +87,80 @@
 		height: 50px
 		line-height: 50px
 	+r(768)
-		+scale(0.5)	
+		+scale(0.5)
+	.js-farm-slider &
+		top: 50%	
+		+transform(translateY(-50%))
+	.js-pride-slider &
+		top: 100px		
 .slick-prev
 	left: -60px
 	&:before
 		content: ""
 		display: inline-block
 		vertical-align: middle
-		+s(prev) 
+		+tr(opacity 200ms)
+		+s(prev)
+	.js-farm-slider &, .js-pride-slider &
+		left: 15%
+		&:before
+			+s(prev-white)
+		&:after
+			content: ""
+			position: absolute
+			top: 0
+			left: 0
+			+s(prev-orange)
+			opacity: 0
+			+tr(opacity 200ms)
+		&:hover
+			&:before
+				opacity: 0
+			&:after
+				opacity: 1
+	.js-pride-slider &
+		left: 0			 
 .slick-next
 	right: -60px
 	&:before
 		content: ""
 		display: inline-block
 		vertical-align: middle
+		+tr(opacity 200ms)
 		+s(next)
+	.js-farm-slider &, .js-pride-slider &
+		right: 15%
+		&:before
+			+s(next-white)
+		&:after
+			content: ""
+			position: absolute
+			top: 0
+			left: 0
+			+s(next-orange)
+			opacity: 0
+			+tr(opacity 200ms)
+		&:hover
+			&:before
+				opacity: 0
+			&:after
+				opacity: 1
+	.js-pride-slider &
+		right: 0		 				
 .slick-dots
 	text-align: center
 	position: absolute
 	margin: 0
-	bottom: 0
+	bottom: 40px
 	left: 0
 	right: 0
 	li
 		position: relative
 		display: inline-block
-		padding: 0 3px 
+		padding: 0 5px 
 		&.slick-active
 			button
-				opacity: 0.3
+				background: $orange 
 				box-shadow: none
 		&:before
 			display: none 
