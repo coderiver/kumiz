@@ -803,6 +803,13 @@
 	&.quote_cols
 		+hb
 		font-style: normal
+	&.quote_wide
+		max-width: 900px
+		background: url(../img/quote-wide.png)
+		-webkit-background-size: 100% 100% 
+		-o-background-size: 100% 100% 
+		background-size: 100% 100%
+		background-repeat: no-repeat	
 	strong
 		font-weight: bold
 	&:before
@@ -1228,9 +1235,13 @@
 // footer
 .footer
 	position: relative
-	padding: 12rem 0 16.4rem
+	padding: 12rem 0 7.2rem
+	margin-bottom: 92px
 	background: url(../img/footer-bg.jpg)
-	+cover 					
+	+cover 	
+	&.footer_producing
+		background: url(../img/footer-bg2.jpg)
+		+cover				
 	.footer__topper
 		margin-bottom: 100px
 		text-align: center

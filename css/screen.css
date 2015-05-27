@@ -466,6 +466,7 @@ body { font-family: "HelveticaNeueCyrRoman"; font-size: 1.3rem; line-height: 1.4
 
 .quote { position: relative; max-width: 656px; min-height: 173px; margin: 0 auto; padding: 55px 35px; background: url(../img/quote.png); -webkit-background-size: 100% 100%; -o-background-size: 100% 100%; background-size: 100% 100%; background-repeat: no-repeat; text-align: center; font-size: 2rem; font-family: "Playfair Display", serif; font-style: italic; }
 .quote.quote_cols { font-family: "HelveticaNeueCyrBold"; font-style: normal; }
+.quote.quote_wide { max-width: 900px; background: url(../img/quote-wide.png); -webkit-background-size: 100% 100%; -o-background-size: 100% 100%; background-size: 100% 100%; background-repeat: no-repeat; }
 .quote strong { font-weight: bold; }
 .quote:before { content: ""; position: absolute; top: -10px; left: 50%; -moz-transform: translateX(-50%); -ms-transform: translateX(-50%); -webkit-transform: translateX(-50%); transform: translateX(-50%); background: url('../img/icons-s9406cbc491.png') 0 -474px no-repeat; width: 53px; height: 28px; }
 .quote .col { width: 50%; padding: 0 10%; }
@@ -572,7 +573,8 @@ body { font-family: "HelveticaNeueCyrRoman"; font-size: 1.3rem; line-height: 1.4
 .labels .labels__item .labels__in a { color: #3da5c7; font-size: 1.4rem; }
 .labels .labels__item .labels__in a:hover { text-decoration: none; }
 
-.footer { position: relative; padding: 12rem 0 16.4rem; background: url(../img/footer-bg.jpg); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; }
+.footer { position: relative; padding: 12rem 0 7.2rem; margin-bottom: 92px; background: url(../img/footer-bg.jpg); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; }
+.footer.footer_producing { background: url(../img/footer-bg2.jpg); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; }
 .footer .footer__topper { margin-bottom: 100px; text-align: center; }
 .footer .footer__topper .title { color: #fff; margin-bottom: 0; }
 .footer .footer__link { display: inline-block; font-family: "Playfair Display", serif; font-size: 4rem; font-weight: bold; color: #fff; text-decoration: none; border-bottom: 1px solid #fff; -moz-transition: border-color 200ms; -o-transition: border-color 200ms; -webkit-transition: border-color 200ms; transition: border-color 200ms; }
@@ -873,3 +875,6 @@ body { font-family: "HelveticaNeueCyrRoman"; font-size: 1.3rem; line-height: 1.4
 
 .packing { position: relative; padding: 9.5rem 0; background: #ffeaff; }
 .packing .packing__content { max-width: 768px; margin: 0 auto; padding-top: 80px; }
+
+.team { position: relative; padding: 9.5rem 0 10rem; }
+.team .doctors { margin: 0 auto 15rem; }
