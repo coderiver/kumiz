@@ -8,6 +8,15 @@
 		font-size: 0
 		img
 			width: 100%
+	.farm__slider.is-center
+		.farm__in
+			background: rgba(#fff, 0.7) 
+			padding: 30px 
+			+transform(translateX(-50%))
+			font-size: 2rem
+			+pf
+			text-align: center
+			font-style: italic		
 	.farm__in
 		position: absolute
 		top: 50%
@@ -21,7 +30,7 @@
 			margin-bottom: 10px
 			+hb
 			font-size: 2rem
-			line-height: 1.2
+			line-height: 1.2	
 
 // pride
 .pride
@@ -63,7 +72,7 @@
 					opacity: 1 
 				a
 					color: $orange
-					.pride__icon
+					.icon
 						box-shadow: 0 0 0 3px $orange
 						+scale(0.93)
 						&:after
@@ -80,7 +89,7 @@
 				+tr(color 200ms)
 				&:hover
 					color: $orange
-					.pride__icon
+					.icon
 						box-shadow: 0 0 0 3px $orange
 						+scale(0.93)
 						&:after
@@ -94,40 +103,7 @@
 					text-transform: uppercase
 					border-bottom: 1px dotted #fff
 					line-height: 2
-					+tr(border-color 200ms)		
-	.pride__icon
-		position: relative
-		width: 63px
-		height: 63px
-		margin: 0 auto 15px 
-		border-radius: 50%
-		background: #fff
-		line-height: 62px
-		&:before
-			content: ""
-			position: absolute
-			top: 5px
-			left: 5px
-			width: 53px
-			height: 53px
-			background: transparent 
-			border-radius: 50%
-			border: 1px solid #6f6f6f
-		&.gray
-			&:before
-				border-color: #6f6f6f
-		&.green
-			&:before
-				border-color: #4cb972
-		&.yellow
-			&:before
-				border-color: #ffd646
-		&.red
-			&:before
-				border-color: #fa5748
-		&.blue
-			&:before
-				border-color: #419ad3												
+					+tr(border-color 200ms)														
 	.pride__content
 		padding-bottom: 70px
 	.pride__item
@@ -150,7 +126,47 @@
 		box-shadow: 0 0 29px rgba(24,21,50,.75)
 		img
 			border-radius: 50%
-			width: 100% 
+			width: 100%
+.icon
+	position: relative
+	width: 63px
+	height: 63px
+	margin: 0 auto 15px 
+	border-radius: 50%
+	background: #fff
+	text-align: center
+	line-height: 62px
+	&:before
+		content: ""
+		position: absolute
+		top: 5px
+		left: 5px
+		width: 53px
+		height: 53px
+		background: transparent 
+		border-radius: 50%
+		border: 1px solid #6f6f6f
+	&.icon_gray
+		&:before
+			border-color: #6f6f6f
+	&.icon_green
+		&:before
+			border-color: #4cb972
+	&.icon_yellow
+		&:before
+			border-color: #ffd646
+	&.icon_red
+		&:before
+			border-color: #fa5748
+	&.icon_blue
+		&:before
+			border-color: #419ad3
+	&.icon_orange-b
+		&:before
+			border-color: $orange-b
+	&.icon_orange
+		&:before
+			border-color: $orange 							 
 .contacts
 	padding-top: 9rem					 				
 .map
@@ -160,16 +176,31 @@
 .animals
 	position: relative 
 	padding: 9.5rem	0 8rem
-.horses
+.scheme
 	max-width: 768px
 	margin: 0 auto
 	font-size: 0
 	text-align: center
-	.horses__in
+	.scheme__in
 		position: relative
 		display: inline-block
 		img
-			max-width: 100%	
+			max-width: 100%
+	&.scheme_violet
+		.tooltip__item
+			background: #d192d1
+			&:before
+				border-color: #d192d1
+		.tooltip_left
+			.tooltip__content
+				&:before
+					+arr(64, 44, #d192d1, tl)
+		.tooltip_right
+			.tooltip__content
+				&:before
+					+arr(64, 44, #d192d1, tr)
+		.tooltip__content
+			background: #d192d1 											
 .tooltip
 	position: absolute
 	&:hover
@@ -248,4 +279,271 @@
 		+scale(0.6)
 	100%
 		+scale(1)	
-						
+
+// done
+.done
+	position: relative
+	padding: 9rem 0 6.5rem
+	background: url(../img/pattern.jpg)  
+	.h2, .title
+		color: #fff						
+	.done__list
+		padding-top: 20px
+		font-size: 0
+		text-align: center
+	.done__item
+		display: inline-block
+		vertical-align: top
+		width: 220px
+		margin: 0 10px
+		.icon
+			width: 91px
+			height: 91px
+			line-height: 88px
+			&:before
+				content: ""
+				top: 8px
+				left: 8px
+				width: 75px
+				height: 75px
+	.done__text
+		font-size: 1.2rem
+		text-transform: uppercase
+		letter-spacing: 1px
+		color: #fff
+		+hb
+		line-height: 1.8
+		
+// milk
+.milk
+	position: relative
+	padding: 9.5rem 0 12rem 		  			
+	.milk__in
+		max-width: 800px
+		margin: 0 auto
+		font-size: 1.4rem
+.diagram
+	position: relative
+	margin-top: 80px
+	height: 380px
+	+vertical
+	.video-btn
+		display: inline-block
+		vertical-align: middle
+		margin-top: 0
+	.diagram__item
+		position: absolute
+		+clr
+		max-width: 360px
+		font-size: 1.4rem 
+		text-align: left
+		& > p
+			padding-top: 20px 
+		&.is-first
+			top: 0
+			left: 40%
+		&.is-second
+			top: 30%
+			right: -5%
+		&.is-third
+			bottom: 5%
+			right: -5%
+		&.is-fourth
+			bottom: 5%
+			left: 5%
+		&.is-fifth
+			left: 5%
+			top: 30%				
+	.diagram__number
+		float: left
+		margin-right: 15px 
+		font-size: 6rem
+		+pf
+		line-height: 1
+		color: #004c99
+		
+// kymis
+.kymis
+	position: relative
+	padding: 9.5rem 0 10rem
+	background: #d2edf6
+	&:before
+		content: ""
+		position: absolute
+		top: 0
+		bottom: 0
+		right: 0
+		left: 0
+		background: url(../img/milk-horse.png) 50% 100% no-repeat
+		-webkit-background-size: auto 100% 
+		-o-background-size: auto 100% 
+		background-size: auto 100%
+	.center
+		position: relative
+		z-index: 2	
+	.kymis__list
+		margin-bottom: 100px
+		font-size: 0
+		text-align: center
+	.kymis__item
+		display: inline-block
+		vertical-align: top
+		margin: 0 20px
+		width: 190px
+		.icon
+			width: 91px
+			height: 91px
+			line-height: 88px
+			&:before
+				content: ""
+				top: 8px
+				left: 8px
+				width: 75px
+				height: 75px
+	.kymis__text
+		font-size: 1.2rem
+		text-transform: uppercase
+		+hb
+	.kymis__info
+		max-width: 750px
+		margin: 0 auto 
+		border-radius: 20px
+		background: rgba(#fff, 0.7)
+		padding: 40px
+		+pf
+		font-style: italic
+		font-size: 2rem
+		strong
+			font-weight: bold
+
+// birth
+.birth
+	position: relative
+	.birth__topper
+		position: absolute
+		top: 95px
+		left: 0
+		right: 0
+		z-index: 2
+	.birth__tabs
+		position: relative
+		z-index: 1
+	.birth__nav
+		position: absolute
+		top: 50%
+		left: 50%
+		margin-left: -400px
+		+transform(translateY(-50%))
+		z-index: 3
+		&:before
+			content: ""
+			position: absolute
+			top: 10px
+			bottom: 10px
+			right: 4px
+			width: 3px
+			background: #4e4a5f  
+		li
+			position: relative
+			text-align: right
+			margin-top: 120px
+			&:first-child
+				margin-top: 0
+			&.is-active
+				a
+					&:after
+						content: ""
+						position: absolute
+						top: 0
+						right: -5px
+						width: 22px
+						height: 22px
+						border-radius: 50%
+						background: #fff
+						box-shadow: 0 0 10px rgba(94,94,94,.4)
+						z-index: 1
+			a
+				display: inline-block
+				padding-right: 37px
+				color: #4e4a5f
+				font-size: 1.3rem
+				text-decoration: none
+				&:before
+					content: ""
+					position: absolute
+					top: 5px
+					right: 0
+					width: 12px
+					height: 12px
+					border-radius: 50%
+					background: #4e4a5f
+					z-index: 2	  
+.kind
+	opacity: 0
+	visibility: hidden
+	+tr(opacity 0.5s)
+	padding: 310px 0 75px
+	background: #ff6262
+	&.is-visible
+		visibility: visible
+		opacity: 1 
+	&.kind_strong
+		background: #ff6262
+	&.kind_mid
+		background: #ffe672
+	&.kind_low
+		background: #9deeb4 	
+	.kind__in
+		position: relative
+		max-width: 800px
+		margin: 0 auto
+		text-align: center
+		&:before
+			content: ""
+			position: absolute
+			top: -50px
+			left: -50px
+			right: -50px
+			bottom: -50px 
+			background: -webkit-radial-gradient(50% 50% at center, rgba(#fff, 0.7), rgba(#fff, 0))
+			background: radial-gradient(50% 50% at center, rgba(#fff, 0.7), rgba(#fff, 0))
+			z-index: 0
+	.kind__bottle
+		position: relative
+		display: inline-block
+		font-size: 0
+	.kind__percent
+		position: absolute
+		top: 62%
+		left: 50%
+		+transform(translate(-50%))
+		font-size: 6rem
+		+pf
+		line-height: 1	
+	.kind__info
+		position: absolute
+		top: 50px
+		right: -160px
+		width: 380px
+		padding: 30px 35px  
+		border-radius: 20px
+		background: #fff
+		box-shadow: 0 5px 16px rgba(43,43,42,.3)
+		font-size: 1.4rem
+		z-index: 1
+		h4
+			+hb
+			margin-bottom: 15px
+			font-size: 2rem 
+//expiration
+.expiration
+	position: relative
+	padding: 9.5rem 0 12rem
+.packing
+	position: relative
+	padding: 9.5rem 0
+	background: #ffeaff  	 	 
+	.packing__content
+		max-width: 768px
+		margin: 0 auto
+		padding-top: 80px 	 	
