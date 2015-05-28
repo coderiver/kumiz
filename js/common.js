@@ -51,7 +51,15 @@ head.ready(function() {
 	});
 
 	$('.js-slider').slick({
-		slidesToShow: 3
+		slidesToShow: 3,
+		responsive: [
+			{
+				breakpoint: 1280,
+				settings: {
+					slidesToShow: 2
+				}
+			}
+		]
 	});
 	$('.js-slider2').slick({
 		slidesToShow: 1

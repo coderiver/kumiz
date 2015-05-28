@@ -95,6 +95,8 @@
 		top: 100px		
 .slick-prev
 	left: -60px
+	+r(1280)
+		left: -40px
 	&:before
 		content: ""
 		display: inline-block
@@ -124,9 +126,13 @@
 		top: 50%
 		+transform(translateY(-50%))
 		&:before
-			+s(prev-dark)			 
+			+s(prev-dark)
+		+r(1280)	
+			left: 0				 
 .slick-next
 	right: -60px
+	+r(1280)
+		right: -40px
 	&:before
 		content: ""
 		display: inline-block
@@ -156,7 +162,9 @@
 		top: 50%
 		+transform(translateY(-50%))
 		&:before
-			+s(next-dark)		 				
+			+s(next-dark)
+		+r(1280)
+			right: 0			 				
 .slick-dots
 	text-align: center
 	position: absolute
