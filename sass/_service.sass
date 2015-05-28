@@ -1,0 +1,110 @@
+// styles for service page
+.cooking
+    position: relative
+    padding: 9rem 0 10rem
+    background: #f2e2da  
+.delivery
+    position: relative
+    padding: 9.5rem 0 0
+.reviews
+    position: relative
+    padding: 9.5rem 0 0
+    background: #d2edf6 
+.customers
+    position: relative
+    padding: 9.5rem 0 7.5rem
+    .h2
+        margin-bottom: 8rem    
+
+.cooking__slider
+    max-width: 1024px
+    margin: 0 auto 65px
+.cooking__slide
+    text-align: center
+    padding: 10px 0
+.cooking__item
+    position: relative
+    display: inline-block
+    width: 314px
+    height: 368px
+    padding: 19px 19px 48px
+    text-align: left
+    background: #fff
+    box-shadow: -1px 0 15px rgba(174,158,148,.43)
+.cooking__img
+    margin-bottom: 22px
+    width: 100%
+    height: 196px
+    font-size: 0
+    img
+        width: 100%
+        height: 100% 
+.cooking__title
+    font-size: 1.8rem
+    color: #1a142f
+    +pf
+.cooking__date
+    position: absolute
+    bottom: 19px
+    left: 19px
+    font-size: 1.3rem
+    +hl
+    color: $orange-b
+.cooking__btn
+    text-align: center   
+
+.delivery__in
+    max-width: 750px
+    margin: 0 auto
+    padding-bottom: 110px
+    background: url(../img/courier.png) 100% 100% no-repeat
+    -webkit-background-size: auto 100%
+    -o-background-size: auto 100%
+    background-size: auto 100%   
+.delivery__text
+    max-width: 360px
+    h4
+        font-size: 2rem
+        color: #1a142f
+        margin-bottom: 1.5rem
+    p
+        font-size: 1.4rem
+        margin-bottom: 3rem       
+
+// comments
+.comments
+    max-width: 900px
+    margin: 0 auto
+    +clr         
+    .comments__img
+        float: left
+        width: 50%
+        font-size: 0
+    .comments__content
+        float: left
+        width: 50%
+        padding-top: 4rem
+    .comments__name
+        margin-bottom: 3rem 
+        font-size: 2rem
+        color: $dark
+        +hb
+    .comments__quote
+        position: relative
+        margin-bottom: 2rem
+        +pf
+        color: #3da5c7
+        font-size: 1.8rem
+        &:before
+            content: "“"
+            position: absolute
+            top: -10px
+            left: -40px
+            +pf
+            font-weight: bold
+            font-style: italic
+            line-height: 1
+            font-size: 6rem
+            color: #3da5c7  
+                     
+        

@@ -119,7 +119,12 @@
 			&:after
 				opacity: 1
 	.js-pride-slider &
-		left: 0			 
+		left: 0	
+	.js-slider &, .js-slider2 &
+		top: 50%
+		+transform(translateY(-50%))
+		&:before
+			+s(prev-dark)			 
 .slick-next
 	right: -60px
 	&:before
@@ -146,7 +151,12 @@
 			&:after
 				opacity: 1
 	.js-pride-slider &
-		right: 0		 				
+		right: 0
+	.js-slider &, .js-slider2 &
+		top: 50%
+		+transform(translateY(-50%))
+		&:before
+			+s(next-dark)		 				
 .slick-dots
 	text-align: center
 	position: absolute

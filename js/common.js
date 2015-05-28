@@ -47,7 +47,14 @@ head.ready(function() {
 	});
 
 	$('.js-packing-slider').slick({
-		sliderToShow: 1
+		slidesToShow: 1
+	});
+
+	$('.js-slider').slick({
+		slidesToShow: 3
+	});
+	$('.js-slider2').slick({
+		slidesToShow: 1
 	});
 	
 
@@ -99,7 +106,7 @@ head.ready(function() {
         	   	tab_item.removeClass("is-active");
         	   	$(this).parent().addClass("is-active");
         	   	tab_cont.hide();
-        	   	activeTab.show().find('.js-pride-slider').slick('reinit');
+        	   	activeTab.show().find('.slider').slick('reinit');
         	   	if ($('.kind').length) {
         	   		setTimeout(function(){
         	   			$('.kind').removeClass('is-visible');

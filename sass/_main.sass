@@ -32,7 +32,9 @@
 	+cover
 	z-index: 1
 	&.video_producing
-		background: url(../img/topper-bg.jpg)	
+		background: url(../img/topper-bg.jpg)
+	&.video_service
+		background: url(../img/topper-bg2.jpg) 		
 .menu
 	position: relative
 	float: left
@@ -1241,7 +1243,10 @@
 	+cover 	
 	&.footer_producing
 		background: url(../img/footer-bg2.jpg)
-		+cover				
+		+cover
+	&.footer_service
+		background: url(../img/footer-bg3.jpg)
+		+cover					
 	.footer__topper
 		margin-bottom: 100px
 		text-align: center
@@ -1256,8 +1261,9 @@
 		color: #fff
 		text-decoration: none
 		border-bottom: 1px solid #fff
-		+tr(border-color 200ms)
+		+transition(border-color 200ms, color 200ms)
 		&:hover
+			color: $orange-b
 			border-color: transparent
 	.footer__bottom
 		position: relative
@@ -1270,9 +1276,9 @@
 		a
 			color: #fff
 			text-decoration: none
-			+tr(opacity 200ms)
+			+tr(color 200ms)
 			&:hover
-				opacity: 0.7 
+				color: $orange-b
 	.footer__center
 		position: absolute
 		top: -16px

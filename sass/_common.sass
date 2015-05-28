@@ -209,15 +209,27 @@ body
 		display: none
 // btn
 .btn
+	display: inline-block
 	height: 41px
+	line-height: 41px
 	padding: 0 27px
 	background: $orange
 	color: #fff
 	font-size: 1.1rem
+	text-decoration: none
 	text-transform: uppercase
-	border-radius: 19px  
+	border-radius: 19px
+	+tr(background 200ms)
+	&:hover
+		background: darken($orange, 5%) 
 	&.btn_violet
-		background: #b151b0  		
+		background: #b151b0
+		&:hover
+			background: darken(#b151b0, 5%) 
+	&.btn_brown
+		background: #987564 
+		&:hover
+			background: darken(#987564, 5%) 	  		
 
 // icons
 [class^=icon-]
