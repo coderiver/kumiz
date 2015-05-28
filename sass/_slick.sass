@@ -97,6 +97,8 @@
 	left: -60px
 	+r(1280)
 		left: -40px
+	+r(1023)
+		left: 0	
 	&:before
 		content: ""
 		display: inline-block
@@ -122,6 +124,9 @@
 				opacity: 1
 	.js-pride-slider &
 		left: 0	
+	.federations &
+		top: 50%
+		+transform(translateY(-50%))
 	.js-slider &, .js-slider2 &
 		top: 50%
 		+transform(translateY(-50%))
@@ -133,6 +138,8 @@
 	right: -60px
 	+r(1280)
 		right: -40px
+	+r(1023)
+		right: 0	
 	&:before
 		content: ""
 		display: inline-block
@@ -158,6 +165,9 @@
 				opacity: 1
 	.js-pride-slider &
 		right: 0
+	.federations &
+		top: 50%
+		+transform(translateY(-50%))
 	.js-slider &, .js-slider2 &
 		top: 50%
 		+transform(translateY(-50%))

@@ -76,6 +76,8 @@ body
 	font-size: 1.3rem 
 	line-height: 1.4
 	color: $dark
+	+r(1023)
+		font-size: 12px
 =justify
 	text-align: justify
 	line-height: 0
@@ -133,7 +135,9 @@ body
 	max-width: 1280px
 	margin: 0 auto
 	+r(1280)
-		padding: 0 15px 
+		padding: 0 15px
+	+r(1024)
+		padding: 0 30px 	 
 
 .h1
 	font-size: 6rem

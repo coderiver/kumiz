@@ -8,6 +8,8 @@
 	z-index: 9
 	.header__tools
 		float: right
+	+r(1024)
+		padding: 20px 0 0 	
 	
 // topper
 .topper
@@ -207,6 +209,9 @@
 		padding-top: 90px
 		height: 755px
 		background: url(../img/man.png) 50% 0 no-repeat
+		+r(768)
+			background: none
+			height: auto 
 	.human__left
 		position: relative
 		float: left
@@ -214,15 +219,28 @@
 		.human__item
 			height: 200px
 			padding-left: 110px
+		+r(1023)
+			width: 50%
+			.human__item
+				padding-left: 30px
+		+r(768)
+			.human__item
+				height: auto
+				margin-bottom: 20px		
 	.human__right
 		position: relative
 		float: right
 		z-index: 2
+		+r(1023)
+			width: 50%
 		.human__item
 			+clr
 			height: 200px
 			.system
 				float: right
+			+r(768)
+				margin-bottom: 20px
+				height: auto	
 	.human__systems
 		position: absolute
 		top: 0
@@ -231,6 +249,8 @@
 		left: 0
 		font-size: 0
 		z-index: 1
+		+r(1023)
+			display: none
 		& > div
 			position: absolute
 			opacity: 0
@@ -260,6 +280,8 @@
 	+clr
 	padding-bottom: 30px
 	+tr(opacity 300ms)
+	+r(768)
+		max-width: 100%
 	&.non-active
 		opacity: 0.5 		
 	&.system_endo
@@ -271,6 +293,8 @@
 				color: #fff
 				&:after
 					+animation(sonarEffect1 1.3s ease-out 75ms)
+		+r(1023)
+			padding-left: 0	
 		.system__title
 			color: #55c977
 	&.system_skin
@@ -292,6 +316,8 @@
 				color: #fff
 				&:after
 					+animation(sonarEffect3 1.3s ease-out 75ms)
+		+r(1023)
+			padding-left: 0	
 		.system__title
 			color: #fb6e6d
 	&.system_brain
@@ -303,6 +329,8 @@
 				color: #fff
 				&:after
 					+animation(sonarEffect4 1.3s ease-out 75ms)
+		+r(1023)
+			margin-right: 0			
 		.system__title
 			color: #eccd00
 	&.system_stomach
@@ -314,6 +342,8 @@
 				color: #fff
 				&:after
 					+animation(sonarEffect5 1.3s ease-out 75ms)
+		+r(1023)
+			padding-right: 0
 		.system__title
 			color: #ee6f75
 	&.system_lungs
@@ -325,6 +355,8 @@
 				color: #fff
 				&:after
 					+animation(sonarEffect6 1.3s ease-out 75ms)
+		+r(1023)
+			margin-right: 0			
 		.system__title
 			color: #729ee7											
 	.system__left
@@ -354,7 +386,7 @@
 		overflow: hidden
 	.system__title
 		display: inline
-		font-size: 1.2rem
+		font-size: 12px
 		+hb
 		text-transform: uppercase
 		border-bottom: 1px dotted
@@ -502,7 +534,7 @@
 			text-decoration: underline
 	.video-link__duration
 		color: #767676
-		font-size: 1.2rem			 					
+		font-size: 12px			 					
 
 // consist
 .consist
@@ -758,6 +790,9 @@
 	min-height: 663px
 	margin: 0 auto 70px
 	padding-top: 150px
+	+r(899)
+		margin: 0 auto 
+		padding-top: 50px
 	.usefull__img
 		position: absolute
 		top: 70px
@@ -797,6 +832,8 @@
 			+hb
 			& > i
 				margin-bottom: 20px
+			+r(899)
+				margin: 0 10px 	
 .quote
 	position: relative
 	max-width: 656px
@@ -857,10 +894,14 @@
 	margin: 0 auto
 	+r(1280)
 		max-width: 100%
+	+r(1023)
+		padding: 0 	
 	.room__in
 		position: relative
 		display: inline-block
-		padding: 22px 0 45px 
+		padding: 22px 0 45px
+		+r(1023)
+			display: block 
 	.room__clear
 		position: relative
 		z-index: 2
@@ -870,6 +911,12 @@
 		font-size: 0
 		img
 			width: 675px
+		+r(1023)
+			width: 100%!important
+			max-width: 100%
+			margin-bottom: 20px
+			img
+				max-width: 100%	
 	.room__dirty
 		position: absolute
 		top: 22px
@@ -888,6 +935,16 @@
 			+transform(rotate(30deg) skew(-30deg))
 			box-shadow: 0 0 40px 20px rgba(0,0,0,0.7)
 			z-index: -1
+		+r(1023)
+			position: relative
+			top: 0
+			left: auto
+			right: auto
+			bottom: auto
+			margin-bottom: 20px
+			img
+				max-width: 100%
+				height: auto
 	.room__line
 		position: absolute
 		top: 0
@@ -895,6 +952,8 @@
 		width: 2px
 		background: #f3db53
 		z-index: 4
+		+r(1023)
+			display: none
 	.room__text-l, .room__text-r
 		visibility: hidden
 		opacity: 0
@@ -909,12 +968,23 @@
 		font-size: 1.4rem
 		+transition(opacity 200ms)
 		z-index: 5
+		+r(1023)
+			opacity: 1
+			visibility: visible
+			position: relative
+			top: 0
+			left: auto
+			width: 100%
+			font-size: 12px
+			margin-bottom: 20px   
 		&.is-visible
 			visibility: visible
 			opacity: 1
 	.room__text-r
 		left: auto
 		right: -175px
+		+r(1023)
+			right: auto
 .immunity
 	position: relative
 	padding: 9.5rem 0 10rem
@@ -927,7 +997,12 @@
 		margin-bottom: 65px
 		h4
 			+hb
-			margin-bottom: 10px 			
+			margin-bottom: 10px
+		+r(768)
+			width: 100%
+			background: #f7f7f7
+			border-radius: 20px
+			padding: 10px 20px   	 			
 	.immunity__list
 		+clr
 	.immunity__item
@@ -947,13 +1022,26 @@
 		& > p
 			font-size: 12px
 			text-transform: uppercase
-			+hb	
+			+hb
+		+r(768)
+			width: 50%
+			margin-left: 0
+			&:first-child
+				&:before
+					display: block
+			&:before
+				top: auto
+				bottom: 50px
+				left: 60%		
 	.immunity__img
 		height: 145px
 		font-size: 0
 		text-align: center
 		img
 			max-width: 100%
+		+r(768)
+			float: left
+			width: 50% 	
 
 // usage
 .usage
@@ -1113,7 +1201,7 @@
 			max-width: 100%
 			max-height: 100%
 	.target__text
-		font-size: 1.2rem
+		font-size: 12px
 		+hb
 		text-transform: uppercase
 		letter-spacing: 1px 		 
@@ -1154,7 +1242,7 @@
 		+hb
 		line-height: 1.2
 	.federations__subtitle
-		margin-bottom: 1.2rem
+		margin-bottom: 12px
 		+hli
 		font-size: 1.4rem
 .doctors
@@ -1184,7 +1272,9 @@
 		left: 0
 		+rotate(-90)
 		font-size: 1.4rem
-		color: #3da5c7		
+		color: #3da5c7
+		+r(1280)
+			left: 40px	
 	.doctors__name
 		margin-bottom: 1rem
 		font-size: 2rem
