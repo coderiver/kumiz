@@ -9,7 +9,12 @@
 	.header__tools
 		float: right
 	+r(1024)
-		padding: 20px 0 0 	
+		padding: 20px 0 0 
+	+r(600)
+		left: 30px
+		right: 30px
+		.header__tools
+			display: none		
 	
 // topper
 .topper
@@ -26,6 +31,10 @@
 		z-index: 2
 		+r(1440)
 			padding-top: 130px
+		+r(768)
+			padding: 130px 20px 0
+		+r(600)
+			padding: 80px 20px 0 		
 .video
 	position: absolute
 	top: 0
@@ -155,6 +164,8 @@
 	z-index: 99
 	+r(1280)
 		bottom: 120px
+	+r(600)
+		bottom: 80px	
 	&.is-scrolled
 		+transform(translate(-50%, 40px))
 	&.is-hidden
@@ -382,6 +393,10 @@
 			opacity: 0
 			+scale(0.9)
 			z-index: -1
+		+r(480)
+			float: none
+			margin-right: 0
+			margin-bottom: 10px  	
 	.system__right
 		overflow: hidden
 	.system__title
@@ -789,10 +804,13 @@
 	position: relative
 	min-height: 663px
 	margin: 0 auto 70px
+	text-align: center
 	padding-top: 150px
 	+r(899)
 		margin: 0 auto 
 		padding-top: 50px
+	+r(600)
+		min-height: 350px	
 	.usefull__img
 		position: absolute
 		top: 70px
@@ -820,12 +838,14 @@
 		position: relative
 		margin-bottom: 45px
 		text-align: center
+		font-size: 0
 		z-index: 3
 		li
 			display: inline-block
 			vertical-align: top
 			width: 240px
 			margin: 0 30px 
+			font-size: 1.3rem
 			text-align: center
 			text-transform: uppercase
 			letter-spacing: 1px
@@ -833,7 +853,24 @@
 			& > i
 				margin-bottom: 20px
 			+r(899)
-				margin: 0 10px 	
+				margin: 0 10px 
+			+r(600)
+				width: 50%
+				padding: 0 10px  
+				margin: 0 0 20px	 
+	.usefull__more
+		position: relative
+		display: inline-block
+		font-size: 1.3rem
+		text-transform: uppercase
+		+hb
+		color: $dark
+		border-bottom: 1px solid
+		cursor: pointer
+		z-index: 1   			
+	.usefull__wrap
+		+r(600)
+			display: none				
 .quote
 	position: relative
 	max-width: 656px
@@ -1032,7 +1069,12 @@
 			&:before
 				top: auto
 				bottom: 50px
-				left: 60%		
+				left: 60%
+		+r(480)
+			width: 100%
+			&:last-child
+				&:before
+					display: none				
 	.immunity__img
 		height: 145px
 		font-size: 0
@@ -1086,13 +1128,19 @@
 				opacity: 1		
 		&:first-child
 			margin-left: 0
+		+r(568)
+			width: 100%
+			margin-left: 0
+			padding: 10px  	
 	.usage__title
 		+hb
 		font-size: 2rem
 		margin-bottom: 2rem
 	.usage__text
 		margin-bottom: 10px
-		font-size: 1.4rem	  			
+		font-size: 1.4rem
+		+r(600)
+			font-size: 12px	  			
 	.usage__alarm
 		max-width: 840px
 		margin: 0 auto 30px
@@ -1146,6 +1194,8 @@
 		right: 0
 		left: 0
 		z-index: 2
+		+r(768)
+			+vertical
 	.target__mid
 		position: absolute
 		top: 35%
@@ -1155,12 +1205,25 @@
 		+pf
 		font-weight: bold
 		font-style: italic
+		+r(768)
+			top: 0
 	.target__list
 		position: absolute
 		top: 0
 		bottom: 0
 		left: 0
 		right: 0
+		+r(768)
+			display: none
+		&.is-mobile
+			display: none
+			top: 50%
+			+transform(translateY(-50%))
+			.target__item
+				position: relative
+			+r(768)
+				display: inline-block
+				vertical-align: middle
 	.target__item
 		position: absolute
 		width: 180px
@@ -1293,24 +1356,39 @@
 .labels
 	position: relative
 	padding: 9rem 0 12rem
+	.labels__slider
+		display: none
+		+r(768)
+			display: block
 	.labels__list
 		padding-top: 5rem
 		font-size: 0
 		text-align: center
+		+r(768)
+			display: none	
 	.labels__item
 		position: relative
 		display: inline-block
 		vertical-align: middle
 		width: 220px
+		text-align: center
 		margin: 0 4rem 7rem
 		border-radius: 50%
 		&:hover
 			.labels__info
 				opacity: 1
 				visibility: visible
+		& > a
+			display: block
+			height: 150px
+			+vertical
+			img
+				display: inline-block
+				vertical-align: middle		
 		+r(1280)
 			margin: 0 3rem 5rem	
 		.labels__logo
+			display: inline-block
 			font-size: 0
 		.labels__info
 			position: absolute
@@ -1346,6 +1424,8 @@
 	+cover 	
 	+r(1280)
 		margin-bottom: 0
+	+r(600)
+		padding: 9rem 0 5rem 	
 	&.footer_producing
 		background: url(../img/footer-bg2.jpg)
 		+cover
@@ -1358,6 +1438,8 @@
 		.title
 			color: #fff
 			margin-bottom: 0
+		+r(600)
+			margin-bottom: 20px	
 	.footer__link
 		display: inline-block
 		+pf
@@ -1374,8 +1456,13 @@
 		position: relative
 		+clr	
 		color: #fff
+		+r(600)
+			text-align: center
 	.footer__left
 		float: left
+		+r(600)
+			float: none
+			margin-bottom: 10px
 	.footer__right
 		float: right
 		a
@@ -1384,8 +1471,16 @@
 			+tr(color 200ms)
 			&:hover
 				color: $orange-b
+		+r(600)
+			float: none		
 	.footer__center
 		position: absolute
 		top: -16px
 		left: 50%
 		+transform(translateX(-50%)) 
+		+r(600)
+			position: relative
+			top: 0
+			left: auto
+			margin-bottom: 20px
+			+transform(translateX(0))

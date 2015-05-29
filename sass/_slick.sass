@@ -91,6 +91,8 @@
 	.js-farm-slider &
 		top: 50%	
 		+transform(translateY(-50%))
+		+r(768)
+			+transform(translateY(-50%) scale(0.5))
 	.js-pride-slider &
 		top: 100px		
 .slick-prev
@@ -127,13 +129,20 @@
 	.federations &
 		top: 50%
 		+transform(translateY(-50%))
+		+r(768)
+			+transform(translateY(-50%) scale(0.5))
 	.js-slider &, .js-slider2 &
 		top: 50%
 		+transform(translateY(-50%))
+		+r(768)
+			+transform(translateY(-50%) scale(0.5))
 		&:before
 			+s(prev-dark)
 		+r(1280)	
-			left: 0				 
+			left: 0	
+	.js-target-slider &
+		&:before
+			+s(prev-dark)					 
 .slick-next
 	right: -60px
 	+r(1280)
@@ -168,13 +177,20 @@
 	.federations &
 		top: 50%
 		+transform(translateY(-50%))
+		+r(768)
+			+transform(translateY(-50%) scale(0.5))
 	.js-slider &, .js-slider2 &
 		top: 50%
 		+transform(translateY(-50%))
+		+r(768)
+			+transform(translateY(-50%) scale(0.5))
 		&:before
 			+s(next-dark)
 		+r(1280)
-			right: 0			 				
+			right: 0
+	.js-target-slider &
+		&:before
+			+s(next-dark)					 				
 .slick-dots
 	text-align: center
 	position: absolute

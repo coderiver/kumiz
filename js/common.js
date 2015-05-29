@@ -1,5 +1,11 @@
 head.ready(function() {
 
+	// usefull
+	$('.usefull__more').on('click', function(){
+		$(this).parents('.usefull').find('.usefull__wrap').slideToggle();
+		$(this).hide();
+	});
+
 	// mobile menu
 
 	$('.container, .js-mob-close').on('click', function(){
@@ -32,6 +38,12 @@ head.ready(function() {
 					slidesToShow: 2,
 					arrows: true
 				}
+			},
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 1
+				}
 			}
 		]
 	});
@@ -44,6 +56,12 @@ head.ready(function() {
 				breakpoint: 1024,
 				settings: {
 					slidesToShow: 2
+				}
+			},
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 1
 				}
 			}
 		]
@@ -75,6 +93,12 @@ head.ready(function() {
 				settings: {
 					slidesToShow: 2
 				}
+			},
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 1
+				}
 			}
 		]
 	});
@@ -82,34 +106,9 @@ head.ready(function() {
 		slidesToShow: 1
 	});
 	
-	function targetSlider(){
-		var slider = $('.js-target-slider');
-
-		// $('.js-target-slider').slick();
-
-		// $('#target').on('click', function(){
-		// 	$('.js-target-slider').slick('unslick');
-		// });
-		
-		if ($('.out').width() <= 768) {
-			$('.js-target-slider').addClass('is-inited');
-			$('.js-target-slider').slick({
-				slidesToShow: 1
-			});
-		}
-		if ($('.out').width() > 768) {
-			if ($('.js-target-slider').hasClass('is-inited')) {
-				$('.js-target-slider').slick('unslick');
-			}
-		}
-
-		
-		
-	}
-	if ($('.js-target-slider').length) {
-		targetSlider();
-	};
-	
+	$('.js-target-slider').slick({
+		slidesToShow: 1
+	});
 
 	// room animation
 
@@ -307,12 +306,6 @@ head.ready(function() {
 			scrollBtn();
 		};
 		nav();
-	});
-
-	$(window).resize(function() {
-		if ($('.js-target-slider').length) {
-			targetSlider();
-		};
 	});
 
 	// svg snap animations

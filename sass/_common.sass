@@ -1,39 +1,3 @@
-// # SHORT HOWTO
-// ## Sprites
-//     .whatever
-//          +sized-sprite($icons, coderiver) //or
-// 			+s(codedby) //gets default value for spritemap as $icons
-// ### animation example
-//     +include keyframes(rotate)
-//        from
-//           +rotate(0)
-//        to
-//           +rotate(360)
-// ## animation usage
-//     body:hover
-// 	    +animation(rotate 200s linear infinite)
-// ## animations easing, see easings.net for full list and examples, tnx @ai
-//     transition: all 1.2s ceaser($ease-in)
-// ## gradient example
-//     +background-image(linear-gradient(#232323, #5c5c5c));
-//     +g(#232323, #5c5c5c);
-//	   horizontal
-//     +gh(#232323, #5c5c5c);
-// ## making bw-images
-//     img
-//			@extend %gray
-// ## predefined media-queries: https://github.com/paranoida/sass-mediaqueries
-//     +min-screen(320)
-//			display: none
-// +max-screen(1000), +iphone5, +iphone4, +ipad-retina, +ipad, +hdpi - also available
-//
-// ## use cycles
-//     @for $i from 1 through 3
-//       .item-#{$i}
-//			width: 2em * $i;
-//     @each $s in a,b,c
-// 	    	#{$s}
-//				display: none
 // fonts 
 +font(HelveticaNeueCyrRoman, HelveticaNeueCyrRoman)
 =hr
@@ -70,7 +34,9 @@ html
 	+r(1366)
 		font-size: 9px
 	+r(1024)
-		font-size: 8px	
+		font-size: 8px
+	+r(600)
+		font-size: 7px		
 body
 	+hr
 	font-size: 1.3rem 
@@ -137,26 +103,34 @@ body
 	+r(1280)
 		padding: 0 15px
 	+r(1024)
-		padding: 0 30px 	 
+		padding: 0 20px 	 
 
 .h1
 	font-size: 6rem
 	+pf
 	color: $dark
 	font-weight: bold
+	+r(768)
+		font-size: 5rem
+	+r(600)
+		font-size: 32px	
 .h2
 	text-transform: uppercase
 	text-align: center
 	font-size: 5rem
 	color: $dark
 	+hul
-	letter-spacing: 0.3rem  
+	letter-spacing: 0.3rem
+	+r(600)
+		font-size: 4rem  
 .h3
 	font-size: 3rem
 	color: $dark
 	+hul
 	text-transform: uppercase
 	letter-spacing: 0.3rem
+	+r(768)
+		font-size: 16px
 .title
 	padding-top: 40px
 	margin-bottom: 40px
@@ -182,7 +156,9 @@ body
 		border: none
 		background: $orange-b
 	span
-		margin: 0 13px 	
+		margin: 0 13px
+	+r(768)
+		margin:  20px auto 	 	
 
 // sonar animation
 .sonar
@@ -225,7 +201,9 @@ body
 	padding: 0 27px
 	background: $orange
 	color: #fff
-	font-size: 1.1rem
+	font-size: 11px
+	+hb
+	letter-spacing: 1px 
 	text-decoration: none
 	text-transform: uppercase
 	border-radius: 19px
