@@ -70,7 +70,9 @@
 				left: 50%
 				+transform(translateX(-50%))
 				+arr(26, 10, #4f497d, t)
-				opacity: 0 	
+				opacity: 0 
+			+r(1023)
+				padding-top: 19px		
 			&.is-active
 				&:before
 					opacity: 1 
@@ -429,6 +431,8 @@
 		left: 0
 		right: 0
 		z-index: 2
+		+r(1023)
+			top: 50px
 	.birth__tabs
 		position: relative
 		z-index: 1
@@ -446,13 +450,22 @@
 			bottom: 10px
 			right: 4px
 			width: 3px
-			background: #4e4a5f  
+			background: #4e4a5f
+		+r(1023)
+			top: 250px
+			left: 0
+			right: 0
+			margin-left: 0
+			text-align: center
+			+transform(translateY(0))
+			&:before
+				display: none
 		li
 			position: relative
 			text-align: right
 			margin-top: 120px
 			&:first-child
-				margin-top: 0
+				margin-top: 0	
 			&.is-active
 				a
 					&:after
@@ -481,7 +494,26 @@
 					height: 12px
 					border-radius: 50%
 					background: #4e4a5f
-					z-index: 2	  
+					z-index: 2
+			+r(1023)
+				display: inline-block
+				margin-top: 0
+				padding: 5px 16px
+				border-radius: 20px
+				&.is-active
+					background: #fff 
+					a
+						border-color: transparent
+						&:after
+							display: none 
+				a
+					font-size: 11px
+					padding-right: 0 
+					text-transform: uppercase
+					+hb
+					border-bottom: 1px dotted 
+					&:before
+						display: none		  
 .kind
 	opacity: 0
 	visibility: hidden
@@ -512,10 +544,15 @@
 			background: -webkit-radial-gradient(50% 50% at center, rgba(#fff, 0.7), rgba(#fff, 0))
 			background: radial-gradient(50% 50% at center, rgba(#fff, 0.7), rgba(#fff, 0))
 			z-index: 0
+		+r(1023)
+			padding: 0 20px 	
 	.kind__bottle
 		position: relative
 		display: inline-block
 		font-size: 0
+		max-width: 100%
+		img
+			max-width: 100%
 	.kind__percent
 		position: absolute
 		top: 62%
@@ -540,7 +577,12 @@
 			margin-bottom: 15px
 			font-size: 2rem 
 		+r(1280)
-			right: -100px	
+			right: -100px
+		+r(1023)
+			position: relative
+			top: auto
+			right: auto
+			width: 100% 	
 //expiration
 .expiration
 	position: relative
