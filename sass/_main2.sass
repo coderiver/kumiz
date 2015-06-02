@@ -127,22 +127,24 @@
 		&:after
 			content: ""
 			position: absolute
-			left: 50%
-			bottom: -135px
-			margin-left: -31px
-			background: url(../img/icons/long-curve.png) no-repeat
-			width: 62px
-			height: 100px
+			bottom: 0
+			left: 0
+			right: 0
+			height: 200px
+			background: url(../img/icons/consultation-deco.png) no-repeat bottom center
 		&.no-bg
 			&:after
 				display: none
 		&.large-pad
 			.section__in
-				padding-top: 300px
+				padding: 300px 0 200px
+		&:last-child
+			.section__in
+				padding-bottom: 0
 		&__in
 			max-width: 1080px
 			margin: 0 auto
-			padding-top: 170px
+			padding: 80px 0 280px
 		.anchors
 			margin-top: 55px
 		.more
