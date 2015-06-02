@@ -3,7 +3,7 @@
 	text-align: center
 	padding: 25px 0 50px
 	+r(768)
-		padding: 25px 0 35px 
+		padding: 25px 0 35px
 	li
 		display: inline-block
 		vertical-align: top
@@ -13,7 +13,7 @@
 			&:before
 				display: none
 		&:before
-			content: "" 
+			content: ""
 			position: absolute
 			top: 8px
 			left: 0
@@ -24,7 +24,7 @@
 	a
 		+pfi
 		font-size: 13px
-		letter-spacing: 0.025em 
+		letter-spacing: 0.025em
 		color: #4c4369
 		+opacity(0.7)
 		+transition(opacity 0.3s)
@@ -34,27 +34,27 @@
 .tags
 	font-size: 0
 	text-align: center
-	padding: 25px 0 0 
+	padding: 25px 0 0
 	li
 		display: inline-block
 		vertical-align: top
-		padding: 0 13px 
+		padding: 0 13px
 	a
 		+pf
 		font-size: 16px
 		color: #8e88a3
 		+transition(color 0.3s)
 		&:hover, &.is-active
-			color: #e8c29a 
+			color: #e8c29a
 
 .pages
 	font-size: 0
 	text-align: center
-	padding: 45px 0 
+	padding: 45px 0
 	li
 		display: inline-block
 		vertical-align: top
-		padding: 0 6px 
+		padding: 0 6px
 	a
 		+pf
 		font-size: 18px
@@ -73,13 +73,13 @@
 			+transition(box-shadow 0.3s)
 			&:hover
 				+box-shadow(0 1px 60px rgba(174, 158, 148, 0.5))
-				
+
 .footer
 	padding: 180px 20px 45px
 	position: relative
-	z-index: 10 
+	z-index: 10
 	+r(768)
-		padding: 20px 20px 140px 
+		padding: 20px 20px 140px
 	&__in
 		+clr
 		text-align: center
@@ -88,16 +88,16 @@
 	p
 		+hr
 		font-size: 13px
-		letter-spacing: 0.03em 
-		padding: 10px 0 
+		letter-spacing: 0.03em
+		padding: 10px 0
 		color: #fff
 		+r(768)
-			color: #8b87a1 
-			padding: 5px 0 
+			color: #8b87a1
+			padding: 5px 0
 		a
-			color: #fff 
+			color: #fff
 			+r(768)
-				color: #8b87a1 
+				color: #8b87a1
 	&__copy
 		float: left
 		text-align: left
@@ -115,9 +115,9 @@
 			&:hover
 				color: #f1902a
 	.button
-		margin: 0 10px 
+		margin: 0 10px
 		+r(768)
-			margin: 0 0 20px 
+			margin: 0 0 20px
 
 .in-title
 	+pf
@@ -132,28 +132,29 @@
 	padding: 0 20px 
 	margin: 0 auto
 	+r(768)
-		padding: 0 
+		padding: 0
 	p, .inner__box
 		padding: 0 10% 0 10% 
+		padding: 0 10%
 		+r(768)
-			padding: 0 25px 
+			padding: 0 25px
 	&__box
 		+r(768)
 			text-align: center
 	.in-title
-		padding: 0 2% 25px 10% 
+		padding: 0 2% 25px 10%
 		+r(768)
 			margin: 0 
 	&__heading
 		+pf
 		line-height: 1.25
 		color: #4c4369
-		padding: 0 8% 0 10% 
+		padding: 0 8% 0 10%
 		font-size: 30px
 		margin-bottom: 45px
 		text-align: left
 		+r(768)
-			padding: 0 25px 
+			padding: 0 25px
 			font-size: 20px
 			margin-bottom: 30px
 			text-align: center
@@ -165,7 +166,7 @@
 		font-size: 16px
 		line-height: 1.75
 		letter-spacing: 0.03em
-		color: #8e88a3 
+		color: #8e88a3
 		margin-bottom: 30px
 		+r(768)
 			font-size: 14px
@@ -177,27 +178,27 @@
 		font-size: 24px
 		line-height: 1.5
 		color: #e8c29a
-		margin: 0 -10px 30px 0 
+		margin: 0 -10px 30px 0
 		+r(768)
-			padding: 0 25px 
-			margin: 0 0 30px 
+			padding: 0 25px
+			margin: 0 0 30px
 			font-size: 18px
 	&__news
-		padding: 0 0 50px  
+		padding: 0 0 50px
 		text-align: center
 		p
 			margin-bottom: 10px
-			padding: 0 9% 0 10% 
+			padding: 0 9% 0 10%
 			text-align: left
 			+r(768)
-				padding: 0 25px 
+				padding: 0 25px
 		img
 			max-width: 300px
 			float: left
-			margin: 10px 35px 10px 0 
+			margin: 10px 35px 10px 0
 			+r(768)
 				float: none
-				margin: 10px 0 30px  
+				margin: 10px 0 30px
 .back
 	display: inline-block
 	position: relative
@@ -212,7 +213,7 @@
 		position: absolute
 		top: 50%
 		left: 0
-		margin: -10px 0 0 
+		margin: -10px 0 0
 		+svg(back, 33, 20)
 
 .gallery
@@ -229,6 +230,8 @@
 		z-index: 200 
 		width: 60px
 		height: 35px
+		margin-top: -11px
+		z-index: 200
 		+r(1028)
 			display: none !important
 		&:before
@@ -244,9 +247,9 @@
 		vertical-align: top
 		+pf
 		font-size: 18px
-		color: #8e88a3 
+		color: #8e88a3
 		position: relative
-		padding: 0 20px 
+		padding: 0 20px
 	&__prev, &__next
 		position: absolute
 		bottom: 0
@@ -266,7 +269,7 @@
 .share
 	font-size: 0
 	text-align: center
-	padding: 50px 0  
+	padding: 50px 0
 	li
 		padding: 0 15px 15px
 		display: inline-block
@@ -277,7 +280,7 @@
 		display: inline-block
 		img
 			margin: 0
-		
+
 
 .number
 	position: relative
@@ -291,10 +294,10 @@
 		text-align: center
 		+hl
 		font-size: 16px
-		color: #4c4369 
+		color: #4c4369
 		border: 1px solid #C8C6CF
-		background: #fff 
-		margin: 0 9px 
+		background: #fff
+		margin: 0 9px
 	&__plus,
 	&__minus
 		display: inline-block
@@ -306,8 +309,8 @@
 		position: relative
 		&:before, &:after
 			position: absolute
-			content: "" 
-			background: #89859a 
+			content: ""
+			background: #89859a
 		&:before
 			top: 18px
 			height: 1px
@@ -328,10 +331,10 @@
 	line-height: 24px
 	color: #4c4369
 	small
-		font-size: 18px		
+		font-size: 18px
 .order
 	max-width: 1024px
-	padding: 0 20px 
+	padding: 0 20px
 	margin: 0 auto
 	+r(768)
 		padding: 0 0 50px
@@ -341,7 +344,7 @@
 		li
 			display: inline-block
 			vertical-align: top
-			padding: 0 5px 
+			padding: 0 5px
 			+r(768)
 				padding: 0
 		a
@@ -353,7 +356,7 @@
 			padding: 3px 22px 8px
 			+r(768)
 				font-size: 26px
-				padding: 11px 22px 13px 
+				padding: 11px 22px 13px
 			&.is-active
 				color: #4c4369
 				background-color: #F6F5F7
@@ -364,22 +367,23 @@
 				border-bottom: 1px dotted #E8C29A
 	&__inner
 		+clr
-		padding: 25px 0 0 
+		padding: 25px 0 0
 	&__filter
 		float: left
 		width: 200px
-		padding: 25px 0 0 
+		padding: 25px 0 0
 		+r(768)
 			float: none
 			margin: 0 auto
 			text-align: center
-			padding: 5px 0 0  
+			padding: 5px 0 0
 		li
 			padding: 0 15px 10px
 			a
 				display: inline-block
 				max-width: 130px
 				padding: 4px 20px 
+				padding: 8px 20px
 				color: #4C4369
 				+pf
 				font-size: 16px
@@ -400,7 +404,7 @@
 	&__img
 		max-width: 350px
 		width: 100%
-		float: left		
+		float: left
 		margin-right: 90px
 		img
 			width: 100%
@@ -411,12 +415,12 @@
 			margin: 0 auto
 	&__info
 		overflow: hidden
-		padding: 35px 0 0 
+		padding: 35px 0 0
 		+r(1028)
 			clear: both
 			max-width: 380px
 		+r(768)
-			margin: 0 auto 
+			margin: 0 auto
 			max-width: 100%
 			text-align: center
 		&.is-small
@@ -433,17 +437,17 @@
 		p
 			+pfi
 			font-size: 15px
-			color: #89859a 
+			color: #89859a
 	&__label
 		+pfi
 		font-size: 18px
 		color: #4c4369
-		line-height: 1.4 
+		line-height: 1.4
 		margin-bottom: 25px
 		display: block
 		+r(768)
 			max-width: 240px
-			margin: 0 auto 25px 
+			margin: 0 auto 25px
 	&__btn
 		clear: both
 		padding: 26px 0 0
@@ -460,15 +464,15 @@
 				margin: 0 auto
 	&__price
 		+clr
-		padding: 0 0 28px 
+		padding: 0 0 28px
 	&__pack
 		+clr
 		font-size: 0
 		text-align: center
-		padding: 0 0 15px 
+		padding: 0 0 15px
 		p
 			font-size: 18px
-			padding: 5px 0 0 
+			padding: 5px 0 0
 		img
 			display: inline-block
 			vertical-align: middle
@@ -484,7 +488,7 @@
 		ul
 			display: inline-block
 			vertical-align: middle
-			padding: 0 0 0 6px 
+			padding: 0 0 0 6px
 			li
 				display: inline-block
 				vertical-align: top
@@ -493,7 +497,7 @@
 	&__quantity
 		text-align: center
 		font-size: 0
-		padding: 17px 0 19px 
+		padding: 17px 0 19px
 		border-top: 1px solid #f1f0f3
 		.spinner
 			float: none
@@ -503,20 +507,20 @@
 			+hl
 			font-size: 13px
 			letter-spacing: 0.03em
-			color: #4c4369 
+			color: #4c4369
 			margin-bottom: 10px
 	&__box
 		font-size: 0
 		text-align: center
 		border-top: 1px solid #f1f0f3
-		padding: 10px 0 15px 
+		padding: 10px 0 15px
 		.price
 			float: none
 	&__block
 		display: none
 		&.is-active
 			display: block
-			
+
 
 .popup
 	&-wrap
@@ -525,8 +529,8 @@
 		left: 0
 		bottom: 0
 		right: 0
-		background: rgba(72, 61, 50, 0.8) 
-		z-index: 300 
+		background: rgba(72, 61, 50, 0.8)
+		z-index: 300
 		overflow: auto
 		display: none
 		&.is-active
@@ -538,12 +542,12 @@
 		right: 17px
 		cursor: pointer
 	&__inner
-		padding: 90px 0 70px 
+		padding: 90px 0 70px
 	&__success
 		position: relative
 		z-index: 2
 		max-width: 330px
-		margin: 0 auto 
+		margin: 0 auto
 	&__logo
 		position: absolute
 		top: -55px
@@ -554,7 +558,7 @@
 		background: #fff
 		+border-radius(50%)
 		padding: 38px 0 0
-		+box 
+		+box
 		img
 			width: 100px
 			display: block
@@ -562,9 +566,9 @@
 .form
 	max-width: 298px
 	padding: 0 30px
-	margin: 0 auto  
+	margin: 0 auto
 	position: relative
-	z-index: 2 
+	z-index: 2
 	text-align: left
 	&__title
 		text-align: center
@@ -585,7 +589,7 @@
 			+pfi
 			font-size: 15px
 			color: #89859a
-			
+
 .field
 	margin-bottom: 15px
 	label
@@ -595,11 +599,11 @@
 		+opacity(0.5)
 		+hr
 		font-size: 11px
-		letter-spacing: 0.1em 
+		letter-spacing: 0.1em
 		color: #c2bfcd
 		text-transform: uppercase
 		display: block
-		margin: 0 0 5px 
+		margin: 0 0 5px
 		small
 			+pfi
 			font-size: 14px
@@ -610,7 +614,7 @@
 .input, .textarea
 	+hr
 	font-size: 11px
-	letter-spacing: 0.1em 
+	letter-spacing: 0.1em
 	color: #89859a
 	border: 1px solid #e0dfe6
 	background: #fff
@@ -619,10 +623,10 @@
 	+box
 	+transition(all 0.3s)
 	&:hover, &:focus
-		border-color: #a19dae 
+		border-color: #a19dae
 	&.error
 		color: #FF4141
-		border-color: #ff4141 
+		border-color: #ff4141
 .textarea
 	height: 68px
 	resize: none
@@ -631,15 +635,15 @@ label.error
 	+opacity(0)
 .section
 	z-index: 5
-	position: relative 
+	position: relative
 .out
 	&.is-inner
 		position: relative
 		.bg-wrap
 			z-index: 0
 		.bg
-			background-attachment: inherit 
-			
+			background-attachment: inherit
+
 .consultation
 	max-width: 960px
 	text-align: center
@@ -649,58 +653,58 @@ label.error
 		margin: 0 auto 40px
 		+r(768)
 			max-width: 70%
-			margin: 0 auto 30px 
+			margin: 0 auto 30px
 	&__section
 		padding-bottom: 240px
 		margin-bottom: 40px
 		position: relative
 		+r(768)
-			padding-bottom: 130px 
+			padding-bottom: 130px
 		&:after
-			content: "" 
+			content: ""
 			position: absolute
 			bottom: 0
 			left: 0
 			right: 0
 			height: 200px
-			background: url(../img/icons/consultation-deco.png) no-repeat bottom center  
-			-webkit-background-size: contain 
-			-o-background-size: contain 
-			background-size: contain 
+			background: url(../img/icons/consultation-deco.png) no-repeat bottom center
+			-webkit-background-size: contain
+			-o-background-size: contain
+			background-size: contain
 			+r(768)
-				height: 100px 
+				height: 100px
 		&.is-last
 			padding: 0
 			+r(768)
-				padding-bottom: 0 
+				padding-bottom: 0
 			&:after
 				display: none
 	&__number
 		+pf
 		font-size: 80px
-		letter-spacing: 0.05em 
+		letter-spacing: 0.05em
 		color: #4c4369
-		display: block 
+		display: block
 		margin-bottom: 25px
 		+r(768)
 			font-size: 32px
 			margin-bottom: 30px
 	&__contacts
-		padding: 30px 0 
+		padding: 30px 0
 		+r(768)
-			padding: 20px 0 0 
+			padding: 20px 0 0
 		div
 			+pfi
 			font-size: 30px
 			line-height: 1.5
-			color: #8e88a3 
+			color: #8e88a3
 			+r(768)
 				font-size: 18px
 				line-height: 2
 			&.is-orange
-				color: #e8c29a 
+				color: #e8c29a
 				span
-					border-bottom-color: #e8c29a 
+					border-bottom-color: #e8c29a
 		span
 			border-bottom: 1px solid #8e88a3
 
@@ -722,11 +726,11 @@ label.error
 			height: 100%
 	&__text
 		overflow: hidden
-		padding: 5px 0  
+		padding: 5px 0
 		+r(768)
 			padding: 0 20px
 			max-width: 300px
-			margin: 0 auto 
+			margin: 0 auto
 		p
 			+pfi
 			font-size: 18px
@@ -738,7 +742,7 @@ label.error
 			font-size: 11px
 			line-height: 1.8
 			color: #c2bfcd
-			letter-spacing: 0.02em  
+			letter-spacing: 0.02em
 			+opacity(0.5)
 			max-width: 170px
 			display: block
@@ -762,7 +766,7 @@ label.error
 	.form-wrap
 		&.is-hidden
 			display: none
-	
+
 .success
 	text-align: center
 	max-width: 350px
@@ -773,13 +777,13 @@ label.error
 		+pfi
 		font-size: 18px
 		line-height: 1.66
-		color: #89859a 
+		color: #89859a
 		margin-bottom: 30px
 .btn-refresh
 	+s(refresh)
 	display: inline-block
 	vertical-align: top
-	
+
 .bg-wrap
 	&.is-inner
 		.bg

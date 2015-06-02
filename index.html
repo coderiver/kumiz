@@ -28,11 +28,11 @@
 										<path d="M3,60c0,0,12,0,27,0s27,0,27,0" fill="none"/>
 									</svg>
 								</span>
+								<span class="header__link">Весь сайт</span>
 							</button>
 						</div>
-						<a href="#all" class="header__link js-link" data-menuanchor="all">Весь сайт</a>
 					</div>
-					<a href="#top" class="logo"><img src="img/logo.png" alt="logo"></a>
+					<a href="#" class="logo js-top"></a>
 					<div class="header__bl onright">
 						<div class="button-wrap">
 							<button class="button button--line button--effect-1">
@@ -59,10 +59,10 @@
 			<div class="section large-pad no-bg js-fade">
 				<div class="section__in txt-center">
 					<h1 class='h1 max-width js-fade-delay-1'>Твой следующий шаг на пути к здоровью и долголетию</h1>
-					<ul class="nav js-fade-delay-2">
-						<li><a href="#products" class="nav__link js-link">Продукты</a></li>
-						<li><a href="#blog" class="nav__link js-link">Блог</a></li>
-						<li><a href="#about" class="nav__link js-link">Компания</a></li>
+					<ul class="anchors js-fade-delay-2">
+						<li><a href="#products" class="anchors__link js-link">Продукты</a></li>
+						<li><a href="#blog" class="anchors__link js-link">Блог</a></li>
+						<li><a href="#about" class="anchors__link js-link">Компания</a></li>
 					</ul>
 					<p class="more"><span>Ниже больше</span></p>
 				</div>
@@ -112,34 +112,34 @@
 				<div class="section__in">
 					<h2 class="h2">Наш блог</h2>
 					<h3 class="h3">Свежие события</h3>
-					<div class="txt-center">
+					<div class="txt-center blog-slider">
 						<div class="blog js-blog js-fade-delay-1">
 							<div class="blog__item">
-								<div class="blog__in">
+								<a href="#" class="blog__in">
 									<div class="blog__img">
 										<img src="img/blog1.jpg" alt="">
 									</div>
 									<p class="blog__txt">Кобылье молоко и кумыс - здоровье в каждой капле</p>
 									<p class="blog__date">06 марта 2015</p>
-								</div>
+								</a>
 							</div>
 							<div class="blog__item">
-								<div class="blog__in">
+								<a href="#" class="blog__in">
 									<div class="blog__img">
 										<img src="img/blog2.jpg" alt="">
 									</div>
 									<p class="blog__txt">Невероятная польза от кумыса.</p>
 									<p class="blog__date">06 марта 2015 </p>
-								</div>
+								</a>
 							</div>
 							<div class="blog__item">
-								<div class="blog__in">
+								<a href="#" class="blog__in">
 									<div class="blog__img">
 										<img src="img/blog3.jpg" alt="">
 									</div>
 									<p class="blog__txt">Влияние кумыса на сердечно-сосудистую и репродуктивную систему</p>
 									<p class="blog__date">06 марта 2015 </p>
-								</div>
+								</a>
 							</div>
 						</div>
 						<div class="blog__btn"><a href="1-0blog.html" class="button is-orange">Весь блог</a></div>
@@ -258,26 +258,18 @@
 	<!-- begin mobile-menu -->
 	<nav class="mob">
 		<div class="mob__in">
-			<a href="#top" class="mob__logo"><img src="img/logo-small.png" alt=""></a>
+			<a href="#" class="mob__logo"><img src="img/logo-small.png" alt=""></a>
 			<div class="mob__nav">
-				<a href="#" class="mob__link">Авторские продукты</a>
 				<ul class="mob__menu">
-					<li><a href="#products" class="js-link">Продукты</a></li>
-					<li><a href="#blog" class="js-link">Блог</a></li>
-					<li><a href="#company" class="js-link">Компания</a></li>
+					<li><a href="#" class="mob__link is-active">Главная</a></li>
+					<li><a href="#" class="mob__link">Блог</a></li>
+					<li><a href="#" class="mob__link">Кобылье молоко и кумыс</a></li>
+					<li><a href="#" class="mob__link">Производство</a></li>
+					<li><a href="#" class="mob__link">Сервис</a></li>
 				</ul>
 			</div>
-			<div class="mob__nav">
-				<a href="#" class="mob__link is-active">Кобылье молоко<br>и кумыс</a>
-				<ul class="mob__menu">
-					<li><a href="#">Терапевтические свойства</a></li>
-					<li><a href="#">Производство</a></li>
-					<li><a href="#">Обслуживание</a></li>
-					<li><a href="#">Стоимость</a></li>
-				</ul>
-			</div>
+			<a href="#" class="mob__order">Консультация</a>
 			<a href="#" class="mob__order">Заказать</a>
-
 		</div>
 	</nav>
 	<div class="mob-close js-mob-close">

@@ -41,20 +41,23 @@
 	&__bl
 		font-size: 0
 		&:first-child
-			margin-top: 9px
+			margin-top: 4px
 	&__menu
 		display: inline-block
 		vertical-align: middle
+		&:hover
+			cursor: pointer
+			.header__link
+				color: $gray
 	&__link
 		display: inline-block
-		margin-left: 20px
+		margin-left: 16px
 		text-transform: uppercase
 		font-size: 11px
-		color: $peach
+		color: #E8C29A
 		vertical-align: middle
 		+hb
-		&:hover
-			color: $gray
+		+transition(color 0.2s ease)
 	&.is-visible
 		top: 0
 	+r(768)
@@ -68,40 +71,25 @@
 			padding: 5px 25px 0
 		.header__link
 			display: none
-		.logo
-			top: 25px
-			width: 100px
-			margin-left: -50px
 
 .logo
 	position: absolute
-	top: 60px
+	top: 85px
 	left: 50%
 	margin-left: -81px
-	img
-		+transition(all 0.7s ease)
-	&:before
-		content: ""
-		position: absolute
-		left: 50%
-		margin-left: -50px
-		width: 100px
-		height: 74px
-		background: url(../img/logo-small.png) no-repeat
-		+opacity(0)
-		+transition(opacity 0.8s ease)
-	&.small
-		img
-			+opacity(0)
-			+transform(scale(0.2) translateY(-100%))
-		&:before
-			+opacity(1)
+	width: 190px
+	height: 137px
+	background: url(../img/logo.png) no-repeat
+	+transition(all 0.8s ease)
+	&.small,
+	&.logo_inner
+		top: 20px
+		+transform(scale(0.56))
+		+opacity(0.5)
 	+r(768)
-		img
-			+opacity(0)
-			+transform(scale(0.2) translateY(-100%))
-		&:before
-			+opacity(1)
+		top: 20px
+		+transform(scale(0.56))
+		+opacity(0.5)
 
 .more
 	position: relative
@@ -156,7 +144,7 @@
 			max-width: 1080px
 			margin: 0 auto
 			padding-top: 170px
-		.nav
+		.anchors
 			margin-top: 55px
 		.more
 			padding-top: 170px
@@ -177,11 +165,11 @@
 				margin-left: -15.5px
 			.more
 				display: block
-				padding-top: 125px		
+				padding-top: 125px
 
 
 //navigation
-.nav
+.anchors
 	font-size: 0
 	li
 		position: relative
@@ -209,7 +197,7 @@
 		margin-top: 30px
 		li
 			padding: 0 15px
-		.nav__link
+		.anchors__link
 			font-size: 14px
 
 //product
@@ -281,26 +269,33 @@
 			display: none
 
 //blog
+.blog-slider
+	margin: 0 -20px
+
 .blog
 	font-size: 0
 	margin-top: 42px
 	&__item
 		display: inline-block
 		text-align: center
-		height: 370px
 		padding: 22px
 		text-align: left
 		vertical-align: top
 		+box
 	&__in
+		display: block
 		max-width: 315px
+		height: 370px
 		margin: 0 auto
 		padding: 20px
 		font-size: 18px
 		background-color: #fff
 		overflow: hidden
 		+box-shadow(0 1px 15px rgba(174, 158, 148, 0.43))
+		+transition(box-shadow 0.3s ease)
 		+box
+		&:hover
+			+box-shadow(0 1px 50px rgba(174, 158, 148, 0.5))
 	&__img
 		height: 192px
 		margin-bottom: 24px
@@ -321,20 +316,22 @@
 		+hl
 	&__btn
 		display: block
-		margin-top: 23px
+		margin-top: 3px
 	&.slick-slider
 		.blog__item
 			padding: 22px 0
 		.slick-prev
-			left: 10px
+			left: 5px
 			&:before
 				content: ""
 				+svg(prev, 14, 33)
 		.slick-next
-			right: 10px
+			right: 5px
 			&:before
 				content: ""
 				+svg(next, 14, 33)
+		.slick-list
+			padding: 20px 0
 	+r(768)
 		.blog__in
 			max-width: 245px
@@ -344,11 +341,6 @@
 			font-size: 12px
 		.blog__btn
 			margin-top: 28px
-		&.slick-slider
-			.slick-prev
-				left: -10px
-			.slick-next
-				right: -10px
 
 //about
 .about
@@ -517,30 +509,31 @@
 		margin-bottom: 40px
 	.mob__nav
 		position: relative
-		margin-bottom: 30px
+		margin-bottom: 50px
 	.mob__link
-		display: inline-block
-		margin-bottom: 10px
+		display: block
+		padding: 10px 0 12px
 		font-size: 18px
 		color: $violet
-		text-decoration: none
+		text-decoration: underline
+		font-weight: 400
 		+pf
 		&:hover, &.is-active
 			text-decoration: none
+			color: $peach
 	.mob__menu
+		max-width: 195px
+		margin: 0 auto
 		li
-			margin-bottom: 10px
-			a
-				font-size: 18px
-				color: $peach
-				text-decoration: underline
-				+pf
-				&:hover
-					text-decoration: none
+			border-bottom: 1px solid #F1F0F3
+			&:last-child
+				border-bottom: none
 	.mob__order
+		display: block
+		margin-bottom: 12px
 		font-size: 18px
 		color: $violet
-		font-weight: bold
+		font-weight: 700
 		text-decoration: underline
 		+pf
 		&:hover
