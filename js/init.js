@@ -4,4 +4,6 @@ head.load("js/lib/jquery.js",
 					"js/lib/snap.svg-min.js",
 					"js/lib/classie.js",
 					"js/lib/dialogFx.js",
+					"js/lib/scrollTo.min.js",
+					"js/lib/jquery.form-validator.min.js",
 					"js/common.js");

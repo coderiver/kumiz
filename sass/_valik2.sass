@@ -1,0 +1,784 @@
+.header
+	.logo
+		&_inner
+			width: 100px
+			margin-left: -50px 
+			+r(768)
+				top: 25px
+			img
+				width: 100%
+.breadcrumbs
+	font-size: 0
+	text-align: center
+	padding: 25px 0 50px
+	+r(768)
+		padding: 25px 0 35px 
+	li
+		display: inline-block
+		vertical-align: top
+		padding: 0 16px
+		position: relative
+		&:first-child
+			&:before
+				display: none
+		&:before
+			content: "" 
+			position: absolute
+			top: 8px
+			left: 0
+			width: 3px
+			height: 3px
+			background-color: #E8C29A
+			+border-radius(50%)
+	a
+		+pfi
+		font-size: 13px
+		letter-spacing: 0.025em 
+		color: #4c4369
+		+opacity(0.7)
+		+transition(opacity 0.3s)
+		&:hover
+			+opacity(1)
+
+.tags
+	font-size: 0
+	text-align: center
+	padding: 25px 0 0 
+	li
+		display: inline-block
+		vertical-align: top
+		padding: 0 13px 
+	a
+		+pf
+		font-size: 16px
+		color: #8e88a3
+		+transition(color 0.3s)
+		&:hover, &.is-active
+			color: #e8c29a 
+
+.pages
+	font-size: 0
+	text-align: center
+	padding: 45px 0 
+	li
+		display: inline-block
+		vertical-align: top
+		padding: 0 6px 
+	a
+		+pf
+		font-size: 18px
+		color: #8e88a3
+		+transition(color 0.3s)
+		&:hover, &.is-active
+			color: #e8c29a
+
+.section
+	&.is-blog
+		+r(768)
+			padding: 0
+		&:after
+			display: none
+		.blog__item
+			margin-bottom: 44px
+		.blog__in
+			+transition(box-shadow 0.3s)
+			&:hover
+				+box-shadow(0 1px 60px rgba(174, 158, 148, 0.5))
+				
+.footer
+	padding: 180px 20px 45px
+	position: relative
+	z-index: 10 
+	+r(768)
+		padding: 20px 20px 140px 
+	&__in
+		+clr
+		text-align: center
+		max-width: 1500px
+		margin: 0 auto
+	p
+		+hr
+		font-size: 13px
+		letter-spacing: 0.03em 
+		padding: 10px 0 
+		color: #fff
+		+r(768)
+			color: #8b87a1 
+			padding: 5px 0 
+		a
+			color: #fff 
+			+r(768)
+				color: #8b87a1 
+	&__copy
+		float: left
+		text-align: left
+		+r(768)
+			float: none
+			text-align: center
+	&__made
+		float: right
+		text-align: right
+		+r(768)
+			float: none
+			text-align: center
+	.button
+		margin: 0 10px 
+		+r(768)
+			margin: 0 0 20px 
+
+.in-title
+	+pf
+	line-height: 1.25
+	color: #4c4369
+	font-size: 40px
+	+r(768)
+		font-size: 24px
+		text-align: center
+.inner
+	max-width: 803px
+	padding: 0 20px 
+	margin: 0 auto
+	+r(768)
+		padding: 0 
+	p, .inner__box
+		padding: 0 10% 
+		+r(768)
+			padding: 0 25px 
+	&__box
+		+r(768)
+			text-align: center
+	.in-title
+		padding: 0 2% 25px 10% 
+		+r(768)
+			padding: 0 25px 25px
+	&__heading
+		+pf
+		line-height: 1.25
+		color: #4c4369
+		padding: 0 8% 0 10% 
+		font-size: 30px
+		margin-bottom: 45px
+		+r(768)
+			padding: 0 25px 
+			font-size: 20px
+			margin-bottom: 30px
+			text-align: center
+	img
+		max-width: 100%
+		margin-bottom: 30px
+	p
+		+hl
+		font-size: 16px
+		line-height: 1.75
+		letter-spacing: 0.03em
+		color: #8e88a3 
+		margin-bottom: 30px
+		+r(768)
+			font-size: 14px
+		b
+			+hr
+			font-weight: normal
+	blockquote
+		+pfi
+		font-size: 24px
+		line-height: 1.5
+		color: #e8c29a
+		margin: 0 -10px 30px 0 
+		+r(768)
+			padding: 0 25px 
+			margin: 0 0 30px 
+			font-size: 18px
+	&__news
+		padding: 0 0 50px  
+		text-align: center
+		p
+			margin-bottom: 10px
+			padding: 0 9% 0 10% 
+			text-align: left
+			+r(768)
+				padding: 0 25px 
+		img
+			max-width: 300px
+			float: left
+			margin: 10px 35px 10px 0 
+			+r(768)
+				float: none
+				margin: 10px 0 30px  
+.back
+	display: inline-block
+	position: relative
+	padding: 4px 0 3px 46px
+	+hb
+	font-size: 11px
+	text-transform: uppercase
+	color: #e8c29a
+	&:before
+		content: ""
+		position: absolute
+		top: 50%
+		left: 0
+		margin: -10px 0 0 
+		+svg(back, 33, 20)
+
+.gallery
+	margin-bottom: 55px
+	&__wrap
+		position: relative
+		text-align: center
+	&__slider
+		position: relative
+	.slick-prev, .slick-next
+		position: absolute
+		top: 50%
+		margin-top: -11px
+		z-index: 200 
+		+r(1028)
+			display: none !important
+		&:before
+			display: none
+	.slick-prev
+		+svg(arr-prev, 49, 21)
+		left: -87px
+	.slick-next
+		+svg(arr-next, 49, 21)
+		right: -87px
+	&__pager
+		display: inline-block
+		vertical-align: top
+		+pf
+		font-size: 18px
+		color: #8e88a3 
+		position: relative
+		padding: 0 20px 
+	&__prev, &__next
+		position: absolute
+		top: 50%
+	&__prev
+		left: 0
+		+s(cap-left)
+	&__next
+		right: 0
+		+s(cap-right)
+	&__current
+		font-size: 36px
+	img
+		margin-bottom: 20px
+
+.share
+	font-size: 0
+	text-align: center
+	padding: 50px 0  
+	li
+		padding: 0 15px 15px
+		display: inline-block
+		vertical-align: middle
+		+r(480)
+			display: block
+	a
+		display: inline-block
+		img
+			margin: 0
+		
+
+.number
+	position: relative
+	font-size: 0
+	&__input
+		display: inline-block
+		vertical-align: top
+		width: 35px
+		height: 35px
+		line-height: 35px
+		text-align: center
+		+hl
+		font-size: 16px
+		color: #4c4369 
+		border: 1px solid #C8C6CF
+		background: #fff 
+		margin: 0 9px 
+	&__plus,
+	&__minus
+		display: inline-block
+		vertical-align: top
+		width: 37px
+		height: 37px
+		color: #89859a
+		background: rgba(221, 218, 231, 0.5)
+		position: relative
+		&:before, &:after
+			position: absolute
+			content: "" 
+			background: #89859a 
+		&:before
+			top: 18px
+			height: 1px
+			left: 11px
+			right: 11px
+	&__plus
+		&:after
+			top: 11px
+			bottom: 11px
+			left: 18px
+			width: 1px
+
+.price
+	+pf
+	font-size: 36px
+	line-height: 24px
+	color: #4c4369
+	small
+		font-size: 18px		
+.order
+	max-width: 1024px
+	padding: 0 20px 
+	margin: 0 auto
+	+r(768)
+		padding: 0 0 50px
+	&__tabs
+		font-size: 0
+		text-align: center
+		li
+			display: inline-block
+			vertical-align: top
+			padding: 0 5px 
+			+r(768)
+				padding: 0
+		a
+			+pf
+			font-size: 40px
+			line-height: 1
+			color: #E8C29A
+			display: inline-block
+			padding: 3px 22px 8px
+			+r(768)
+				font-size: 26px
+				padding: 11px 22px 13px 
+			&.is-active
+				color: #4c4369
+				background-color: #F6F5F7
+				+border-radius(24px)
+				span
+					border: none
+			span
+				border-bottom: 1px dotted #E8C29A
+	&__inner
+		+clr
+		padding: 25px 0 0 
+	&__filter
+		float: left
+		width: 200px
+		padding: 25px 0 0 
+		+r(768)
+			float: none
+			margin: 0 auto
+			text-align: center
+			padding: 5px 0 0  
+		li
+			padding: 0 15px 10px
+			a
+				display: inline-block
+				max-width: 130px
+				padding: 8px 20px 
+				color: #4C4369
+				+pf
+				font-size: 16px
+				&.is-active
+					border: 1px solid #E8C29A
+					+border-radius(19px)
+					span
+						border-bottom: none
+				&:hover
+					color: #E8C29A
+					span
+						border-bottom: none
+				span
+					border-bottom: 1px solid rgba(232, 194, 154, 0.7)
+	&__content
+		overflow: hidden
+	&__img
+		max-width: 350px
+		width: 100%
+		float: left		
+		margin-right: 90px
+		img
+			width: 100%
+			+r(768)
+				max-width: 90%
+		+r(768)
+			float: none
+			margin: 0 auto
+	&__info
+		overflow: hidden
+		padding: 35px 0 0 
+		+r(1028)
+			clear: both
+			max-width: 380px
+		+r(768)
+			margin: 0 auto 
+			max-width: 100%
+			text-align: center
+		&.is-small
+			max-width: 240px
+		.spinner
+			float: left
+			+r(768)
+				float: none
+				margin-bottom: 20px
+		.price
+			float: right
+			+r(768)
+				float: none
+		p
+			+pfi
+			font-size: 15px
+			color: #89859a 
+	&__label
+		+pfi
+		font-size: 18px
+		color: #4c4369
+		line-height: 1.4 
+		margin-bottom: 25px
+		display: block
+		+r(768)
+			max-width: 240px
+			margin: 0 auto 25px 
+	&__btn
+		clear: both
+		padding: 26px 0 0
+		border-top: 1px solid #e0e0e0
+		.button
+			width: 100%
+			text-align: center
+			margin-bottom: 30px
+			+r(768)
+				max-width: 260px
+		p
+			+r(768)
+				max-width: 200px
+				margin: 0 auto
+	&__price
+		+clr
+		padding: 0 0 28px 
+	&__pack
+		+clr
+		font-size: 0
+		text-align: center
+		padding: 0 0 15px 
+		p
+			font-size: 18px
+			padding: 5px 0 0 
+		img
+			display: inline-block
+			vertical-align: middle
+			width: 81px
+		span
+			padding: 15px 10px 0
+			+pf
+			font-size: 24px
+			line-height: 1
+			color: #8e88a3
+			display: inline-block
+			vertical-align: middle
+		ul
+			display: inline-block
+			vertical-align: middle
+			padding: 0 0 0 6px 
+			li
+				display: inline-block
+				vertical-align: top
+				+s(bottle2)
+				margin: 0 0 0 -6px
+	&__quantity
+		text-align: center
+		font-size: 0
+		padding: 17px 0 19px 
+		border-top: 1px solid #f1f0f3
+		.spinner
+			float: none
+			display: inline-block
+		span
+			display: block
+			+hl
+			font-size: 13px
+			letter-spacing: 0.03em
+			color: #4c4369 
+			margin-bottom: 10px
+	&__box
+		font-size: 0
+		text-align: center
+		border-top: 1px solid #f1f0f3
+		padding: 10px 0 15px 
+		.price
+			float: none
+	&__block
+		display: none
+		&.is-active
+			display: block
+			
+
+.popup
+	&-wrap
+		position: fixed
+		top: 0
+		left: 0
+		bottom: 0
+		right: 0
+		background: rgba(72, 61, 50, 0.8) 
+		z-index: 300 
+		overflow: auto
+		display: none
+		&.is-active
+			display: block
+	&__close
+		+s(close)
+		position: absolute
+		top: 16px
+		right: 17px
+		cursor: pointer
+	&__inner
+		padding: 90px 0 70px 
+	&__success
+		position: relative
+		z-index: 2
+		max-width: 330px
+		margin: 0 auto 
+	&__logo
+		position: absolute
+		top: -55px
+		left: 50%
+		margin-left: -90px
+		width: 180px
+		height: 180px
+		background: #fff
+		+border-radius(50%)
+		padding: 38px 0 0
+		+box 
+		img
+			width: 100px
+			display: block
+			margin: 0 auto
+.form
+	max-width: 298px
+	padding: 0 30px
+	margin: 0 auto  
+	position: relative
+	z-index: 2 
+	text-align: left
+	&__title
+		text-align: center
+		+pf
+		font-size: 40px
+		line-height: 1.25
+		color: #4c4369
+		display: block
+		margin-bottom: 20px
+	&__bottom
+		padding: 8px 0 10px
+		text-align: center
+		.button
+			width: 100%
+			+box
+			margin-bottom: 20px
+		p
+			+pfi
+			font-size: 15px
+			color: #89859a
+			
+.field
+	margin-bottom: 15px
+	label
+		display: block
+		+transition(all 0.3s)
+	span
+		+opacity(0.5)
+		+hr
+		font-size: 11px
+		letter-spacing: 0.1em 
+		color: #c2bfcd
+		text-transform: uppercase
+		display: block
+		margin: 0 0 5px 
+		small
+			+pfi
+			font-size: 14px
+			color: #E8C29A
+	.help-block
+		display: none
+
+.input, .textarea
+	+hr
+	font-size: 11px
+	letter-spacing: 0.1em 
+	color: #89859a
+	border: 1px solid #e0dfe6
+	background: #fff
+	padding: 13px
+	width: 100%
+	+box
+	+transition(all 0.3s)
+	&:hover, &:focus
+		border-color: #a19dae 
+	&.error
+		color: #FF4141
+		border-color: #ff4141 
+.textarea
+	height: 68px
+	resize: none
+label.error
+	font-size: 0
+	+opacity(0)
+.section
+	z-index: 5
+	position: relative 
+.out
+	&.is-inner
+		position: relative
+		.bg-wrap
+			z-index: 0
+		.bg
+			background-attachment: inherit 
+			
+.consultation
+	max-width: 960px
+	text-align: center
+	margin: 0 auto
+	.in-title
+		max-width: 340px
+		margin: 0 auto 40px
+		+r(768)
+			max-width: 70%
+			margin: 0 auto 30px 
+	&__section
+		padding-bottom: 240px
+		margin-bottom: 40px
+		position: relative
+		+r(768)
+			padding-bottom: 130px 
+		&:after
+			content: "" 
+			position: absolute
+			bottom: 0
+			left: 0
+			right: 0
+			height: 200px
+			background: url(../img/icons/consultation-deco.png) no-repeat bottom center  
+			-webkit-background-size: contain 
+			-o-background-size: contain 
+			background-size: contain 
+			+r(768)
+				height: 100px 
+		&.is-last
+			padding: 0
+			+r(768)
+				padding-bottom: 0 
+			&:after
+				display: none
+	&__number
+		+pf
+		font-size: 80px
+		letter-spacing: 0.05em 
+		color: #4c4369
+		display: block 
+		margin-bottom: 25px
+		+r(768)
+			font-size: 32px
+			margin-bottom: 30px
+	&__contacts
+		padding: 30px 0 
+		+r(768)
+			padding: 20px 0 0 
+		div
+			+pfi
+			font-size: 30px
+			line-height: 1.5
+			color: #8e88a3 
+			+r(768)
+				font-size: 18px
+				line-height: 2
+			&.is-orange
+				color: #e8c29a 
+				span
+					border-bottom-color: #e8c29a 
+		span
+			border-bottom: 1px solid #8e88a3
+
+.c-blockquote
+	text-align: left
+	+clr
+	max-width: 840px
+	margin: 0 auto
+	&__img
+		float: left
+		width: 154px
+		height: 154px
+		margin-right: 70px
+		+r(768)
+			float: none
+			margin: 0 auto 25px
+		img
+			width: 100%
+			height: 100%
+	&__text
+		overflow: hidden
+		padding: 5px 0  
+		+r(768)
+			padding: 0 20px
+			max-width: 300px
+			margin: 0 auto 
+		p
+			+pfi
+			font-size: 18px
+			line-height: 1.66
+			color: #8e88a3
+			margin-bottom: 25px
+		span
+			+hr
+			font-size: 11px
+			line-height: 1.8
+			color: #c2bfcd
+			letter-spacing: 0.02em  
+			+opacity(0.5)
+			max-width: 170px
+			display: block
+			text-transform: uppercase
+
+.js-form-back
+	&.is-success
+		.form-wrap
+			display: none
+			&.is-hidden
+				display: block
+	.form-wrap
+		&.is-hidden
+			display: none
+.js-form
+	&.is-success
+		.form-wrap
+			display: none
+			&.is-hidden
+				display: block
+	.form-wrap
+		&.is-hidden
+			display: none
+	
+.success
+	text-align: center
+	max-width: 350px
+	margin: 0 auto
+	.in-title
+		margin-bottom: 20px
+	p
+		+pfi
+		font-size: 18px
+		line-height: 1.66
+		color: #89859a 
+		margin-bottom: 30px
+.btn-refresh
+	+s(refresh)
+	display: inline-block
+	vertical-align: top
+	
+.bg-wrap
+	&.is-inner
+		.bg
+			position: absolute

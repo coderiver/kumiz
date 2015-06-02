@@ -1,0 +1,228 @@
+// # SHORT HOWTO
+// ## Sprites
+//     .whatever
+//          +sized-sprite($icons, coderiver) //or
+// 			+s(codedby) //gets default value for spritemap as $icons
+// ### animation example
+//     +include keyframes(rotate)
+//        from
+//           +rotate(0)
+//        to
+//           +rotate(360)
+// ## animation usage
+//     body:hover
+// 	    +animation(rotate 200s linear infinite)
+// ## animations easing, see easings.net for full list and examples, tnx @ai
+//     transition: all 1.2s ceaser($ease-in)
+// ## gradient example
+//     +background-image(linear-gradient(#232323, #5c5c5c))
+//     +g(#232323, #5c5c5c)
+//	   horizontal
+//     +gh(#232323, #5c5c5c)
+// ## making bw-images
+//     img
+//			@extend %gray
+// ## predefined media-queries: https://github.com/paranoida/sass-mediaqueries
+//     +min-screen(320)
+//			display: none
+// +max-screen(1000), +iphone5, +iphone4, +ipad-retina, +ipad, +hdpi - also available
+//
+// ## use cycles
+//     @for $i from 1 through 3
+//       .item-#{$i}
+//			width: 2em * $i
+//     @each $s in a,b,c
+// 	    	#{$s}
+//				display: none
+
+
+// fonts
++font(HelveticaNeueCyrRoman, HelveticaNeueCyrRoman)
++font(HelveticaNeueCyrBold, HelveticaNeueCyrBold)
++font(HelveticaNeueCyrThin, HelveticaNeueCyrThin)
++font(HelveticaNeueCyrLight, HelveticaNeueCyrLight)
++font(HelveticaNeueCyrUltraLight, HelveticaNeueCyrUltraLight)
+
+=hr
+	font-family: 'HelveticaNeueCyrRoman', Helvetica, sans-serif
+
+=ht
+	font-family: 'HelveticaNeueCyrThin', Helvetica, sans-serif
+
+=hl
+	font-family: 'HelveticaNeueCyrLight', Helvetica, sans-serif
+
+=hb
+	font-family: 'HelveticaNeueCyrBold', Helvetica, sans-serif
+
+=hu
+	font-family: 'HelveticaNeueCyrUltraLight', Helvetica, sans-serif
+
+=pf
+	font-family: 'Playfair Display', serif
+
+=pfi
+	font-family: 'Playfair Display', serif
+	font-style: italic
+
+//variables
+$peach: #E8C29A
+$violet: #4C4369
+$gray: #B9B7C2
+$lavender: #8E88A3
+$orange: #f89a36
+
+body
+	font-size: 13px
+	line-height: 1.4
+	background: #fff
+	+hr
+
+.out
+	min-width: 320px
+	position: relative
+	&.open-menu
+		.container
+			&:after
+				width: 100%
+				height: 100%
+				opacity: 1
+				+tr(opacity 500ms)
+		.mob, .mob-close
+			+transform(translate3d(0, 0, 0))
+		.mob-close
+			visibility: visible
+
+.container
+	position: relative
+	left: 0
+	z-index: 99
+	+tr(transform 500ms)
+	&:after
+		content: ""
+		position: absolute
+		top: 0
+		right: 0
+		width: 0
+		height: 0
+		background: rgba(#483c31, 0.6)
+		opacity: 0
+		+transition(opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s)
+		z-index: 1
+
+.main
+	position: relative
+	z-index: 1
+
+a
+	text-decoration: none
+
+h1, h2, h3, h4, h5, h6, strong
+	font-weight: normal
+
+// common blocks
+.txt-center
+	text-align: center
+
+.onleft
+	float: left
+.onright
+	float: right
+
+.h1
+	font-size: 40px
+	color: $violet
+	text-transform: uppercase
+	letter-spacing: 0.08em
+	+ht
+	&.max-width
+		max-width: 750px
+		margin: 0 auto
+	+r(768)
+		font-size: 24px
+
+.h2
+	text-align: center
+	font-size: 50px
+	text-transform: uppercase
+	color: #E8C29A
+	letter-spacing: 0.1em
+	line-height: 1.2
+	+hu
+	+r(768)
+		font-size: 30px
+
+.h3
+	text-align: center
+	font-size: 18px
+	color: #f2ddc6
+	+pfi
+
+.button-wrap
+	font-size: 0
+	.button
+		display: inline-block
+		vertical-align: middle
+		&:not(:only-of-type)
+			&:first-child
+				margin-right: 13px
+	+r(768)
+		display: none
+
+.button
+	display: inline-block
+	padding: 14px 23px
+	text-transform: uppercase
+	font-size: 11px
+	background: none
+	color: $peach
+	border-radius: 19px
+	line-height: 1
+	border: 1px solid $peach
+	+hb
+	+box
+	&:hover
+		color: #F0D6BC
+		border-color: #F0D6BC
+		+transition(all 0.3s ease)
+	&.is-peach
+		background: $peach
+		color: #fff
+		&:hover
+			background: #E0B686
+	&.is-orange
+		background: $orange
+		color: #fff
+		border: none
+		text-align: center
+		a
+			color: #fff
+		&:hover
+			background: #ef7e07
+	.morph-shape
+		position: absolute
+		width: 100%
+		height: 100%
+		top: 0
+		left: 0
+	&.button--line
+		height: 50px
+		position: relative
+		border: none
+		svg
+			fill: none
+			stroke: #e8c29a
+			stroke-width: 2px
+			stroke-linecap: round
+	&.button--fill
+		height: 50px
+		position: relative
+		border: none
+		svg
+			fill: #e8c29a
+			stroke: #e8c29a
+			stroke-width: 2px
+			stroke-linecap: round
+		.button__text
+			position: relative
+			color: #FFF
