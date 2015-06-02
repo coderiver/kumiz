@@ -11,7 +11,7 @@ head.ready(function() {
 	$('.container, .js-mob-close').on('click', function(){
 		$('.out').removeClass('open-menu');
 		$('.bg').removeClass('is-hidden');
-		
+
 	});
 	$('#hamburger').on('click', function(event){
 		var top = $(window).scrollTop();
@@ -28,7 +28,7 @@ head.ready(function() {
 	  };
 	});
 
-	//scrollTo
+	scrollTo
 	function scrollTo(page){
 
 		$('html, body').animate({
@@ -193,7 +193,7 @@ head.ready(function() {
 	$('.js-slider2').slick({
 		slidesToShow: 1
 	});
-	
+
 	$('.js-target-slider').slick({
 		slidesToShow: 1
 	});
@@ -368,7 +368,7 @@ head.ready(function() {
     	    	var m = (l - w)/2;
     	    	var delta = (x - m);
     	    	var koef = (100 - (delta/w)*100);
-    	    
+
     	    if(koef < 15){
     	    	$(".js-room-clean").css('width', '15%');
     	    	$(".js-room-line").css('left', '15%');
@@ -386,10 +386,10 @@ head.ready(function() {
     	    	$('.js-room-text-r').removeClass('is-visible');
     	    }
     	});
-    };    
-        
+    };
+
 	// tabs
-	
+
 	function tab() {
        $(".js-tab").each(function(){
         	var tab_link = $(this).find("a");
@@ -411,7 +411,7 @@ head.ready(function() {
         	   			$('.kind').removeClass('is-visible');
         	   			activeTab.find('.kind').addClass('is-visible');
         	   		}, 100);
-        	   		
+
         	   	};
         	   	return false;
         	});
@@ -419,12 +419,12 @@ head.ready(function() {
         	if ($(this).parents('.js-tab-group').find('.js-prev').length) {
         		var prev = $(this).parents(".js-tab-group").find(".js-prev");
         		var next = $(this).parents(".js-tab-group").find(".js-next");
-        		
+
         		prev.on('click', function(){
         			var activeLink = $(this).parents('.js-tab-group').find('.js-tab').find("li.is-active"),
         				prevLink = activeLink.prev().find('a');
         			var	nextTab = prevLink.attr('href');
-        		
+
         			if (activeLink.prev().length) {
         				activeLink.removeClass("is-active").prev().addClass('is-active');
         				tab_cont.hide();
@@ -444,7 +444,7 @@ head.ready(function() {
         	};
        });
   	}
-  	tab();	
+  	tab();
 
 	// parallax effect for bg-images
 	// function parallax(){
@@ -459,12 +459,12 @@ head.ready(function() {
 	// 	});
 	// }
 	// parallax();
-	
+
 
 	// human block
 
 	function human(){
-		// hint appearance 
+		// hint appearance
 		$('.system').hover(function() {
 			var name = $(this).data('name');
 			$('.system').addClass('non-active');
@@ -499,7 +499,7 @@ head.ready(function() {
 		else {
 			$('.js-scroll-down').removeClass('is-scrolled');
 		}
-	}	
+	}
 
 	function nav(){
 		$('.section').each(function(){
@@ -512,7 +512,7 @@ head.ready(function() {
 		});
 		$(".nav a").click(function (){
 		    var page = $(this).attr("href");
-		
+
 		    $('html, body').animate({
 		        scrollTop: $(page).offset().top
 		    }, 500);
@@ -546,7 +546,7 @@ head.ready(function() {
 		scrollBtn();
 		topperScroll();
 	};
-	
+
 	// window scroll events
 	$(window).scroll(function(){
 		if ($('.js-scroll-down').length) {
@@ -626,18 +626,18 @@ head.ready(function() {
 	})();
 
 	// buttons animations
-	
+
 	(function() {
 
 		function extend( a, b ) {
-			for( var key in b ) { 
+			for( var key in b ) {
 				if( b.hasOwnProperty( key ) ) {
 					a[key] = b[key];
 				}
 			}
 			return a;
 		}
-		
+
 		function SVGButton( el, options ) {
 			this.el = el;
 			this.options = extend( {}, this.options );
@@ -691,24 +691,24 @@ head.ready(function() {
 			} );
 		} );
 
-	})();			
+	})();
 
 	// popups
 
 	(function() {
-			
+
 		$('.js-popup').on( 'click', function () {
 			var somedialog = $(this).data('dialog'),
 
 			somedialog = $('#' + somedialog);
-			
+
 
 			var morphEl = somedialog.find( '.morph-shape' ),
 				morphElSvg = morphEl.find('svg');
 
 			var s = Snap( morphElSvg[0] ),
 			path = s.select( 'path' ),
-			steps = { 
+			steps = {
 				open : morphEl.attr( 'data-morph-open' ),
 				close : morphEl.attr( 'data-morph-close' )
 			},
@@ -725,7 +725,7 @@ head.ready(function() {
 
 			dlg.toggle();
 		});
-		
+
 
 	})();
 
@@ -744,7 +744,7 @@ head.ready(function() {
 			}
 		});
 	}
-	
+
 	$(window).scroll(function(){
 		visibility();
 	});
