@@ -242,17 +242,20 @@
 			position: relative
 			display: block
 			&:last-child
-				&:after
-					content: ''
-					position: absolute
-					left: 50%
-					top: 50%
-					margin: -4px 0 0 -4px
-					width: 8px
-					height: 8px
-					border-radius: 50%
-					background: $lavender
-					+transition(all 0.3s ease)
+				position: absolute
+				top: 0
+				+transition(all 0.3s ease)
+				button
+					&:before
+						content: ''
+						position: absolute
+						left: 50%
+						top: 50%
+						margin: -4px 0 0 -4px
+						width: 8px
+						height: 8px
+						border-radius: 50%
+						background: $lavender
 			button
 				position: relative
 				width: 30px
@@ -270,11 +273,9 @@
 					margin: -4px 0 0 -4px
 					background: #F0E3D9
 					border-radius: 50%
-			@for $i from 1 through 3
-				&.slick-active:nth-child(#{$i}) ~ li:last-child > button:after
-					+transform(translateY($i*100%))
-
-
+			@for $i from 1 through 10
+				&.slick-active:nth-child(#{$i}) ~ li:last-child
+					+transform(translateY($i*30px - 30px))
 	+r(768)
 		.product__img,
 		.product__txt
