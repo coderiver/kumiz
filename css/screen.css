@@ -181,11 +181,11 @@ h1, h2, h3, h4, h5, h6, strong { font-weight: normal; }
 .container .section { max-width: 1500px; margin: 0 auto; padding: 0 25px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 .container .section:after { content: ""; position: absolute; bottom: 0; left: 0; right: 0; height: 200px; background: url(../img/icons/consultation-deco.png) no-repeat bottom center; }
 .container .section.no-bg:after { display: none; }
-.container .section.large-pad .section__in { padding: 300px 0 200px; }
+.container .section.large-pad .section__in { padding-top: 300px; }
 .container .section:last-child .section__in { padding-bottom: 0; }
 .container .section__in { max-width: 1080px; margin: 0 auto; padding: 80px 0 280px; }
 .container .section .anchors { margin-top: 55px; }
-.container .section .more { padding-top: 170px; margin-bottom: 30px; }
+.container .section .more { display: block; padding-top: 170px; margin-bottom: 30px; }
 @media only screen and (max-width: 1280px) { .container .section.large-pad .section__in { padding-top: 250px; }
   .container .section .nav { margin-top: 35px; } }
 @media only screen and (max-width: 768px) { .container .section.large-pad .section__in { padding-top: 170px; }
@@ -207,14 +207,15 @@ h1, h2, h3, h4, h5, h6, strong { font-weight: normal; }
 .slick-product .product__slide:after { content: " "; display: table; clear: both; }
 .slick-product .product__img { width: 50%; }
 .slick-product .product__img .product__ttl { display: none; text-align: center; font-size: 24px; }
-.slick-product .product__txt { width: 50%; padding: 20px 5% 0; color: #8e88a3; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.slick-product .product__txt { width: 50%; padding: 20px 50px 0 30px; color: #8e88a3; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 .slick-product .product__txt .button { margin-top: 35px; text-transform: uppercase; }
 .slick-product .product__p { line-height: 24px; letter-spacing: 0.03em; }
 .slick-product .product__ttl { margin-bottom: 30px; padding-top: 20px; font-size: 40px; color: #4c4369; line-height: 1.25; font-family: "Playfair Display", serif; }
-.slick-product .slick-dots { text-align: left; top: 50%; left: 10px; right: inherit; bottom: inherit; -moz-transform: translateY(-50%); -ms-transform: translateY(-50%); -webkit-transform: translateY(-50%); transform: translateY(-50%); }
-.slick-product .slick-dots li { display: block; padding: 11px 0; }
-.slick-product .slick-dots li button { width: 8px; height: 8px; background: #f0e3d9; -moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none; }
-.slick-product .slick-dots li.slick-active button { background: #8e88a3; }
+.slick-product .slick-dots { text-align: left; top: 50%; left: 0; right: inherit; bottom: inherit; -moz-transform: translateY(-50%); -ms-transform: translateY(-50%); -webkit-transform: translateY(-50%); transform: translateY(-50%); }
+.slick-product .slick-dots li { display: block; }
+.slick-product .slick-dots li button { position: relative; width: 30px; height: 30px; border-radius: 0; background: none; -moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none; }
+.slick-product .slick-dots li button:before { content: ""; position: absolute; width: 8px; height: 8px; top: 50%; left: 50%; margin: -4px 0 0 -4px; background: #f0e3d9; border-radius: 50%; }
+.slick-product .slick-dots li.slick-active button:before { background: #8e88a3; }
 @media only screen and (max-width: 768px) { .slick-product .product__img, .slick-product .product__txt { float: none; width: 100%; }
   .slick-product .product__img img { margin: 0 auto; }
   .slick-product .product__img .product__ttl { display: block; }
@@ -272,7 +273,7 @@ h1, h2, h3, h4, h5, h6, strong { font-weight: normal; }
 .all__list a:hover { text-decoration: none; }
 @media only screen and (max-width: 768px) { .all .all__list { width: 100%; display: block; margin: 0 auto 45px; text-align: center; } }
 
-.footer.is-main { padding: 75px 25px 170px; z-index: 15; }
+.footer.is-main { padding: 75px 25px 240px; z-index: 1; }
 .footer.is-main p { color: #4c4369; }
 .footer.is-main p a { color: #4c4369; }
 .footer.is-main p a:hover { text-decoration: underline; }

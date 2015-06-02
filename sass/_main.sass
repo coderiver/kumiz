@@ -4,18 +4,18 @@
 	top: 0
 	left: 50px
 	right: 50px
-	padding: 58px 0 0 
+	padding: 58px 0 0
 	z-index: 9
 	.header__tools
 		float: right
 	+r(1024)
-		padding: 20px 0 0 
+		padding: 20px 0 0
 	+r(600)
 		left: 30px
 		right: 30px
 		.header__tools
-			display: none		
-	
+			display: none
+
 // topper
 .topper
 	position: relative
@@ -25,7 +25,7 @@
 		position: relative
 		padding-top: 170px
 		max-width: 768px
-		margin: 0 auto 
+		margin: 0 auto
 		text-align: center
 		font-size: 1.4rem
 		z-index: 2
@@ -34,13 +34,13 @@
 		//+r(768)
 		//	padding: 130px 20px 0
 		//+r(600)
-		//	padding: 80px 20px 0 
+		//	padding: 80px 20px 0
 	+r(1023)
 		+vertical
 		.topper__in
 			display: inline-block
 			vertical-align: middle
-			padding: 0 20px				
+			padding: 0 20px
 .video
 	position: absolute
 	top: 0
@@ -53,7 +53,7 @@
 	&.video_producing
 		background: url(../img/topper-bg.jpg)
 	&.video_service
-		background: url(../img/topper-bg2.jpg) 		
+		background: url(../img/topper-bg2.jpg)
 .menu
 	position: relative
 	float: left
@@ -62,7 +62,7 @@
 		display: inline-block
 		vertical-align: middle
 		font-size: 1.1rem
-		letter-spacing: 1px 
+		letter-spacing: 1px
 		text-transform: uppercase
 		+hb
 		color: $orange-b
@@ -85,7 +85,7 @@
 				background: #fff
 		.video-btn__text
 			color: #004c99
-			border-color: #004c99						 
+			border-color: #004c99
 	.video-btn__icon
 		position: relative
 		left: 7px
@@ -98,13 +98,13 @@
 			left: 0
 			width: 95px
 			height: 95px
-			margin: -31px 0 0 -39px 
+			margin: -31px 0 0 -39px
 			border-radius: 50%
-			background: transparent 
+			background: transparent
 			z-index: 0
 		& > span
 			position: relative
-			z-index: 2	
+			z-index: 2
 		& > i
 			position: absolute
 			top: 0
@@ -164,14 +164,14 @@
 	position: absolute
 	bottom: 164px
 	left: 50%
-	background: transparent 
+	background: transparent
 	+transform(translateX(-50%))
 	+transition(transform 300ms, opacity 300ms)
 	z-index: 99
 	+r(1280)
 		bottom: 120px
 	+r(768)
-		bottom: 80px 		
+		bottom: 80px
 
 //nav
 .nav
@@ -191,7 +191,7 @@
 			vertical-align: middle
 			height: 92px
 			+vertical
-			margin: 0 16px 
+			margin: 0 16px
 			a
 				display: inline-block
 				vertical-align: middle
@@ -206,14 +206,14 @@
 					border-color: transparent
 					color: $orange
 	+r(1280)
-		display: none				
+		display: none
 
 // orgamism
 .organism
 	position: relative
-	padding: 9rem 0 12rem 
+	padding: 9rem 0 12rem
 	background: #ebece8
-	z-index: 2				
+	z-index: 2
 .human
 	.human__in
 		+clr
@@ -223,7 +223,7 @@
 		background: url(../img/man.png) 50% 0 no-repeat
 		+r(768)
 			background: none
-			height: auto 
+			height: auto
 	.human__left
 		position: relative
 		float: left
@@ -238,7 +238,7 @@
 		+r(768)
 			.human__item
 				height: auto
-				margin-bottom: 20px		
+				margin-bottom: 20px
 	.human__right
 		position: relative
 		float: right
@@ -252,7 +252,7 @@
 				float: right
 			+r(768)
 				margin-bottom: 20px
-				height: auto	
+				height: auto
 	.human__systems
 		position: absolute
 		top: 0
@@ -268,7 +268,7 @@
 			opacity: 0
 			+tr(opacity 300ms)
 			&.is-visible
-				opacity: 1 
+				opacity: 1
 			&.endo
 				top: 15%
 				left: 45.5%
@@ -286,7 +286,7 @@
 				left: 45%
 			&.lungs
 				top: 12%
-				left: 45%			 							 		
+				left: 45%
 .system
 	width: 360px
 	+clr
@@ -295,7 +295,7 @@
 	+r(768)
 		max-width: 100%
 	&.non-active
-		opacity: 0.5 		
+		opacity: 0.5
 	&.system_endo
 		padding-left: 50px
 		&:hover
@@ -306,7 +306,7 @@
 				&:after
 					+animation(sonarEffect1 1.3s ease-out 75ms)
 		+r(1023)
-			padding-left: 0	
+			padding-left: 0
 		.system__title
 			color: #55c977
 	&.system_skin
@@ -329,7 +329,7 @@
 				&:after
 					+animation(sonarEffect3 1.3s ease-out 75ms)
 		+r(1023)
-			padding-left: 0	
+			padding-left: 0
 		.system__title
 			color: #fb6e6d
 	&.system_brain
@@ -342,7 +342,7 @@
 				&:after
 					+animation(sonarEffect4 1.3s ease-out 75ms)
 		+r(1023)
-			margin-right: 0			
+			margin-right: 0
 		.system__title
 			color: #eccd00
 	&.system_stomach
@@ -368,9 +368,9 @@
 				&:after
 					+animation(sonarEffect6 1.3s ease-out 75ms)
 		+r(1023)
-			margin-right: 0			
+			margin-right: 0
 		.system__title
-			color: #729ee7											
+			color: #729ee7
 	.system__left
 		float: left
 		border-radius: 50%
@@ -397,7 +397,7 @@
 		+r(480)
 			float: none
 			margin-right: 0
-			margin-bottom: 10px  	
+			margin-bottom: 10px
 	.system__right
 		overflow: hidden
 	.system__title
@@ -423,7 +423,7 @@
 	100%
 		box-shadow: 0 0 0 1px rgba(255,255,255,0.1), 0 0 5px 5px #55c977, 0 0 0 5px rgba(255,255,255,0.5)
 		transform: scale(1.4)
-		opacity: 0		
+		opacity: 0
 +keyframes(sonarEffect2)
 	0%
 		opacity: 0.3
@@ -433,7 +433,7 @@
 	100%
 		box-shadow: 0 0 0 1px rgba(255,255,255,0.1), 0 0 5px 5px #eaae89, 0 0 0 5px rgba(255,255,255,0.5)
 		transform: scale(1.4)
-		opacity: 0		
+		opacity: 0
 +keyframes(sonarEffect3)
 	0%
 		opacity: 0.3
@@ -443,7 +443,7 @@
 	100%
 		box-shadow: 0 0 0 1px rgba(255,255,255,0.1), 0 0 5px 5px #fd4040, 0 0 0 5px rgba(255,255,255,0.5)
 		transform: scale(1.4)
-		opacity: 0	
+		opacity: 0
 +keyframes(sonarEffect4)
 	0%
 		opacity: 0.3
@@ -453,7 +453,7 @@
 	100%
 		box-shadow: 0 0 0 1px rgba(255,255,255,0.1), 0 0 5px 5px #f3db53, 0 0 0 5px rgba(255,255,255,0.5)
 		transform: scale(1.4)
-		opacity: 0	
+		opacity: 0
 +keyframes(sonarEffect5)
 	0%
 		opacity: 0.3
@@ -483,8 +483,8 @@
 	100%
 		box-shadow: 0 0 0 1px rgba(255,255,255,0.1), 0 0 5px 5px #fff, 0 0 0 5px rgba(255,255,255,0.5)
 		transform: scale(1.4)
-		opacity: 0				
-		
+		opacity: 0
+
 // influence
 .influence
 	+clr
@@ -494,17 +494,17 @@
 		margin-right: 5.7%
 		font-size: 0
 		img
-			width: 100% 
+			width: 100%
 	.influence__in
 		float: right
 		width: 61%
 		text-align: left
-		padding-right: 5rem 		
+		padding-right: 5rem
 	.influence__article
 		margin-bottom: 20px
 		border-bottom: 1px solid #f3f3f3
 		padding-bottom: 35px
-		font-size: 1.4rem    	
+		font-size: 1.4rem
 	.influence__title
 		font-size: 2rem
 		margin-bottom: 25px
@@ -518,7 +518,7 @@
 				content: ""
 				display: inline-block
 				margin-left: 9px
-				vertical-align: middle 
+				vertical-align: middle
 				+s(more-orange)
 			&:hover
 				text-decoration: none
@@ -550,7 +550,7 @@
 			text-decoration: underline
 	.video-link__duration
 		color: #767676
-		font-size: 12px			 					
+		font-size: 12px
 
 // consist
 .consist
@@ -574,7 +574,7 @@
 		+r(1280)
 			left: 140px
 		+r(768)
-			display: none	
+			display: none
 	.tabs__next
 		position: absolute
 		top: 50%
@@ -584,7 +584,7 @@
 		+r(1280)
 			right: 140px
 		+r(768)
-			display: none		
+			display: none
 	.tabs__nav
 		font-size: 0
 		text-align: center
@@ -593,18 +593,18 @@
 			vertical-align: middle
 			margin: 0 14px
 			height: 41px
-			padding: 0 24px 
+			padding: 0 24px
 			border-radius: 20px
 			+vertical
 			&.is-active
 				background: #fff
 				a
 					color: $dark
-					border-color: transparent 
+					border-color: transparent
 			a
 				display: inline-block
 				vertical-align: middle
-				border-bottom: 1px dotted 
+				border-bottom: 1px dotted
 				font-size: 11px
 				text-transform: uppercase
 				+hb
@@ -620,7 +620,7 @@
 	overflow-x: auto
 	.chemistry__table
 		width: 746px
-		padding: 50px 
+		padding: 50px
 	.chemistry__in
 		box-shadow: 0 0 50px rgba(17,76,34,.36)
 		background: #fff
@@ -646,7 +646,7 @@
 		color: #fff
 		text-transform: uppercase
 		font-size: 11px
-		letter-spacing: 1px 
+		letter-spacing: 1px
 		&.red
 			background: #fd4040
 		&.green
@@ -692,7 +692,7 @@
 		background: #f89a36
 		+vertical
 		cursor: pointer
-		visibility: hidden				 		   
+		visibility: hidden
 .row
 	position: relative
 	+clr
@@ -717,7 +717,7 @@
 					position: relative
 					+hbl
 					border-color: transparent
-					box-shadow: 3px 0 5px 0px rgba(41, 36, 55, 0.2), -3px 0 5px rgba(41, 36, 55, 0.2)	
+					box-shadow: 3px 0 5px 0px rgba(41, 36, 55, 0.2), -3px 0 5px rgba(41, 36, 55, 0.2)
 					&:before
 						content: ""
 						position: absolute
@@ -734,7 +734,7 @@
 						left: 0
 						height: 4px
 						background: #fff
-						z-index: 9 
+						z-index: 9
 	&.row_in
 		&:hover
 			.span
@@ -744,7 +744,7 @@
 					&:before, &:after
 						background: #f4f3f6
 			.chemistry__details
-				visibility: visible			  
+				visibility: visible
 
 .col1
 	width: 175px
@@ -762,7 +762,7 @@
 			right: -1px
 			width: 1px
 			height: 1px
-			background: #a29db2  
+			background: #a29db2
 		span
 			display: inline-block
 			vertical-align: middle
@@ -772,9 +772,9 @@
 			span
 				font-size: 1.3rem
 				text-transform: none
-				+hli 	
+				+hli
 .col2
-	width: 232px 			
+	width: 232px
 .col3
 	width: 239px
 
@@ -802,7 +802,7 @@
 			bottom: 5px
 			border-radius: 50%
 			background: transparent
-			border: 1px solid #fff				
+			border: 1px solid #fff
 
 // medical
 .medical
@@ -814,10 +814,10 @@
 	text-align: center
 	padding-top: 150px
 	+r(899)
-		margin: 0 auto 
+		margin: 0 auto
 		padding-top: 50px
 	+r(600)
-		min-height: 350px	
+		min-height: 350px
 	.usefull__img
 		position: absolute
 		top: 70px
@@ -833,10 +833,10 @@
 	.usefull__lines
 		position: absolute
 		top: 113px
-		left: 50% 
-		width: 912px	
+		left: 50%
+		width: 912px
 		height: 456px
-		margin-left: -456px 
+		margin-left: -456px
 		background: url(../img/lines.png) 0 0 no-repeat
 		z-index: 2
 		+r(980)
@@ -851,7 +851,7 @@
 			display: inline-block
 			vertical-align: top
 			width: 240px
-			margin: 0 30px 
+			margin: 0 30px
 			font-size: 1.3rem
 			text-align: center
 			text-transform: uppercase
@@ -860,11 +860,11 @@
 			& > i
 				margin-bottom: 20px
 			+r(899)
-				margin: 0 10px 
+				margin: 0 10px
 			+r(600)
 				width: 50%
-				padding: 0 10px  
-				margin: 0 0 20px	 
+				padding: 0 10px
+				margin: 0 0 20px
 	.usefull__more
 		position: relative
 		display: inline-block
@@ -874,22 +874,22 @@
 		color: $dark
 		border-bottom: 1px solid
 		cursor: pointer
-		z-index: 1   			
+		z-index: 1
 	.usefull__wrap
 		+r(600)
-			display: none				
+			display: none
 .quote
 	position: relative
 	max-width: 656px
 	min-height: 173px
-	margin: 0 auto 
-	padding: 55px 35px 
+	margin: 0 auto
+	padding: 55px 35px
 	background: url(../img/quote.png)
-	-webkit-background-size: 100% 100% 
-	-o-background-size: 100% 100% 
+	-webkit-background-size: 100% 100%
+	-o-background-size: 100% 100%
 	background-size: 100% 100%
-	background-repeat: no-repeat  
-	text-align: center 
+	background-repeat: no-repeat
+	text-align: center
 	font-size: 2rem
 	+pf
 	font-style: italic
@@ -901,10 +901,10 @@
 	&.quote_wide
 		max-width: 900px
 		background: url(../img/quote-wide.png)
-		-webkit-background-size: 100% 100% 
-		-o-background-size: 100% 100% 
+		-webkit-background-size: 100% 100%
+		-o-background-size: 100% 100%
 		background-size: 100% 100%
-		background-repeat: no-repeat	
+		background-repeat: no-repeat
 	strong
 		font-weight: bold
 	&:before
@@ -918,19 +918,19 @@
 		width: 50%
 		padding: 0 10%
 		+r(767)
-			width: 100% 
+			width: 100%
 	.quote__number
 		margin-bottom: 15px
 		font-size: 60px
 		+pf
 		line-height: 1
-		color: $orange-b 			
+		color: $orange-b
 
 // hygiene
 .hygiene
 	text-align: center
 	padding: 9.5rem 0 10rem
-	background: url(../img/hygiene-bg.jpg)		
+	background: url(../img/hygiene-bg.jpg)
 	.h2, .title
 		color: #fff
 .room
@@ -943,13 +943,13 @@
 	+r(1280)
 		max-width: 100%
 	+r(1023)
-		padding: 0 	
+		padding: 0
 	.room__in
 		position: relative
 		display: inline-block
 		padding: 22px 0 45px
 		+r(1023)
-			display: block 
+			display: block
 	.room__clear
 		position: relative
 		z-index: 2
@@ -964,7 +964,7 @@
 			max-width: 100%
 			margin-bottom: 20px
 			img
-				max-width: 100%	
+				max-width: 100%
 	.room__dirty
 		position: absolute
 		top: 22px
@@ -1024,7 +1024,7 @@
 			left: auto
 			width: 100%
 			font-size: 12px
-			margin-bottom: 20px   
+			margin-bottom: 20px
 		&.is-visible
 			visibility: visible
 			opacity: 1
@@ -1037,7 +1037,7 @@
 	position: relative
 	padding: 9.5rem 0 10rem
 	.immunity__wrap
-		max-width: 800px		
+		max-width: 800px
 	.immunity__in
 		padding-top: 50px
 	.immunity__text
@@ -1050,7 +1050,7 @@
 			width: 100%
 			background: #f7f7f7
 			border-radius: 20px
-			padding: 10px 20px   	 			
+			padding: 10px 20px
 	.immunity__list
 		+clr
 	.immunity__item
@@ -1085,7 +1085,7 @@
 			width: 100%
 			&:last-child
 				&:before
-					display: none				
+					display: none
 	.immunity__img
 		height: 145px
 		font-size: 0
@@ -1094,13 +1094,13 @@
 			max-width: 100%
 		+r(768)
 			float: left
-			width: 50% 	
+			width: 50%
 
 // usage
 .usage
 	position: relative
 	padding: 9.5rem 0
-	background: #ffe5ff 			
+	background: #ffe5ff
 	.usage__list
 		max-width: 940px
 		margin: 0 auto 50px
@@ -1109,7 +1109,7 @@
 		position: relative
 		float: left
 		width: 31%
-		padding: 41px 
+		padding: 41px
 		margin-left: 3.5%
 		&:before
 			content: ""
@@ -1119,30 +1119,30 @@
 			right: 0
 			left: 0
 			background: url(../img/border.png)
-			-webkit-background-size: 100% 100% 
-			-o-background-size: 100% 100% 
+			-webkit-background-size: 100% 100%
+			-o-background-size: 100% 100%
 			background-size: 100% 100%
 			opacity: 0
-			+tr(opacity 200ms) 
+			+tr(opacity 200ms)
 		a
 			visibility: hidden
 			color: #b151b0
 			opacity: 0
-			+tr(opacity 200ms) 
+			+tr(opacity 200ms)
 			&:hover
 				text-decoration: none
 		&:hover
 			&:before
 				opacity: 1
 			a
-				visibility: visible 
-				opacity: 1		
+				visibility: visible
+				opacity: 1
 		&:first-child
 			margin-left: 0
 		+r(568)
 			width: 100%
 			margin-left: 0
-			padding: 10px  	
+			padding: 10px
 	.usage__title
 		+hb
 		font-size: 2rem
@@ -1151,7 +1151,7 @@
 		margin-bottom: 10px
 		font-size: 1.4rem
 		+r(600)
-			font-size: 12px	  			
+			font-size: 12px
 	.usage__alarm
 		max-width: 840px
 		margin: 0 auto 30px
@@ -1160,7 +1160,7 @@
 		+pf
 		font-style: italic
 	.usage__btn
-		text-align: center 	
+		text-align: center
 
 // philosophy
 .philosophy
@@ -1182,7 +1182,7 @@
 		position: relative
 		text-align: center
 		z-index: 2
-		
+
 // target
 .target
 	position: relative
@@ -1190,7 +1190,7 @@
 	text-align: center
 	.target__in
 		position: relative
-		display: inline-block			 
+		display: inline-block
 		max-width: 755px
 		width: 100%
 	.target__bg
@@ -1259,7 +1259,7 @@
 			left: 7%
 		&.target__item_7
 			top: 13%
-			left: 9%						
+			left: 9%
 	.target__img
 		display: inline-block
 		width: 120px
@@ -1278,15 +1278,15 @@
 		font-size: 12px
 		+hb
 		text-transform: uppercase
-		letter-spacing: 1px 		 
+		letter-spacing: 1px
 // bussiness
 .bussiness
 	position: relative
 	padding: 9rem 0 7rem
-	background: #d2edf6  
+	background: #d2edf6
 .federations
 	max-width: 920px
-	margin: 0 auto 14rem 
+	margin: 0 auto 14rem
 	padding-top: 60px
 	.federations__item
 		width: 280px
@@ -1309,7 +1309,7 @@
 		& > a
 			color: #3da5c7
 			&:hover
-				text-decoration: none		
+				text-decoration: none
 	.federations__title
 		margin-bottom: 18px
 		font-size: 2rem
@@ -1321,13 +1321,13 @@
 		font-size: 1.4rem
 .doctors
 	max-width: 920px
-	margin: 0 auto 				 	
+	margin: 0 auto
 	.doctors__item
 		position: relative
 		text-align: center
 		width: 280px
 	.doctors__img
-		display: inline-block			 
+		display: inline-block
 		width: 175px
 		height: 175px
 		margin-bottom: 35px
@@ -1348,7 +1348,7 @@
 		font-size: 1.4rem
 		color: #3da5c7
 		+r(1280)
-			left: 40px	
+			left: 40px
 	.doctors__name
 		margin-bottom: 1rem
 		font-size: 2rem
@@ -1362,7 +1362,7 @@
 		font-size: 1.8rem
 		font-style: italic
 		color: #3da5c7
-		
+
 // labels
 .labels
 	position: relative
@@ -1376,7 +1376,7 @@
 		font-size: 0
 		text-align: center
 		+r(768)
-			display: none	
+			display: none
 	.labels__item
 		position: relative
 		display: inline-block
@@ -1395,9 +1395,9 @@
 			+vertical
 			img
 				display: inline-block
-				vertical-align: middle		
+				vertical-align: middle
 		+r(1280)
-			margin: 0 3rem 5rem	
+			margin: 0 3rem 5rem
 		.labels__logo
 			display: inline-block
 			font-size: 0
@@ -1425,24 +1425,24 @@
 				font-size: 1.4rem
 				&:hover
 					text-decoration: none
-					
+
 // footer
 .footer
 	position: relative
 	padding: 12rem 0 7.2rem
 	margin-bottom: 92px
 	background: url(../img/footer-bg.jpg)
-	+cover 	
+	+cover
 	+r(1280)
 		margin-bottom: 0
 	+r(600)
-		padding: 9rem 0 5rem 	
+		padding: 9rem 0 5rem
 	&.footer_producing
 		background: url(../img/footer-bg2.jpg)
 		+cover
 	&.footer_service
 		background: url(../img/footer-bg3.jpg)
-		+cover					
+		+cover
 	.footer__topper
 		margin-bottom: 100px
 		text-align: center
@@ -1450,7 +1450,7 @@
 			color: #fff
 			margin-bottom: 0
 		+r(600)
-			margin-bottom: 20px	
+			margin-bottom: 20px
 	.footer__link
 		display: inline-block
 		+pf
@@ -1465,7 +1465,7 @@
 			border-color: transparent
 	.footer__bottom
 		position: relative
-		+clr	
+		+clr
 		color: #fff
 		+r(600)
 			text-align: center
@@ -1483,12 +1483,12 @@
 			&:hover
 				color: $orange-b
 		+r(600)
-			float: none		
+			float: none
 	.footer__center
 		position: absolute
 		top: -16px
 		left: 50%
-		+transform(translateX(-50%)) 
+		+transform(translateX(-50%))
 		+r(600)
 			position: relative
 			top: 0

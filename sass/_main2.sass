@@ -137,7 +137,7 @@
 				display: none
 		&.large-pad
 			.section__in
-				padding: 300px 0 200px
+				padding-top: 300px
 		&:last-child
 			.section__in
 				padding-bottom: 0
@@ -148,6 +148,7 @@
 		.anchors
 			margin-top: 55px
 		.more
+			display: block
 			padding-top: 170px
 			margin-bottom: 30px
 		+r(1280)
@@ -214,7 +215,7 @@
 			font-size: 24px
 	.product__txt
 		width: 50%
-		padding: 20px 5% 0
+		padding: 20px 50px 0 30px
 		color: $lavender
 		+box
 		.button
@@ -233,21 +234,33 @@
 	.slick-dots
 		text-align: left
 		top: 50%
-		left: 10px
+		left: 0
 		right: inherit
 		bottom: inherit
 		+transform(translateY(-50%))
 		li
 			display: block
-			padding: 11px 0
 			button
-				width: 8px
-				height: 8px
-				background: #F0E3D9
+				position: relative
+				width: 30px
+				height: 30px
+				border-radius: 0
+				background: none
 				+box-shadow(none)
+				&:before
+					content: ""
+					position: absolute
+					width: 8px
+					height: 8px
+					top: 50%
+					left: 50%
+					margin: -4px 0 0 -4px
+					background: #F0E3D9
+					border-radius: 50%
 			&.slick-active
 				button
-					background: $lavender
+					&:before
+						background: $lavender
 	+r(768)
 		.product__img,
 		.product__txt
@@ -470,8 +483,8 @@
 //footer
 .footer
 	&.is-main
-		padding: 75px 25px 170px
-		z-index: 15
+		padding: 75px 25px 240px
+		z-index: 1
 		p
 			color: $violet
 			a
