@@ -217,6 +217,8 @@ head.ready(function() {
 		]
 	});
 
+	$('.slick-product .slick-dots').append('<li aria-hidden="true"><button type="button" data-role="none">4</button></li>');
+
 	$('.js-blog').slick({
 		arrows: false,
 		slidesToShow: 3,
