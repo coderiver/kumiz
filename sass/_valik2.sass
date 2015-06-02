@@ -307,6 +307,7 @@
 		color: #89859a
 		background: rgba(237, 236, 240, 0.5)
 		position: relative
+		+transition(all 0.3s)
 		&:before, &:after
 			position: absolute
 			content: ""
@@ -357,6 +358,10 @@
 			+r(768)
 				font-size: 26px
 				padding: 11px 22px 13px
+			&:hover
+				span
+					border-bottom-color: #4c4369 
+					color: #4c4369
 			&.is-active
 				color: #4c4369
 				background-color: #F6F5F7
@@ -364,6 +369,7 @@
 				span
 					border: none
 			span
+				+transition(all 0.3s)
 				border-bottom: 1px dotted #E8C29A
 	&__inner
 		+clr
@@ -383,7 +389,6 @@
 				display: inline-block
 				max-width: 130px
 				padding: 4px 20px 
-				padding: 8px 20px
 				color: #4C4369
 				+pf
 				font-size: 16px
@@ -398,7 +403,7 @@
 					span
 						border-bottom: none
 				span
-					border-bottom: 1px solid rgba(232, 194, 154, 0.7)
+					border-bottom: 1px solid rgba(137, 133, 154, 0.4)
 	&__content
 		overflow: hidden
 	&__img
@@ -516,10 +521,6 @@
 		padding: 10px 0 15px
 		.price
 			float: none
-	&__block
-		display: none
-		&.is-active
-			display: block
 
 
 .popup
@@ -668,9 +669,6 @@ label.error
 			right: 0
 			height: 200px
 			background: url(../img/icons/consultation-deco.png) no-repeat bottom center
-			-webkit-background-size: contain
-			-o-background-size: contain
-			background-size: contain
 			+r(768)
 				height: 100px
 		&.is-last
@@ -703,9 +701,11 @@ label.error
 				line-height: 2
 			&.is-orange
 				color: #e8c29a
-				span
+				a
+					color: #e8c29a
 					border-bottom-color: #e8c29a
-		span
+		a
+			color: #8e88a3
 			border-bottom: 1px solid #8e88a3
 
 .c-blockquote
@@ -742,7 +742,7 @@ label.error
 			font-size: 11px
 			line-height: 1.8
 			color: #c2bfcd
-			letter-spacing: 0.02em
+			letter-spacing: 0.1em
 			+opacity(0.5)
 			max-width: 170px
 			display: block
