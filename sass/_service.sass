@@ -9,12 +9,23 @@
 .reviews
     position: relative
     padding: 9.5rem 0 0
-    background: #d2edf6 
+    background: #d2edf6
+    +r(600)
+        padding: 9.5rem 0 45px  
 .customers
     position: relative
     padding: 9.5rem 0 7.5rem
     .h2
-        margin-bottom: 8rem    
+        margin-bottom: 8rem 
+    +r(767)
+        .quote.quote_wide
+            width: 278px
+            height: 354px
+            margin: 0 auto 
+            background: url(../img/quote-high.png)
+            font-size: 14px
+            &:before
+                display: none       
 
 .cooking__slider
     max-width: 1024px
@@ -25,7 +36,7 @@
 .cooking__item
     position: relative
     display: inline-block
-    width: 314px
+    max-width: 314px
     height: 368px
     padding: 19px 19px 48px
     text-align: left
@@ -60,7 +71,9 @@
     background: url(../img/courier.png) 100% 100% no-repeat
     -webkit-background-size: auto 100%
     -o-background-size: auto 100%
-    background-size: auto 100%   
+    background-size: auto 100%
+    +r(600)
+        background: none   
 .delivery__text
     max-width: 360px
     h4
@@ -69,21 +82,47 @@
         margin-bottom: 1.5rem
     p
         font-size: 1.4rem
-        margin-bottom: 3rem       
+        margin-bottom: 3rem 
+    img
+        display: none
+        max-width: 100%
+    +r(600)
+        text-align: center
+        max-width: 100%
+        img
+            display: inline-block
+            margin-bottom: 20px
+        h4
+            font-size: 16px
+        p
+            font-size: 12px                   
 
 // comments
 .comments
     max-width: 900px
     margin: 0 auto
     +clr         
+    .comments__item
+        +r(600)
+            padding-top: 25px
+            text-align: center
     .comments__img
         float: left
         width: 50%
         font-size: 0
+        img
+            display: inline-block
+        +r(600)
+            width: 100%
+            float: none
+            margin-bottom: 20px 
     .comments__content
         float: left
         width: 50%
         padding-top: 4rem
+        +r(600)
+            width: 100%
+            float: none 
     .comments__name
         margin-bottom: 3rem 
         font-size: 2rem
@@ -106,6 +145,9 @@
             font-style: italic
             line-height: 1
             font-size: 6rem
-            color: #3da5c7  
+            color: #3da5c7 
+    .comments__signature
+        img
+            display: inline-block         
                      
         
