@@ -63,7 +63,6 @@
 	+r(768)
 		top: 0
 		padding-top: 0
-		background: rgba(#fff, 0.7)
 		.header__bl
 			&:first-child
 				margin-top: 0
@@ -219,7 +218,6 @@
 		.button
 			margin-top: 35px
 			text-transform: uppercase
-			letter-spacing: 0.1em
 	.product__p
 		line-height: 24px
 		letter-spacing: 0.03em
@@ -332,15 +330,15 @@
 				+svg(next, 14, 33)
 		.slick-list
 			padding: 20px 0
-	+r(768)
-		.blog__in
-			max-width: 245px
-			padding: 17px 13px
-			font-size: 14px
-		.blog__date
-			font-size: 12px
-		.blog__btn
-			margin-top: 28px
+		+r(768)
+			.blog__in
+				max-width: 245px
+				padding: 17px 13px
+				font-size: 14px
+			.blog__date
+				font-size: 12px
+			.blog__btn
+				margin-top: 28px
 
 //about
 .about
@@ -405,18 +403,15 @@
 .blockquote
 	position: relative
 	max-width: 925px
-	min-height: 150px
+	min-height: 228px
 	margin: 30px auto 25px
-	padding: 55px 35px
-	background: url(../img/quote.png)
-	-webkit-background-size: 100% 100%
-	-o-background-size: 100% 100%
-	background-size: 100% 100%
-	background-repeat: no-repeat
+	padding: 60px 35px
+	background: url(../img/quote2.png) top center no-repeat
 	text-align: center
 	font-size: 20px
 	font-style: italic
-	color: $violet
+	color: #8E88A3
+	line-height: 1.8
 	+box
 	+pf
 	strong
@@ -426,16 +421,13 @@
 		position: absolute
 		top: -10px
 		left: 50%
-		+transform(translateX(-50%))
+		margin-left: -30px
 		+s(horse2)
 		background-color: #FFF
+	+ .about__btn
+		margin-top: 15px
 	+r(768)
 		font-size: 15px
-		&:before
-			+transform(scale(0.8) translateX(-50%))
-	+r(360)
-		&:before
-			display: none
 
 //all
 .all
