@@ -16,7 +16,9 @@
 			font-size: 2rem
 			+pf
 			text-align: center
-			font-style: italic		
+			font-style: italic
+			+r(768)
+				+transform(translateX(0))		
 	.farm__in
 		position: absolute
 		top: 50%
@@ -43,6 +45,7 @@
 			max-width: 100%
 			border-radius: 0
 			+transform(translateX(0))					
+
 
 // pride
 .pride
@@ -213,7 +216,12 @@
 		position: relative
 		display: inline-block
 		img
+			display: inline-block
 			max-width: 100%
+		+r(768)
+			display: block
+			img	
+				margin-bottom: 30px
 	&.scheme_violet
 		.tooltip__item
 			background: #d192d1
@@ -236,6 +244,8 @@
 			pointer-events: auto
 			opacity: 1
 			+transform(rotate(0)) 
+	+r(768)
+		display: none
 	.tooltip__item
 		position: relative
 		width: 12px
@@ -308,6 +318,19 @@
 	100%
 		+scale(1)	
 
+.tooltip-slider
+	display: none
+	+r(768)
+		display: block
+	.tooltip-slider__item
+		font-size: 12px
+		padding: 0 30px 
+		span
+			display: inline-block
+			margin-bottom: 15px 
+			font-size: 50px
+			line-height: 1
+			+pf	
 // done
 .done
 	position: relative
@@ -435,13 +458,13 @@
 		position: relative
 		z-index: 2	
 	.kymis__list
-		margin-bottom: 100px
+		margin-bottom: 70px
 		font-size: 0
 		text-align: center
 	.kymis__item
 		display: inline-block
 		vertical-align: top
-		margin: 0 20px
+		margin: 0 20px 30px
 		width: 19rem
 		.icon
 			width: 91px
@@ -453,6 +476,9 @@
 				left: 8px
 				width: 75px
 				height: 75px
+		+r(600)
+			display: block
+			margin: 0 auto 30px 		
 	.kymis__text
 		font-size: 12px
 		text-transform: uppercase
@@ -640,6 +666,13 @@
 .expiration
 	position: relative
 	padding: 9.5rem 0 12rem
+	.quote
+		+r(767)
+			width: 278px
+			height: 354px
+			background: url(../img/quote-high.png) 
+			&:before
+				display: none
 .packing
 	position: relative
 	padding: 9.5rem 0
@@ -647,11 +680,27 @@
 	.packing__content
 		max-width: 768px
 		margin: 0 auto
-		padding-top: 80px
+		padding-top: 80px 
+	+r(600)
+		.tabs__nav
+			max-width: 280px
+			margin: 0 auto
+			li
+				display: block
+				margin: 0 auto 10px 	
 
 // team
 .team
 	position: relative
 	padding: 9.5rem 0 10rem
 	.doctors
-		margin: 0 auto 15rem		 	 	
+		margin: 0 auto 15rem
+	+r(767)
+		.quote.quote_wide
+			width: 278px
+			height: 354px
+			margin: 0 auto 
+			background: url(../img/quote-high.png)
+			font-size: 14px
+			&:before
+				display: none			 	 	
