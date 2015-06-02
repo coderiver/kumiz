@@ -399,6 +399,11 @@ head.ready(function() {
         	tab_item.first().addClass("is-active");
         	$(this).parents(".js-tab-group").find(".js-tab1").show();
 
+        	if ($('.kind').length) {
+        		$(this).parents(".js-tab-group").find(".js-tab1").find('.kind').addClass('is-visible');
+
+        	};
+
         	tab_link.on("click", function() {
         	   	var index = $(this).attr("href");
         	   	var activeTab = $(this).parents(".js-tab-group").find("."+index);
@@ -480,27 +485,6 @@ head.ready(function() {
 	}
 	human();
 
-	// scroll down btn
-	function scrollBtn(){
-		var scroll = $(window).scrollTop(),
-			height = $('.out').height(),
-			windowHeight = $(window).height();
-
-		if (scroll >= (height - windowHeight)) {
-			$('.js-scroll-down').addClass('is-hidden');
-		}
-		else {
-			$('.js-scroll-down').removeClass('is-hidden');
-		}
-
-		if (scroll > 1) {
-			$('.js-scroll-down').addClass('is-scrolled');
-		}
-		else {
-			$('.js-scroll-down').removeClass('is-scrolled');
-		}
-	}
-
 	function nav(){
 		$('.section').each(function(){
 		    var pos = $(this).offset().top;
@@ -543,15 +527,11 @@ head.ready(function() {
 	};
 
 	if ($('.js-scroll-down').length) {
-		scrollBtn();
 		topperScroll();
 	};
 
 	// window scroll events
 	$(window).scroll(function(){
-		if ($('.js-scroll-down').length) {
-			scrollBtn();
-		};
 		nav();
 	});
 

@@ -161,7 +161,7 @@
 		&:hover
 			border-color: transparent
 .scroll-down
-	position: fixed
+	position: absolute
 	bottom: 164px
 	left: 50%
 	background: transparent 
@@ -170,13 +170,8 @@
 	z-index: 99
 	+r(1280)
 		bottom: 120px
-	+r(600)
-		bottom: 20px	
-	&.is-scrolled
-		+transform(translate(-50%, 40px))
-	&.is-hidden
-		opacity: 0
-		visibility: hidden 		
+	+r(768)
+		bottom: 80px 		
 
 //nav
 .nav
@@ -575,15 +570,21 @@
 		top: 50%
 		left: 240px
 		+s(prev-dark)
+		z-index: 2
 		+r(1280)
 			left: 140px
+		+r(768)
+			display: none	
 	.tabs__next
 		position: absolute
 		top: 50%
 		right: 240px
 		+s(next-dark)
+		z-index: 2
 		+r(1280)
-			right: 140px	
+			right: 140px
+		+r(768)
+			display: none		
 	.tabs__nav
 		font-size: 0
 		text-align: center
@@ -604,7 +605,7 @@
 				display: inline-block
 				vertical-align: middle
 				border-bottom: 1px dotted 
-				font-size: 1.1rem
+				font-size: 11px
 				text-transform: uppercase
 				+hb
 				text-decoration: none
@@ -892,6 +893,8 @@
 	font-size: 2rem
 	+pf
 	font-style: italic
+	+r(600)
+		font-size: 16px
 	&.quote_cols
 		+hb
 		font-style: normal
@@ -913,7 +916,9 @@
 		+s(horse)
 	.col
 		width: 50%
-		padding: 0 10% 
+		padding: 0 10%
+		+r(767)
+			width: 100% 
 	.quote__number
 		margin-bottom: 15px
 		font-size: 60px
