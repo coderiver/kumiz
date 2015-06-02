@@ -239,7 +239,20 @@
 		bottom: inherit
 		+transform(translateY(-50%))
 		li
+			position: relative
 			display: block
+			&:last-child
+				&:after
+					content: ''
+					position: absolute
+					left: 50%
+					top: 50%
+					margin: -4px 0 0 -4px
+					width: 8px
+					height: 8px
+					border-radius: 50%
+					background: $lavender
+					+transition(all 0.3s ease)
 			button
 				position: relative
 				width: 30px
@@ -257,10 +270,11 @@
 					margin: -4px 0 0 -4px
 					background: #F0E3D9
 					border-radius: 50%
-			&.slick-active
-				button
-					&:before
-						background: $lavender
+			@for $i from 1 through 3
+				&.slick-active:nth-child(#{$i}) ~ li:last-child > button:after
+					+transform(translateY($i*100%))
+
+
 	+r(768)
 		.product__img,
 		.product__txt
@@ -379,8 +393,11 @@
 			background: url(../img/history.png) 0 0 no-repeat
 			z-index: -1
 		&.no-bg
+			margin-top: 37px
 			&:before
 				display: none
+			.about__txt
+				padding-top: 0
 	&__txt
 		width: 50%
 		max-width: 450px
