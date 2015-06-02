@@ -31,10 +31,16 @@
 		z-index: 2
 		+r(1440)
 			padding-top: 130px
-		+r(768)
-			padding: 130px 20px 0
-		+r(600)
-			padding: 80px 20px 0 		
+		//+r(768)
+		//	padding: 130px 20px 0
+		//+r(600)
+		//	padding: 80px 20px 0 
+	+r(1023)
+		+vertical
+		.topper__in
+			display: inline-block
+			vertical-align: middle
+			padding: 0 20px				
 .video
 	position: absolute
 	top: 0
@@ -165,7 +171,7 @@
 	+r(1280)
 		bottom: 120px
 	+r(600)
-		bottom: 80px	
+		bottom: 20px	
 	&.is-scrolled
 		+transform(translate(-50%, 40px))
 	&.is-hidden

@@ -107,7 +107,7 @@
 		vertical-align: middle
 		+tr(opacity 200ms)
 		+s(prev)
-	.js-farm-slider &, .js-pride-slider &
+	.js-farm-slider &, .js-pride-slider &, .js-pride-slider2 &
 		left: 15%
 		&:before
 			+s(prev-white)
@@ -124,8 +124,10 @@
 				opacity: 0
 			&:after
 				opacity: 1
-	.js-pride-slider &
-		left: 0	
+	.js-pride-slider &, .js-pride-slider2 &
+		left: 0
+	.js-pride-slider2 &
+		top: 75px	
 	.federations &
 		top: 50%
 		+transform(translateY(-50%))
@@ -155,7 +157,7 @@
 		vertical-align: middle
 		+tr(opacity 200ms)
 		+s(next)
-	.js-farm-slider &, .js-pride-slider &
+	.js-farm-slider &, .js-pride-slider &, .js-pride-slider2 &
 		right: 15%
 		&:before
 			+s(next-white)
@@ -172,8 +174,10 @@
 				opacity: 0
 			&:after
 				opacity: 1
-	.js-pride-slider &
+	.js-pride-slider &, .js-pride-slider2 &
 		right: 0
+	.js-pride-slider2 &
+		top: 75px
 	.federations &
 		top: 50%
 		+transform(translateY(-50%))
@@ -198,17 +202,24 @@
 	bottom: 40px
 	left: 0
 	right: 0
+	+r(768)
+		bottom: 30%
+	+r(568)
+		bottom: 40%
+	+r(480)
+		bottom: 50%
+	+r(360)
+		bottom: 55%			
 	li
 		position: relative
 		display: inline-block
-		padding: 0 5px 
+		padding: 0 11px 
 		&.slick-active
 			button
 				background: $orange 
 				box-shadow: none
 		&:before
 			display: none 
-				 
 	button
 		display: block
 		width: 6px

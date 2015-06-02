@@ -45,15 +45,15 @@ head.ready(function() {
 
 	});
 
-	$('.js-top').click(function(){
+	$('.js-top').click(function(e){
 
-		$('html, body').animate({
-			scrollTop: 0,
-		}, 800);
-	});
+	  	e.preventDefault();
+	  	$('html, body').animate({
+	  	 scrollTop: 0,
+	  	}, 800);
+	 });
 
-	$(window).scroll(function(){
-
+	function moveAll(){
 		var top = $(window).scrollTop();
 
 		if(top > 100){
@@ -62,8 +62,12 @@ head.ready(function() {
 		} else{
 			$('.logo').removeClass('small');
 			$('.js-bg').removeClass('position');
-		}
+	  	}
+	}
+	moveAll();
 
+	$(window).scroll(function(){
+		moveAll();
 	});
 
 	// slick slider
@@ -109,16 +113,60 @@ head.ready(function() {
 
 	$('.js-farm-slider').slick({
 		dots: true,
-		fade: true,
 		slidesToShow: 1,
 		slidesToScroll: 1,
-  		adaptiveHeight: true
+  		adaptiveHeight: true,
+  		responsive: [
+				{
+					breakpoint: 768,
+					settings: {
+						arrows: false
+					}
+				}
+			]
 	});
 
 	$('.js-pride-slider').each(function(){
 		$(this).slick({
-			slidesToShow: 3
+			slidesToShow: 3,
+			responsive: [
+				{
+					breakpoint: 900,
+					settings: {
+						slidesToShow: 2
+					}
+				},
+				{
+					breakpoint: 768,
+					settings: {
+						slidesToShow: 1
+					}
+				}
+			]
 		});
+	});
+	$('.js-pride-slider2').slick({
+		slidesToShow: 5,
+		responsive: [
+			{
+				breakpoint: 1280,
+				settings: {
+					slidesToShow: 3
+				}
+			},
+			{
+				breakpoint: 900,
+				settings: {
+					slidesToShow: 2
+				}
+			},
+			{
+				breakpoint: 600,
+				settings: {
+					slidesToShow: 1
+				}
+			}
+		]
 	});
 
 	$('.js-packing-slider').slick({
@@ -174,7 +222,7 @@ head.ready(function() {
 		slidesToShow: 3,
 		responsive: [
 			{
-				breakpoint: 1028,
+				breakpoint: 1100,
 				settings: {
 				slidesToShow: 2,
 				slidesToScroll: 2,
