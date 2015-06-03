@@ -22,6 +22,8 @@
 	+r(980)
 		&.position
 			+transform(none)
+	+r(768)
+		position: static
 
 .header
 	position: fixed
@@ -164,6 +166,8 @@
 			.nav
 				margin-top: 35px
 		+r(768)
+			.section__in
+				padding: 80px 0 200px
 			&.large-pad
 				.section__in
 					padding: 170px 0 130px
@@ -314,6 +318,7 @@
 	margin-top: 42px
 	&__item
 		display: inline-block
+		width: 33%
 		text-align: center
 		padding: 22px
 		text-align: left
@@ -369,15 +374,33 @@
 				+svg(next, 14, 33)
 		.slick-list
 			padding: 20px 0
-		+r(768)
-			.blog__in
-				max-width: 245px
-				padding: 17px 13px
-				font-size: 14px
-			.blog__date
-				font-size: 12px
-			.blog__btn
-				margin-top: 28px
+	+r(1280)
+		&.slick-slider
+			.blog__item
+				padding: 22px 10px
+		.blog__item
+			padding: 22px 10px
+		.blog__in
+			max-width: 270px
+			height: 280px
+			padding: 15px
+		.blog__img
+			height: 150px
+			margin-bottom: 15px
+		.blog__txt
+			height: 60px
+			font-size: 14px
+			line-height: 1.45
+		.blog__date
+			font-size: 12px
+	+r(768)
+		&.slick-slider
+			.blog__item
+				padding: 22px 0
+		.blog__item
+			width: 100%
+		.blog__in
+			max-width: 240px
 
 //about
 .about
@@ -532,7 +555,7 @@
 				&:hover
 					text-decoration: underline
 		+r(768)
-			padding-bottom: 120px
+			padding-bottom: 0
 
 
 // mobile menu

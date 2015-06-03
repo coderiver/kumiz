@@ -65,6 +65,8 @@
 
 .section
 	&.is-blog
+		.section__in
+			padding: 170px 0 50px
 		+r(768)
 			padding: 0
 		&:after
@@ -129,12 +131,12 @@
 		text-align: center
 .inner
 	max-width: 843px
-	padding: 0 20px 
+	padding: 0 20px
 	margin: 0 auto
 	+r(768)
 		padding: 0
 	p, .inner__box
-		padding: 0 10% 0 10% 
+		padding: 0 10% 0 10%
 		padding: 0 10%
 		+r(768)
 			padding: 0 25px
@@ -144,7 +146,7 @@
 	.in-title
 		padding: 0 2% 25px 10%
 		+r(768)
-			margin: 0 
+			margin: 0
 	&__heading
 		+pf
 		line-height: 1.25
@@ -207,7 +209,7 @@
 	font-size: 11px
 	text-transform: uppercase
 	color: #e8c29a
-	letter-spacing: 0.1em 
+	letter-spacing: 0.1em
 	&:before
 		content: ""
 		position: absolute
@@ -227,7 +229,7 @@
 		position: absolute
 		top: 50%
 		margin-top: -18px
-		z-index: 200 
+		z-index: 200
 		width: 60px
 		height: 35px
 		margin-top: -11px
@@ -360,7 +362,7 @@
 				padding: 11px 22px 13px
 			&:hover
 				span
-					border-bottom-color: #4c4369 
+					border-bottom-color: #4c4369
 					color: #4c4369
 			&.is-active
 				color: #4c4369
@@ -388,7 +390,7 @@
 			a
 				display: inline-block
 				max-width: 130px
-				padding: 4px 20px 
+				padding: 4px 20px
 				color: #4C4369
 				+pf
 				font-size: 16px
