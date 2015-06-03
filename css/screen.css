@@ -321,7 +321,11 @@ h1, h2, h3, h4, h5, h6, strong { font-weight: normal; }
 .blockquote strong { font-weight: bold; }
 .blockquote:before { content: ""; position: absolute; top: -10px; left: 50%; margin-left: -30px; background: url('../img/icons-se5a7d47aa8.png') 0 -1058px no-repeat; width: 80px; height: 41px; background-color: white; }
 .blockquote + .about__btn { margin-top: 15px; }
-@media only screen and (max-width: 768px) { .blockquote { font-size: 15px; } }
+.blockquote p { margin-bottom: 0; }
+@media only screen and (max-width: 1024px) { .blockquote { min-height: 254px; padding: 60px 0; font-size: 20px; background: url(../img/quote-cols.png) top center no-repeat; }
+  .blockquote p { max-width: 550px; margin: 0 auto; } }
+@media only screen and (max-width: 768px) { .blockquote { min-height: 354px; font-size: 15px; background: url(../img/quote-high.png) top center no-repeat; }
+  .blockquote p { max-width: 240px; } }
 
 .all { margin-top: 70px; text-align: center; font-size: 0; }
 .all__list { display: inline-block; width: 25%; max-width: 235px; padding: 0 2%; text-align: left; vertical-align: top; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
