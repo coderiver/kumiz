@@ -23,23 +23,22 @@
 		&.position
 			+transform(none)
 
-
 .header
 	position: fixed
-	width: 100%
 	top: -200px
-	min-height: 110px
-	padding-top: 60px
+	left: 0
+	right: 0
 	z-index: 10
 	+transition(top 0.6s ease)
 	&__in
-		max-width: 1540px
-		margin: 0 auto
-		padding: 0 20px
-		+box
+		text-align: center
+	&__wrap
+		position: absolute
+		top: 60px
+		left: 48px
+		right: 45px
 		+clr
 	&__bl
-		font-size: 0
 		&:first-child
 			margin-top: 4px
 	&__menu
@@ -62,33 +61,39 @@
 		top: 0
 	+r(768)
 		top: 0
-		padding-top: 0
+		.header__wrap
+			top: 25px
+			left: 25px
+			right: 25px
 		.header__bl
 			&:first-child
 				margin-top: 0
-		.header__in
-			padding: 5px 25px 0
 		.header__link
 			display: none
 
 .logo
-	position: absolute
-	top: 85px
-	left: 50%
-	margin-left: -81px
+	position: relative
+	display: inline-block
 	width: 190px
 	height: 137px
+	margin-top: 85px
 	background: url(../img/logo.png) no-repeat
+	z-index: 2
 	+transition(all 0.8s ease)
 	&.small,
 	&.logo_inner
-		top: 20px
+		margin-top: 15px
 		+transform(scale(0.56))
 		+opacity(0.5)
 	+r(768)
-		top: 20px
+		margin-top: 5px
 		+transform(scale(0.56))
 		+opacity(0.5)
+		&.small,
+		&.logo_inner
+			margin-top: 5px
+
+
 
 .more
 	position: relative
@@ -98,6 +103,7 @@
 	color: #F0E3D9
 	letter-spacing: 0.08em
 	z-index: 0
+	-webkit-tap-highlight-color: transparent
 	+hb
 	+transition(all 0.9s ease)
 	&:before
@@ -160,11 +166,10 @@
 		+r(768)
 			&.large-pad
 				.section__in
-					padding-top: 170px
+					padding: 170px 0 130px
 			&:after
-				background: url(../img/icons/small-curve.png) no-repeat
-				width: 31px
-				margin-left: -15.5px
+				height: 147px
+				background: url(../img/icons/small-curve.png) bottom center no-repeat
 			.more
 				display: block
 				padding-top: 125px
@@ -209,6 +214,9 @@
 		+clr
 	.product__img
 		width: 50%
+		padding-left: 50px
+		img
+			max-width: 100%
 		.product__ttl
 			display: none
 			text-align: center
@@ -234,7 +242,7 @@
 	.slick-dots
 		text-align: left
 		top: 50%
-		left: 0
+		left: 10px
 		right: inherit
 		bottom: inherit
 		+transform(translateY(-50%))
@@ -282,6 +290,7 @@
 			float: none
 			width: 100%
 		.product__img
+			padding-left: 0
 			img
 				margin: 0 auto
 			.product__ttl
@@ -464,14 +473,14 @@
 
 //all
 .all
-	margin-top: 50px
+	margin-top: 70px
 	text-align: center
 	font-size: 0
 	&__list
 		display: inline-block
 		width: 25%
 		max-width: 235px
-		padding: 0 3%
+		padding: 0 2%
 		text-align: left
 		vertical-align: top
 		+box
@@ -482,15 +491,28 @@
 				a
 					font-size: 18px
 					color: $violet
+					line-height: 1.8
+					span
+						+background-image(-linear-gradient($violet 0%, $violet 100%))
+					&:hover
+						span
+							+background-image(none)
+
 		a
+			position: relative
 			display: inline-block
-			text-decoration: underline
 			font-size: 16px
 			color: #DEB78E
+			line-height: 1.5
 			+pf
-			+transition(all 0.3s ease)
+			span
+				background-repeat: repeat-x
+				background-size: 1px 1px
+				background-position: 0 100%
+				+background-image(-linear-gradient(#DEB78E 0%, #DEB78E 100%))
 			&:hover
-				text-decoration: none
+				span
+					+background-image(none)
 	+r(768)
 		.all__list
 			width: 100%
