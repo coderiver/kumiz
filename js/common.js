@@ -496,7 +496,7 @@ head.ready(function() {
 		        $('[href = #'+id+']').addClass('is-active');
 		    }
 		});
-		
+
 	}
 	nav();
 
