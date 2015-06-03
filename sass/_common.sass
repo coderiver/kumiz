@@ -139,7 +139,16 @@ body
 	+pf
 	font-style: italic
 	strong
-		font-weight: bold	 
+		font-weight: bold
+	button
+		background: transparent
+		font-style: italic
+		font-size: 2.4rem
+		+pf  
+		text-decoration: underline
+		color: $orange
+		&:hover
+			text-decoration: none		 
 .subtitle
 	font-size: 4rem
 	+pf
@@ -235,6 +244,8 @@ body
 	+s(info)
 .icon-info-white
 	+s(info-white)
+.icon-info-small
+	+s(info-small)	
 .icon-machine
 	+s(machine)
 .icon-plant
