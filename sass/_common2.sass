@@ -72,6 +72,11 @@ $gray: #B9B7C2
 $lavender: #8E88A3
 $orange: #f89a36
 
+html, body
+	&.no-scroll
+		position: fixed
+		overflow: hidden
+
 body
 	font-size: 13px
 	line-height: 1.4
@@ -230,3 +235,16 @@ h1, h2, h3, h4, h5, h6, strong
 			color: #FFF
 	.button__text
 		letter-spacing: 0.1em
+
+// appearence
+.animate
+	opacity: 0
+	+transition(opacity 0.4s ease)
+	&.is-animated
+		opacity: 1
+@for $i from 1 through 10
+	.animate_#{$i}
+		transition-delay: #{300*$i}ms !important
+	+r(768)
+		.animate
+			opacity: 1

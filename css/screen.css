@@ -31,6 +31,8 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 @font-face { font-family: HelveticaNeueCyrThin; src: url("fonts/HelveticaNeueCyrThin.eot"); src: url("fonts/HelveticaNeueCyrThin.eot?#iefix") format("embedded-opentype"), url("fonts/HelveticaNeueCyrThin.woff2") format("woff2"), url("fonts/HelveticaNeueCyrThin.woff") format("woff"), url("fonts/HelveticaNeueCyrThin.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 @font-face { font-family: HelveticaNeueCyrLight; src: url("fonts/HelveticaNeueCyrLight.eot"); src: url("fonts/HelveticaNeueCyrLight.eot?#iefix") format("embedded-opentype"), url("fonts/HelveticaNeueCyrLight.woff2") format("woff2"), url("fonts/HelveticaNeueCyrLight.woff") format("woff"), url("fonts/HelveticaNeueCyrLight.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 @font-face { font-family: HelveticaNeueCyrUltraLight; src: url("fonts/HelveticaNeueCyrUltraLight.eot"); src: url("fonts/HelveticaNeueCyrUltraLight.eot?#iefix") format("embedded-opentype"), url("fonts/HelveticaNeueCyrUltraLight.woff2") format("woff2"), url("fonts/HelveticaNeueCyrUltraLight.woff") format("woff"), url("fonts/HelveticaNeueCyrUltraLight.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+html.no-scroll, body.no-scroll { position: fixed; overflow: hidden; }
+
 body { font-size: 13px; line-height: 1.4; background: white; font-family: "HelveticaNeueCyrRoman", Helvetica, sans-serif; }
 
 .out { min-width: 320px; position: relative; }
@@ -82,6 +84,39 @@ h1, h2, h3, h4, h5, h6, strong { font-weight: normal; }
 .button.button--fill .button__text { position: relative; color: white; }
 .button .button__text { letter-spacing: 0.1em; }
 
+.animate { opacity: 0; -moz-transition: opacity 0.4s ease; -o-transition: opacity 0.4s ease; -webkit-transition: opacity 0.4s ease; transition: opacity 0.4s ease; }
+.animate.is-animated { opacity: 1; }
+
+.animate_1 { transition-delay: 300ms !important; }
+
+@media only screen and (max-width: 768px) { .animate { opacity: 1; } }
+.animate_2 { transition-delay: 600ms !important; }
+
+@media only screen and (max-width: 768px) { .animate { opacity: 1; } }
+.animate_3 { transition-delay: 900ms !important; }
+
+@media only screen and (max-width: 768px) { .animate { opacity: 1; } }
+.animate_4 { transition-delay: 1200ms !important; }
+
+@media only screen and (max-width: 768px) { .animate { opacity: 1; } }
+.animate_5 { transition-delay: 1500ms !important; }
+
+@media only screen and (max-width: 768px) { .animate { opacity: 1; } }
+.animate_6 { transition-delay: 1800ms !important; }
+
+@media only screen and (max-width: 768px) { .animate { opacity: 1; } }
+.animate_7 { transition-delay: 2100ms !important; }
+
+@media only screen and (max-width: 768px) { .animate { opacity: 1; } }
+.animate_8 { transition-delay: 2400ms !important; }
+
+@media only screen and (max-width: 768px) { .animate { opacity: 1; } }
+.animate_9 { transition-delay: 2700ms !important; }
+
+@media only screen and (max-width: 768px) { .animate { opacity: 1; } }
+.animate_10 { transition-delay: 3000ms !important; }
+
+@media only screen and (max-width: 768px) { .animate { opacity: 1; } }
 .menu-button { position: relative; display: block; background: none; outline: none; border: none; -webkit-tap-highlight-color: transparent; -webkit-tap-highlight-color: transparent; }
 .menu-button .morph-shape { display: inline-block; vertical-align: middle; width: 40px; height: 40px; }
 .menu-button .morph-shape svg path, .menu-button .morph-shape svg line { stroke: #e8c29a; stroke-width: 2px; -moz-transition: -moz-transform 0.3s; -o-transition: -o-transform 0.3s; -webkit-transition: -webkit-transform 0.3s; transition: transform 0.3s; }
@@ -164,14 +199,14 @@ h1, h2, h3, h4, h5, h6, strong { font-weight: normal; }
 .header__menu:hover .header__link { color: #b9b7c2; }
 .header__link { display: inline-block; margin-left: 16px; text-transform: uppercase; font-size: 11px; color: #e8c29a; vertical-align: middle; font-family: "HelveticaNeueCyrBold", Helvetica, sans-serif; -moz-transition: color 0.2s ease; -o-transition: color 0.2s ease; -webkit-transition: color 0.2s ease; transition: color 0.2s ease; }
 .header.is-visible { top: 0; }
-@media only screen and (max-width: 768px) { .header { top: 0; }
+@media only screen and (max-width: 1024px) { .header { top: 0; }
   .header .header__wrap { top: 25px; left: 25px; right: 25px; }
-  .header .header__bl:first-child { margin-top: 0; }
-  .header .header__link { display: none; } }
+  .header .header__bl:first-child { margin-top: 0; } }
+@media only screen and (max-width: 768px) { .header .header__link { display: none; } }
 
 .logo { position: relative; display: inline-block; width: 190px; height: 137px; margin-top: 85px; background: url(../img/logo.png) no-repeat; z-index: 2; -moz-transition: all 0.8s ease; -o-transition: all 0.8s ease; -webkit-transition: all 0.8s ease; transition: all 0.8s ease; }
 .logo.small, .logo.logo_inner { margin-top: 15px; -moz-transform: scale(0.56); -ms-transform: scale(0.56); -webkit-transform: scale(0.56); transform: scale(0.56); filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50); opacity: 0.5; }
-@media only screen and (max-width: 768px) { .logo { margin-top: 5px; -moz-transform: scale(0.56); -ms-transform: scale(0.56); -webkit-transform: scale(0.56); transform: scale(0.56); filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50); opacity: 0.5; }
+@media only screen and (max-width: 1024px) { .logo { margin-top: 5px; -moz-transform: scale(0.56); -ms-transform: scale(0.56); -webkit-transform: scale(0.56); transform: scale(0.56); filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50); opacity: 0.5; }
   .logo.small, .logo.logo_inner { margin-top: 5px; } }
 
 .more { position: relative; text-align: center; font-size: 11px; text-transform: uppercase; color: #f0e3d9; letter-spacing: 0.08em; z-index: 0; -webkit-tap-highlight-color: transparent; font-family: "HelveticaNeueCyrBold", Helvetica, sans-serif; -moz-transition: all 0.9s ease; -o-transition: all 0.9s ease; -webkit-transition: all 0.9s ease; transition: all 0.9s ease; }
