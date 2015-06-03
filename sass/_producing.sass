@@ -10,6 +10,8 @@
 			width: 100%
 	.farm__slider.is-center
 		.farm__in
+			top: auto
+			bottom: 75px
 			background: rgba(#fff, 0.7) 
 			padding: 30px 
 			+transform(translateX(-50%))
@@ -206,7 +208,11 @@
 	height: 480px 
 .animals
 	position: relative 
-	padding: 9.5rem	0 8rem
+	overflow: hidden
+	padding: 9.5rem	0 0
+	.title
+		max-width: 400px
+		margin: 0 auto 
 .scheme
 	max-width: 768px
 	margin: 0 auto
@@ -490,6 +496,8 @@
 		background: rgba(#fff, 0.7)
 		padding: 40px
 		+pf
+		text-align: center
+		line-height: 1.8
 		font-style: italic
 		font-size: 2rem
 		strong
@@ -666,13 +674,6 @@
 .expiration
 	position: relative
 	padding: 9.5rem 0 12rem
-	.quote
-		+r(767)
-			width: 278px
-			height: 354px
-			background: url(../img/quote-high.png) 
-			&:before
-				display: none
 .packing
 	position: relative
 	padding: 9.5rem 0

@@ -569,8 +569,16 @@
 		position: absolute
 		top: 50%
 		left: 240px
-		+s(prev-dark)
+		width: 48px
+		height: 84px
+		background: transparent
 		z-index: 2
+		&:before
+			content: ""
+			position: absolute
+			top: 10px
+			left: 10px
+			+s(prev-dark)
 		+r(1280)
 			left: 140px
 		+r(768)
@@ -579,8 +587,17 @@
 		position: absolute
 		top: 50%
 		right: 240px
-		+s(next-dark)
+		width: 48px
+		height: 84px 
+		background: transparent  
 		z-index: 2
+		&:before
+			content: ""
+			position: absolute
+			top: 10px
+			left: 10px
+			+s(next-dark)
+		
 		+r(1280)
 			right: 140px
 		+r(768)
@@ -592,28 +609,35 @@
 			display: inline-block
 			vertical-align: middle
 			margin: 0 14px
-			height: 41px
-			padding: 0 24px 
+			height: 41px 
 			border-radius: 20px
-			+vertical
 			&.is-active
-				background: #fff
 				a
 					color: $dark
-					border-color: transparent 
+					background: #fff
+					span
+						border-color: transparent 
 			a
 				display: inline-block
 				vertical-align: middle
-				border-bottom: 1px dotted 
-				font-size: 11px
+				height: 41px
+				padding: 0 24px 
+				border-radius: 20px 
 				text-transform: uppercase
+				+vertical
 				+hb
 				text-decoration: none
 				color: $dark
 				+transition(color 200ms, border-color 200ms)
+				span
+					display: inline-block
+					vertical-align: middle
+					border-bottom: 1px dotted
+					font-size: 11px
 				&:hover
 					color: $orange
-					border-color: $orange
+					span
+						border-color: $orange
 .chemistry
 	max-width: 746px
 	margin: 0 auto
@@ -881,8 +905,8 @@
 			display: none				
 .quote
 	position: relative
-	max-width: 656px
-	min-height: 173px
+	width: 656px
+	height: 173px
 	margin: 0 auto 
 	padding: 55px 35px 
 	background: url(../img/quote.png)
@@ -894,18 +918,37 @@
 	font-size: 2rem
 	+pf
 	font-style: italic
+	+r(767)
+		width: 278px
+		height: 354px
+		background-image: url(../img/quote-high.png)
+		&:before
+			display: none
 	+r(600)
 		font-size: 16px
 	&.quote_cols
+		width: 698px
+		height: 254px
+		background-image: url(../img/quote-cols.png)
 		+hb
 		font-style: normal
+		+r(767)
+			width: 278px
+			height: 354px
+			background-image: url(../img/quote-high.png)
+			&:before
+				display: none
 	&.quote_wide
-		max-width: 900px
-		background: url(../img/quote-wide.png)
-		-webkit-background-size: 100% 100% 
-		-o-background-size: 100% 100% 
-		background-size: 100% 100%
-		background-repeat: no-repeat	
+		width: 928px
+		height: 248px 
+		background-image: url(../img/quote-wide.png)
+		+r(930)
+			width: 278px
+			height: 354px
+			font-size: 14px 
+			background-image: url(../img/quote-high.png)
+			&:before
+				display: none	
 	strong
 		font-weight: bold
 	&:before
