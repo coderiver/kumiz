@@ -164,10 +164,14 @@
 	+transform(translateX(-50%))
 	+transition(transform 300ms, opacity 300ms)
 	z-index: 99
+	&.is-hidden
+		z-index: 1
 	+r(1280)
 		bottom: 120px
 	+r(768)
-		bottom: 80px 		
+		bottom: 80px
+	+r(568)
+		bottom: 40px	 		
 
 //nav
 .nav
