@@ -700,4 +700,8 @@ head.ready(function() {
 
 	})();
 
+	$(window).load(function(){
+  		$('.header').addClass('is-visible');
+	});
+
 });
