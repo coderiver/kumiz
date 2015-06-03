@@ -303,14 +303,16 @@ head.ready(function() {
 				else {
 					val += 1;
 					input.val(val);
-				}
+				};				
+				input.trigger('change');
 			});
 			minus.on("click", function(){
 				var val = +(input.val());
 				if (val > 1) {
 					val -= 1;
 					input.val(val);
-				}
+				};
+				input.trigger('change');
 				return false;
 			});
 			input.on("change", function(){
@@ -703,5 +705,18 @@ head.ready(function() {
 	$(window).load(function(){
   		$('.header').addClass('is-visible');
 	});
-
+	//price 
+	$('.js-price').each(function() {
+		$('.js-price-input').on('change', function() {
+			$(this).parents('.js-price').find('.js-price-text').text($(this).val()*$(this).parents('.js-price').find('.js-price-text').data('price'));
+			$('.js-price-text').map(function() {
+				$(this).text($(this).text().replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 '));
+			})
+		});
+	});
+	$(window).load(function() {
+		$('.js-price-text').map(function() {
+			$(this).text($(this).text().replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 '));
+		});
+	});
 });
