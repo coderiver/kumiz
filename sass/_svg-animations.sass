@@ -16,7 +16,7 @@
     
     .morph-shape svg path,
     .morph-shape svg line
-        stroke: $orange
+        stroke: #e8c29a
         stroke-width: 2px
         -webkit-transition: -webkit-transform 0.3s
         transition: transform 0.3s
@@ -138,8 +138,9 @@
     position: relative
     z-index: 5
     opacity: 0
-    &.dialog_chemistry
+    .dialog_chemistry &
         max-width: 660px
+        box-shadow: 1px 0 182px #43684d
 
 .dialog--open
     .dialog__content
