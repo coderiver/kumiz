@@ -152,6 +152,7 @@ h1, h2, h3, h4, h5, h6, strong { font-weight: normal; }
 @media only screen and (max-width: 1280px) { .bg { height: 150px; -webkit-background-size: contain; -o-background-size: contain; background-size: contain; }
   .bg.position { -moz-transform: translateY(50px); -ms-transform: translateY(50px); -webkit-transform: translateY(50px); transform: translateY(50px); } }
 @media only screen and (max-width: 980px) { .bg.position { -moz-transform: none; -ms-transform: none; -webkit-transform: none; transform: none; } }
+@media only screen and (max-width: 768px) { .bg { position: static; } }
 
 .header { position: fixed; top: -200px; left: 0; right: 0; z-index: 10; -moz-transition: top 0.6s ease; -o-transition: top 0.6s ease; -webkit-transition: top 0.6s ease; transition: top 0.6s ease; }
 .header__in { text-align: center; }
@@ -189,7 +190,8 @@ h1, h2, h3, h4, h5, h6, strong { font-weight: normal; }
 .container .section .more { display: block; padding-top: 170px; margin-bottom: 30px; }
 @media only screen and (max-width: 1280px) { .container .section.large-pad .section__in { padding-top: 250px; }
   .container .section .nav { margin-top: 35px; } }
-@media only screen and (max-width: 768px) { .container .section.large-pad .section__in { padding: 170px 0 130px; }
+@media only screen and (max-width: 768px) { .container .section .section__in { padding: 80px 0 200px; }
+  .container .section.large-pad .section__in { padding: 170px 0 130px; }
   .container .section:after { height: 147px; background: url(../img/icons/small-curve.png) bottom center no-repeat; }
   .container .section .more { display: block; padding-top: 125px; } }
 
@@ -302,7 +304,7 @@ h1, h2, h3, h4, h5, h6, strong { font-weight: normal; }
 .footer.is-main p { color: #4c4369; }
 .footer.is-main p a { color: #4c4369; }
 .footer.is-main p a:hover { text-decoration: underline; }
-@media only screen and (max-width: 768px) { .footer.is-main { padding-bottom: 120px; } }
+@media only screen and (max-width: 768px) { .footer.is-main { padding-bottom: 0; } }
 
 .mob { position: fixed; top: 0; left: 0; width: 320px; height: 100%; padding: 40px 0; background: white; overflow-y: auto; text-align: center; z-index: 100; -moz-transform: translate3d(-100%, 0, 0); -ms-transform: translate3d(-100%, 0, 0); -webkit-transform: translate3d(-100%, 0, 0); transform: translate3d(-100%, 0, 0); -moz-transition: -moz-transform 500ms; -o-transition: -o-transform 500ms; -webkit-transition: -webkit-transform 500ms; transition: transform 500ms; }
 @media only screen and (max-width: 360px) { .mob { width: 250px; } }
