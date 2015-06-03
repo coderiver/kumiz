@@ -5,7 +5,7 @@ head.ready(function() {
   	function appeareAnimation(){
   		$('.animate').each(function(){
   			var item_coor = $(this).offset().top,
-  				start_Y = ($(document).scrollTop() + $(window).height() - 100);
+  				start_Y = ($(document).scrollTop() + $(window).height());
   			if (start_Y >= item_coor) {
   				$(this).addClass('is-animated');
   			};
@@ -25,21 +25,17 @@ head.ready(function() {
 	$('.container, .js-mob-close').on('click', function(){
 		$('.out').removeClass('open-menu');
 		$('.bg').removeClass('is-hidden');
+		//$('html, body').removeClass('no-scroll');
+		$('.js-scroll-down').removeClass('is-hidden');
 
 	});
-	$('#hamburger').on('click', function(event){
+	$('.menu-button').on('click', function(event){
 		var top = $(window).scrollTop();
 		$('.out').addClass('open-menu');
 		$('.bg').addClass('is-hidden');
+		//$('html, body').addClass('no-scroll');
+		$('.js-scroll-down').addClass('is-hidden');
 		event.stopPropagation();
-	});
-
-	$('.container').on('scroll touchmove mousewheel', function(e){
-	  if ($('.out').hasClass('open-menu')) {
-	  	e.preventDefault();
-	  	e.stopPropagation();
-	  	return false;
-	  };
 	});
 
 	//scrollTo
@@ -703,32 +699,5 @@ head.ready(function() {
 
 
 	})();
-
-	//fade
-	function visibility(){
-		var window_top = $(window).scrollTop();
-		var window_height = $(window).height();
-		var start_visibility = window_top + window_height;
-
-		$(".js-fade").each(function(){
-
-			var block_position = $(this).offset().top;
-
-			if(start_visibility >= block_position){
-				$(this).addClass('is-visible');
-			}
-		});
-	}
-
-	$(window).scroll(function(){
-		visibility();
-	});
-
-	$(window).load(function(){
-
-		visibility();
-		$('.header').addClass('is-visible');
-
-	});
 
 });

@@ -36,7 +36,7 @@ html
 	+r(1024)
 		font-size: 8px
 	+r(600)
-		font-size: 7px		
+		font-size: 7px			
 body
 	+hr
 	font-size: 1.3rem 
@@ -94,10 +94,12 @@ body
 		+transition(opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s)
 		z-index: 1
 
-// appearence
+// appearance
 .animate
 	opacity: 0
 	+tr(opacity 300ms)
+	+r(768)
+		opacity: 1 
 	&.is-animated
 		opacity: 1
 @for $i from 1 through 10

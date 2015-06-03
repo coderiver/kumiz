@@ -50,6 +50,7 @@ body { font-family: "HelveticaNeueCyrRoman"; font-size: 1.3rem; line-height: 1.4
 .container:after { content: ""; position: absolute; top: 0; right: 0; width: 0; height: 0; background: rgba(72, 60, 49, 0.6); opacity: 0; -moz-transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s; -o-transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s; -webkit-transition: opacity 0.5s, width 0.1s, height 0.1s; -webkit-transition-delay: 0s, 0.5s, 0.5s; transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s; z-index: 1; }
 
 .animate { opacity: 0; -moz-transition: opacity 300ms; -o-transition: opacity 300ms; -webkit-transition: opacity 300ms; transition: opacity 300ms; }
+@media only screen and (max-width: 768px) { .animate { opacity: 1; } }
 .animate.is-animated { opacity: 1; }
 
 .animate_1 { transition-delay: 300ms !important; }
@@ -253,8 +254,10 @@ body { font-family: "HelveticaNeueCyrRoman"; font-size: 1.3rem; line-height: 1.4
 .video-btn .video-btn__text:hover { border-color: transparent; }
 
 .scroll-down { position: absolute; bottom: 164px; left: 50%; background: transparent; -moz-transform: translateX(-50%); -ms-transform: translateX(-50%); -webkit-transform: translateX(-50%); transform: translateX(-50%); -moz-transition: -moz-transform 300ms, opacity 300ms; -o-transition: -o-transform 300ms, opacity 300ms; -webkit-transition: -webkit-transform 300ms, opacity 300ms; transition: transform 300ms, opacity 300ms; z-index: 99; }
+.scroll-down.is-hidden { z-index: 1; }
 @media only screen and (max-width: 1280px) { .scroll-down { bottom: 120px; } }
 @media only screen and (max-width: 768px) { .scroll-down { bottom: 80px; } }
+@media only screen and (max-width: 568px) { .scroll-down { bottom: 40px; } }
 
 .nav { position: fixed; bottom: 0; left: 0; right: 0; height: 92px; background: #fff; box-shadow: 0 0 7px #ccc; z-index: 9; }
 .nav ul { font-size: 0; text-align: center; }
