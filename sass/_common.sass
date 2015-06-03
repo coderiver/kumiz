@@ -93,7 +93,16 @@ body
 		opacity: 0
 		+transition(opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s)
 		z-index: 1
-		
+
+// appearence
+.animate
+	opacity: 0
+	+tr(opacity 300ms)
+	&.is-animated
+		opacity: 1
+@for $i from 1 through 10
+	.animate_#{$i}
+		transition-delay: #{300*$i}ms !important		  			
 .main
 	position: relative
 	z-index: 1				 	

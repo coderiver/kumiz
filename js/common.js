@@ -1,5 +1,19 @@
 head.ready(function() {
 
+	// animation appearing
+
+  	function appeareAnimation(){
+  		$('.animate').each(function(){
+  			var item_coor = $(this).offset().top,
+  				start_Y = ($(document).scrollTop() + $(window).height() - 100);
+  			if (start_Y >= item_coor) {
+  				$(this).addClass('is-animated');
+  			};
+
+  		});
+  	}
+  	appeareAnimation();
+
 	// usefull
 	$('.usefull__more').on('click', function(){
 		$(this).parents('.usefull').find('.usefull__wrap').slideToggle();
@@ -68,6 +82,7 @@ head.ready(function() {
 
 	$(window).scroll(function(){
 		moveAll();
+		appeareAnimation();
 	});
 
 	// slick slider
@@ -223,14 +238,6 @@ head.ready(function() {
 		arrows: false,
 		slidesToShow: 3,
 		responsive: [
-			{
-				breakpoint: 1100,
-				settings: {
-				slidesToShow: 2,
-				slidesToScroll: 2,
-				arrows: true
-				}
-			},
 			{
 				breakpoint: 768,
 				settings: {
