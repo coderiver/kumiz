@@ -1,18 +1,4 @@
-head.ready(function() {
-
-	// animation appearing
-
-  	function appeareAnimation(){
-  		$('.animate').each(function(){
-  			var item_coor = $(this).offset().top,
-  				start_Y = ($(window).scrollTop() + $(window).height());
-  			if (start_Y >= item_coor) {
-  				$(this).addClass('is-animated');
-  			};
-
-  		});
-  	};
-  	appeareAnimation();
+$(document).ready(function() {
 
 	// usefull
 	$('.usefull__more').on('click', function(){
@@ -25,15 +11,12 @@ head.ready(function() {
 	$('.container, .js-mob-close').on('click', function(){
 		$('.out').removeClass('open-menu');
 		$('.bg').removeClass('is-hidden');
-		//$('html, body').removeClass('no-scroll');
 		$('.js-scroll-down').removeClass('is-hidden');
 
 	});
 	$('.menu-button').on('click', function(event){
-		var top = $(window).scrollTop();
 		$('.out').addClass('open-menu');
 		$('.bg').addClass('is-hidden');
-		//$('html, body').addClass('no-scroll');
 		$('.js-scroll-down').addClass('is-hidden');
 		event.stopPropagation();
 	});
@@ -41,7 +24,7 @@ head.ready(function() {
 	//scrollTo
 	function scrollTo(page){
 
-		$('html, body').animate({
+		$('#viewport').animate({
 			scrollTop: $(page).offset().top - 80
 		}, 800);
 
@@ -58,27 +41,28 @@ head.ready(function() {
 	$('.js-top').click(function(e){
 
 	  	e.preventDefault();
-	  	$('html, body').animate({
+	  	$('#viewport').animate({
 	  	 scrollTop: 0,
 	  	}, 800);
 	 });
 
 	function moveAll(){
-		var top = $(window).scrollTop();
+		var top = $('#viewport').scrollTop();
 
 		if(top > 100){
 			$('.logo').addClass('small');
 			$('.js-bg').addClass('position');
+			$('.js-scroll-down').addClass('is-hidden');
 		} else{
 			$('.logo').removeClass('small');
 			$('.js-bg').removeClass('position');
+			$('.js-scroll-down').removeClass('is-hidden');
 	  	}
 	}
 	moveAll();
 
-	$(window).scroll(function(){
+	$('#viewport').scroll(function(){
 		moveAll();
-		appeareAnimation();
 	});
 
 	// slick slider
@@ -458,21 +442,6 @@ head.ready(function() {
   	}
   	tab();
 
-	// parallax effect for bg-images
-	// function parallax(){
-	// 	$('.js-parallax').each(function(){
-	// 		var	top = $(this).position().top,
-	// 			yPos = $(window).scrollTop();
-
-	// 		var diff = (yPos - top);
-	// 			console.log(top, yPos, diff);
-	// 		$(this).css('transform', 'translateY('+diff+'px)');
-
-	// 	});
-	// }
-	// parallax();
-
-
 	// human block
 
 	function human(){
@@ -494,9 +463,9 @@ head.ready(function() {
 
 	function nav(){
 		$('.section').each(function(){
-		    var pos = $(this).offset().top;
+		    var pos = $(this).position().top;
 		    var id = $(this).attr('id');
-		    if( $(window).scrollTop() >= (pos - 100)){
+		    if( $('#viewport').scrollTop() >= (pos - 100)){
 		        $('.nav ul li a').removeClass('is-active');
 		        $('[href = #'+id+']').addClass('is-active');
 		    }
@@ -505,14 +474,14 @@ head.ready(function() {
 	}
 	nav();
 
-	$(window).scroll(function(){
+	$('#viewport').scroll(function(){
 		nav();
 	});
 
 	$(".nav a").on('click', function (){
 		    var page = $(this).attr("href");
 		    console.log(page);
-		    $('html, body').animate({
+		    $('#viewport').animate({
 		        scrollTop: $(page).offset().top
 		    }, 500);
 		    return false;
@@ -521,7 +490,7 @@ head.ready(function() {
 	$('.js-scroll-down').on('click', function(){
 		var anchor = $(window).height();
 		console.log(anchor);
-		$('html, body').animate({
+		$('#viewport').animate({
 			scrollTop: anchor
 		}, 500);
 

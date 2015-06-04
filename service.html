@@ -12,9 +12,9 @@
 <body>
 	<div class="out">
 		<div class="container">
-			<div class="main">
+			<div id="viewport" class="main">
 				<!-- header -->
-				<header class="header animate">
+				<header class="header" data-sr>
 					<nav class="menu">
 						<div class="menu__btn">
 							<button id="hamburger" class="menu-button">
@@ -49,7 +49,7 @@
 					</div>
 				</header>
 				<!-- navigation -->
-				<nav class="nav animate">
+				<nav class="nav" data-sr>
 					<ul>
 						<li><a href="#cooking">Кобылье молоко в кулинарии</a></li>
 						<li><a href="#delivery">Доставка</a></li>
@@ -58,7 +58,7 @@
 					</ul>
 				</nav>
 				<!-- topper-->
-				<section class="section topper animate animate_1">
+				<section class="section topper" data-sr="wait 0.3s">
 					<div class="video video_service"></div>
 					<div class="topper__in">
 						<h1 class="h1">Сервис</h1>
@@ -74,11 +74,11 @@
 				<!-- cooking -->
 				<section id="cooking" class="section cooking">
 					<div class="center">
-						<h2 class="h2 animate">Кобылье молоко в кулинарии</h2>
-						<div class="title animate">
+						<h2 class="h2" data-sr>Кобылье молоко в кулинарии</h2>
+						<div class="title" data-sr>
 							<p>Наш повар разработал <strong>уникальные рецепты</strong> из кобыльего молока </p>
 						</div>
-						<div class="cooking__slider js-slider animate animate_1">
+						<div class="cooking__slider js-slider" data-sr="wait 0.3s">
 							<div class="cooking__slide">
 								<div class="cooking__item">
 									<div class="cooking__img">
@@ -116,7 +116,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="cooking__btn animate animate_2">
+						<div class="cooking__btn" data-sr="wait 0.6s">
 							<button class="btn btn_brown">все рецепты в блоге</button>
 						</div>
 					</div>
@@ -137,11 +137,11 @@
 				<!-- delivery -->
 				<section id="delivery" class="section delivery">
 					<div class="center">
-						<h2 class="h2 animate">Доставка продукта</h2>
-						<div class="title animate">
+						<h2 class="h2" data-sr>Доставка продукта</h2>
+						<div class="title" data-sr>
 							<p><strong>Наш продукт уникален</strong> и не предназначен для продажи на полках магазина </p>
 						</div>
-						<div class="delivery__in animate animate_1">
+						<div class="delivery__in" data-sr="wait 0.3s">
 							<div class="delivery__text">
 								<img src="img/courier.png" alt="">
 								<h4>Доставка кобыльего молока и кумыса</h4>
@@ -154,12 +154,12 @@
 				<!-- reviews -->
 				<section id="reviews" class="section reviews">
 					<div class="center">
-						<h2 class="h2 animate">отзывы</h2>
-						<div class="title animate">
+						<h2 class="h2" data-sr>отзывы</h2>
+						<div class="title" data-sr>
 							<p>Наши клиенты самые <strong>здоровые и счастливые люди</strong></p>
 						</div>
 						<!-- tabs -->
-						<div class="tabs js-tab-group animate animate_1">
+						<div class="tabs js-tab-group" data-sr="wait 0.3s">
 							<ul class="tabs__nav js-tab">
 								<li class="is-active"><a href="js-tab1"><span>мертвые</span></a></li>
 								<li><a href="js-tab2"><span>живые</span></a></li>
@@ -232,15 +232,15 @@
 				<!-- customers -->
 				<section id="customers" class="section customers">
 					<div class="center">
-						<h2 class="h2 animate">Наши покупатели</h2>
+						<h2 class="h2" data-sr>Наши покупатели</h2>
 						<!-- quote -->
-						<div class="quote quote_wide animate animate_1">
+						<div class="quote quote_wide" data-sr="wait 0.3s">
 							<p><strong>Это люди, ведущие здоровый образ жизни, употребляющие натуральные продукты, интересующиеся альтернативной медициной, информированы о полезных свойствах кобыльего молока и кумыса и те, кто способен изменить свое отношение к здоровому образу жизни, принять и придерживаться его.</strong></p>
 						</div>
 					</div>
 				</section>
 				<!-- footer -->
-				<footer class="footer footer_service animate">
+				<footer class="footer footer_service" data-sr>
 					<div class="center">
 						<div class="footer__topper">
 							<div class="title">
@@ -305,6 +305,23 @@
 <!-- popups -->
 
 <!-- load scripts -->
-<script src="js/lib/head.js" data-headjs-load="js/init.js"></script>
+<script src='js/lib/jquery.js'></script>
+<script src='js/lib/slick.min.js'></script>
+<script src='js/lib/modernizr.custom.js'></script>
+<script src='js/lib/snap.svg-min.js'></script>
+<script src='js/lib/classie.js'></script>
+<script src='js/lib/dialogFx.js'></script>
+<script src='js/lib/scrollTo.min.js'></script>
+<script src='js/lib/jquery.form-validator.min.js'></script>
+<script src='js/lib/scrollReveal.min.js'></script>
+<script src='js/common.js'></script>
+<script>
+	var config = { 
+		viewport: document.getElementById('viewport'),
+		vFactor:  0.50,
+		scale: false
+	}
+	window.sr = new scrollReveal( config);
+</script>
 </body>
 </html>

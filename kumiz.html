@@ -12,9 +12,9 @@
 <body>
 	<div class="out">
 		<div class="container">
-			<div class="main">
+			<div id="viewport" class="main">
 				<!-- header -->
-				<header class="header animate">
+				<header class="header" data-sr>
 					<nav class="menu">
 						<div class="menu__btn">
 							<button id="hamburger" class="menu-button">
@@ -49,7 +49,7 @@
 					</div>
 				</header>
 				<!-- navigation -->
-				<nav class="nav animate animate_1">
+				<nav class="nav" data-sr>
 					<ul>
 						<li><a href="#orgamism" class="">Влияние на организм</a></li>
 						<li><a href="#consist">Состав</a></li>
@@ -63,7 +63,7 @@
 					</ul>
 				</nav>
 				<!-- topper-->
-				<section class="section topper animate animate_1">
+				<section class="section topper" data-sr="wait 0.3s">
 					<div class="video"></div>
 					<div class="topper__in">
 						<h1 class="h1">Кобылье молоко</h1>
@@ -94,13 +94,13 @@
 				<!-- organism -->
 				<section id="orgamism" class="section organism">
 					<div class="center">
-						<h2 class="h2 animate">Влияние на организм</h2>
+						<h2 class="h2" data-sr>Влияние на организм</h2>
 						<div class="human">
-							<div class="title animate">
+							<div class="title" data-sr>
 								<p><strong>Кобылье молоко</strong> и <strong>кумыс</strong> эффективно</p>
 								<p>воздействует на основные системы человека:</p>
 							</div>
-							<div class="human__in animate animate_1">
+							<div class="human__in" data-sr>
 								<div class="human__left">
 									<div class="human__item">
 										<div class="system system_endo" data-name="endo">
@@ -219,12 +219,12 @@
 				<!-- consist -->
 				<section id="consist" class="section consist">
 					<div class="center">
-						<h2 class="h2 animate">Cостав кобыльего молока</h2>
-						<div class="title animate">
+						<h2 class="h2" data-sr>Cостав кобыльего молока</h2>
+						<div class="title" data-sr>
 							<p>По <strong>белковому</strong> и <strong>минеральному</strong> составу кобылье молоко приближено</p>
 							<p>к женскому грудному молоку:</p>
 						</div>
-						<div class="consist__in animate animate_1">
+						<div class="consist__in" data-sr="wait 0.3s">
 							<!-- tabs -->
 							<div class="tabs js-tab-group">
 								<ul class="tabs__nav js-tab">
@@ -429,17 +429,17 @@
 				<!-- medical -->
 				<section id="medical" class="section medical">
 					<div class="center">
-						<h2 class="h2 animate">терапевтические свойства</h2>
-						<div class="title animate">
+						<h2 class="h2" data-sr>терапевтические свойства</h2>
+						<div class="title" data-sr>
 							<p><strong>Кобылье молоко и кумыс</strong> - полезные для организма </p>
 							<p>терапевтические продукты</p>
 						</div>
 						<div class="usefull">
-							<div class="usefull__img aminate">
+							<div class="usefull__img" data-sr>
 								<img src="img/bottle.png" alt="">
 							</div>
-							<div class="usefull__lines animate animate_1"></div>
-							<ul class="usefull__list animate animate_2">
+							<div class="usefull__lines" data-sr="wait 0.3s"></div>
+							<ul class="usefull__list" data-sr="wait 0.6s">
 								<li>
 									<i class="icon-medical1"></i>
 									<p>Дает организму больше энергии</p>
@@ -457,7 +457,7 @@
 									<p>Дает организму больше энергии</p>
 								</li>
 							</ul>
-							<div class="usefull__wrap animate animate_2">
+							<div class="usefull__wrap" data-sr="wait 0.6s">
 								<ul class="usefull__list">
 									<li>
 										<i class="icon-medical5"></i>
@@ -485,7 +485,7 @@
 							</div>
 							<div class="usefull__more">все свойства</div>
 						</div>
-						<div class="quote animate animate_2">
+						<div class="quote" data-sr="wait 0.6s">
 							<strong>Кобылье молоко</strong> не панацея от всех болезней, не стоит об этом забывать
 						</div>
 					</div>
@@ -493,12 +493,12 @@
 				<!-- hygiene -->
 				<section id="hygiene" class="section hygiene">
 					<div class="center">
-						<h2 class="h2 animate">гигиена кишечной флоры</h2>
-						<div class="title animate">
+						<h2 class="h2" data-sr>гигиена кишечной флоры</h2>
+						<div class="title" data-sr>
 							<p><strong>Ежедневная гигиена</strong> - это минимум усилий, для нормальной</p>
 							<p>жизнедеятельности нашего организма!</p>
 						</div>
-						<div class="room animate animate_1">
+						<div class="room" data-sr="wait 0.3s">
 							<div class="room__in js-room">
 								<div class="room__clear js-room-clean" style="width: 50%;">
 									<img src="img/room-clean.png" alt="">
@@ -516,33 +516,33 @@
 				<!-- immunity -->
 				<section id="immunity" class="section immunity">
 					<div class="center immunity__wrap">
-						<h2 class="h2 animate">Ежедневная гигиена</h2>
-						<div class="title animate"><strong>Наш иммунитет</strong> — совокупность блаблабла</div>
+						<h2 class="h2" data-sr>Ежедневная гигиена</h2>
+						<div class="title" data-sr><strong>Наш иммунитет</strong> — совокупность блаблабла</div>
 						<div class="immunity__in">
-							<article class="immunity__text animate animate_1">
+							<article class="immunity__text" data-sr="wait 0.3s">
 								<h4>Иммунитет — совокупность</h4>
 								<p>Ваш иммунитет подобно растению, при правильном уходе за своим организмом он становится крепче и сильнее</p>
 							</article>
 							<ul class="immunity__list">
-								<li class="immunity__item animate animate_2">
+								<li class="immunity__item" data-sr="wait 0.6s">
 									<div class="immunity__img">
 										<img src="img/flower1.png" alt="">
 									</div>
 									<p>Ежедневная<br> чистка зубов</p>
 								</li>
-								<li class="immunity__item animate animate_3">
+								<li class="immunity__item" data-sr="wait 0.9s">
 									<div class="immunity__img">
 										<img src="img/flower2.png" alt="">
 									</div>
 									<p>Ежедневное<br> принятие душа</p>
 								</li>
-								<li class="immunity__item animate animate_4">
+								<li class="immunity__item" data-sr="wait 1.2s">
 									<div class="immunity__img">
 										<img src="img/flower3.png" alt="">
 									</div>
 									<p>Ежедневное<br> мытье рук</p>
 								</li>
-								<li class="immunity__item animate animate_5">
+								<li class="immunity__item" data-sr="wait 1.5s">
 									<div class="immunity__img">
 										<img src="img/flower4.png" alt="">
 									</div>
@@ -565,32 +565,32 @@
 				<!-- usage -->
 				<section id="usage" class="section usage">
 					<div class="center">
-						<h2 class="h2 animate">правильное употребление</h2>
-						<div class="title animate">
+						<h2 class="h2" data-sr>правильное употребление</h2>
+						<div class="title" data-sr>
 							<p>В качестве терапевтических целей существует <strong>специальная методика</strong></p>
 							<p><strong>употребления</strong> кобыльего молока</p>
 						</div>
 						<ul class="usage__list">
-							<li class="usage__item animate animate_1">
+							<li class="usage__item" data-sr="wait 0.3s">
 								<div class="usage__title">Удовольствие</div>
 								<div class="usage__text">Эти продукты можно пить в свое удовольствие, т.к. это натуральный, природный продукт, безопасно приготовленный и упакованный</div>
 								<a href="#">Подробнее</a>
 							</li>
-							<li class="usage__item animate animate_2">
+							<li class="usage__item" data-sr="wait 0.6s">
 								<div class="usage__title">Профилактика</div>
 								<div class="usage__text">Минимальная суточная доза кобыльего молока в терапевтических целях -  250мл. (½ с утра за 20 минут до завтрака и ½ перед сном)</div>
 								<a href="#">Подробнее</a>
 							</li>
-							<li class="usage__item animate animate_3">
+							<li class="usage__item" data-sr="wait 0.9s">
 								<div class="usage__title">Лечение</div>
 								<div class="usage__text">Кумыс в терапевтических целях необходимо пить по 250мл. за 30 минут до еды</div>
 								<a href="#">Подробнее</a>
 							</li>
 						</ul>
-						<div class="usage__alarm animate_3">
+						<div class="usage__alarm" data-sr="wait 0.9s">
 							* Не рекомендуется пить кобылье молоко и кумыс людям с непереносимостью лактозы или с аллергией на молочные продукты
 						</div>
-						<div class="usage__btn animate_3">
+						<div class="usage__btn" data-sr="wait 0.9s">
 							<button class="btn btn_violet">Узнать больше о методике</button>
 						</div>
 					</div>
@@ -609,12 +609,12 @@
 				<section id="philosophy" class="section philosophy">
 					<div class="philosophy__video"></div>
 					<div class="philosophy__in center">
-						<h2 class="h2 animate">философия справедливого эгоиста</h2>
-						<div class="title animate">
+						<h2 class="h2" data-sr>философия справедливого эгоиста</h2>
+						<div class="title" data-sr>
 							<p>Каждый должен думать прежде всего <strong>о своем здоровье,</strong> чтобы потом он смог</p>
 							<p>думать о других и выполнить то, что должен!  </p>
 						</div>
-						<div class="video-btn animate animate_1 video-btn_white">
+						<div class="video-btn video-btn_white" data-sr="wait 0.3s">
 							<a href="#" class="video-btn__icon js-video2">
 								<span class="icon-play-white"></span>
 								<i class="video-btn__dot1"></i>
@@ -633,48 +633,48 @@
 				<!-- target -->
 				<section id="target" class="section target">
 					<div class="center">
-						<h2 class="h2 animate">Для кого предназначено</h2>
-						<div class="title animate"><p>Кобылье молоко и кумыс</p></div>
+						<h2 class="h2" data-sr>Для кого предназначено</h2>
+						<div class="title" data-sr><p>Кобылье молоко и кумыс</p></div>
 						<div class="target__in">
 							<div class="target__wrap">
 								<div class="target__list">
-									<div class="target__item target__item_1 animate animate_1">
+									<div class="target__item target__item_1" data-sr="wait 0.3s">
 										<div class="target__img">
 											<img src="img/pict1.jpg" alt="">
 										</div>
 										<div class="target__text">Для беременных или кормящих женщин</div>
 									</div>
-									<div class="target__item target__item_2 animate animate_2">
+									<div class="target__item target__item_2" data-sr="wait 0.6s">
 										<div class="target__img">
 											<img src="img/pict1.jpg" alt="">
 										</div>
 										<div class="target__text">Для беременных или кормящих женщин</div>
 									</div>
-									<div class="target__item target__item_3 animate animate_3">
+									<div class="target__item target__item_3" data-sr="wait 0.9s">
 										<div class="target__img">
 											<img src="img/pict1.jpg" alt="">
 										</div>
 										<div class="target__text">Для беременных или кормящих женщин</div>
 									</div>
-									<div class="target__item target__item_4 animate animate_4">
+									<div class="target__item target__item_4" data-sr="wait 1.2s">
 										<div class="target__img">
 											<img src="img/pict1.jpg" alt="">
 										</div>
 										<div class="target__text">Для беременных или кормящих женщин</div>
 									</div>
-									<div class="target__item target__item_5 animate animate_5">
+									<div class="target__item target__item_5" data-sr="wait 1.5s">
 										<div class="target__img">
 											<img src="img/pict1.jpg" alt="">
 										</div>
 										<div class="target__text">Для беременных или кормящих женщин</div>
 									</div>
-									<div class="target__item target__item_6 animate animate_6">
+									<div class="target__item target__item_6" data-sr="wait 1.8s">
 										<div class="target__img">
 											<img src="img/pict1.jpg" alt="">
 										</div>
 										<div class="target__text">Для беременных или кормящих женщин</div>
 									</div>
-									<div class="target__item target__item_7 animate animate_7">
+									<div class="target__item target__item_7" data-sr="wait 2.1s">
 										<div class="target__img">
 											<img src="img/pict1.jpg" alt="">
 										</div>
@@ -735,12 +735,12 @@
 				<!-- bussiness -->
 				<section id="bussiness" class="section bussiness">
 					<div class="center">
-						<h2 class="h2 animate">Европейское молочное коневодство</h2>
-						<div class="title animate">
+						<h2 class="h2" data-sr>Европейское молочное коневодство</h2>
+						<div class="title" data-sr>
 							<p><strong>Федерации</strong> и ассоциации:</p>
 						</div>
 						<!-- federations -->
-						<div class="federations js-federations animate animate_1">
+						<div class="federations js-federations" data-sr="wait 0.3s">
 							<div class="federations__item">
 								<div class="federations__logo">
 									<img src="img/logo1.png" alt="">
@@ -772,11 +772,11 @@
 								</div>
 							</div>
 						</div>
-						<div class="title animate">
+						<div class="title" data-sr>
 							<p>Европейские<strong> эксперты и врачи: </strong></p>
 						</div>
 						<!-- doctors -->
-						<div class="doctors js-doctors animate animate_1">
+						<div class="doctors js-doctors" data-sr="wait 0.3s">
 							<div class="doctors__item">
 								<div class="doctors__img">
 									<img src="img/pict2.png" alt="">
@@ -847,11 +847,11 @@
 				<!-- labels -->
 				<section id="labels" class="section labels">
 					<div class="center">
-						<div class="title animate">
+						<div class="title" data-sr>
 							<p><strong>Ведущие</strong> европейские производители: </p>
 						</div>
 						<ul class="labels__list">
-							<li class="labels__item animate animate_1">
+							<li class="labels__item" data-sr="wait 0.3s">
 								<div class="labels__logo">
 									<img src="img/logo8.png" alt="">
 								</div>
@@ -862,7 +862,7 @@
 									</div>	
 								</div>
 							</li>
-							<li class="labels__item animate animate_2">
+							<li class="labels__item" data-sr="wait 0.6s">
 								<div class="labels__logo">
 									<img src="img/logo2.png" alt="">
 								</div>
@@ -873,7 +873,7 @@
 									</div>
 								</div>
 							</li>
-							<li class="labels__item animate animate_3">
+							<li class="labels__item" data-sr="wait 0.9s">
 								<div class="labels__logo">
 									<img src="img/logo3.png" alt="">
 								</div>
@@ -884,7 +884,7 @@
 									</div>
 								</div>
 							</li>
-							<li class="labels__item animate animate_4">
+							<li class="labels__item" data-sr="wait 1.2s">
 								<div class="labels__logo">
 									<img src="img/logo4.png" alt="">
 								</div>
@@ -895,7 +895,7 @@
 									</div>
 								</div>
 							</li>
-							<li class="labels__item animate animate_5">
+							<li class="labels__item" data-sr="wait 1.5s">
 								<div class="labels__logo">
 									<img src="img/logo5.png" alt="">
 								</div>
@@ -906,7 +906,7 @@
 									</div>
 								</div>
 							</li>
-							<li class="labels__item animate animate_6">
+							<li class="labels__item" data-sr="wait 1.8s">
 								<div class="labels__logo">
 									<img src="img/logo6.png" alt="">
 								</div>
@@ -917,7 +917,7 @@
 									</div>
 								</div>
 							</li>
-							<li class="labels__item animate animate_7">
+							<li class="labels__item" data-sr="wait 2.1s">
 								<div class="labels__logo">
 									<img src="img/logo7.png" alt="">
 								</div>
@@ -969,7 +969,7 @@
 					</div>
 				</section>
 				<!-- footer -->
-				<footer class="footer animate">
+				<footer class="footer" data-sr>
 					<div class="center">
 						<div class="footer__topper">
 							<div class="title">
@@ -1273,6 +1273,24 @@
 	</div>
 </div>	
 <!-- load scripts -->
-<script src="js/lib/head.js" data-headjs-load="js/init.js"></script>
+
+<script src='js/lib/jquery.js'></script>
+<script src='js/lib/slick.min.js'></script>
+<script src='js/lib/modernizr.custom.js'></script>
+<script src='js/lib/snap.svg-min.js'></script>
+<script src='js/lib/classie.js'></script>
+<script src='js/lib/dialogFx.js'></script>
+<script src='js/lib/scrollTo.min.js'></script>
+<script src='js/lib/jquery.form-validator.min.js'></script>
+<script src='js/lib/scrollReveal.min.js'></script>
+<script src='js/common.js'></script>
+<script>
+	var config = { 
+		viewport: document.getElementById('viewport'),
+		vFactor:  0.50,
+		scale: false
+	}
+	window.sr = new scrollReveal( config);
+</script>
 </body>
 </html>
