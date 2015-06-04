@@ -28,8 +28,8 @@
 .header
 	position: fixed
 	top: -200px
-	left: 0
-	right: 0
+	left: 50px
+	right: 50px
 	z-index: 10
 	+transition(top 0.6s ease)
 	&__in
@@ -37,8 +37,8 @@
 	&__wrap
 		position: absolute
 		top: 60px
-		left: 48px
-		right: 45px
+		left: 0
+		right: 0
 		+clr
 	&__bl
 		&:first-child
@@ -131,8 +131,7 @@
 		margin: 0 auto
 		padding: 0 25px
 		+box
-		&:after
-			content: ""
+		.flourish
 			position: absolute
 			bottom: 0
 			left: 0

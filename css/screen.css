@@ -156,9 +156,9 @@ h1, h2, h3, h4, h5, h6, strong { font-weight: normal; }
 @media only screen and (max-width: 980px) { .bg.position { -moz-transform: none; -ms-transform: none; -webkit-transform: none; transform: none; } }
 @media only screen and (max-width: 768px) { .bg { position: static; } }
 
-.header { position: fixed; top: -200px; left: 0; right: 0; z-index: 10; -moz-transition: top 0.6s ease; -o-transition: top 0.6s ease; -webkit-transition: top 0.6s ease; transition: top 0.6s ease; }
+.header { position: fixed; top: -200px; left: 50px; right: 50px; z-index: 10; -moz-transition: top 0.6s ease; -o-transition: top 0.6s ease; -webkit-transition: top 0.6s ease; transition: top 0.6s ease; }
 .header__in { text-align: center; }
-.header__wrap { position: absolute; top: 60px; left: 48px; right: 45px; *zoom: 1; }
+.header__wrap { position: absolute; top: 60px; left: 0; right: 0; *zoom: 1; }
 .header__wrap:after { content: " "; display: table; clear: both; }
 .header__bl:first-child { margin-top: 4px; }
 .header__menu { display: inline-block; vertical-align: middle; }
@@ -183,7 +183,7 @@ h1, h2, h3, h4, h5, h6, strong { font-weight: normal; }
   .more:before { margin-left: -15.5px; background: url('../img/icons-se5a7d47aa8.png') 0 -2923px no-repeat; width: 31px; height: 147px; } }
 
 .container .section { max-width: 1500px; margin: 0 auto; padding: 0 25px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
-.container .section:after { content: ""; position: absolute; bottom: 0; left: 0; right: 0; height: 200px; background: url(../img/icons/consultation-deco.png) no-repeat bottom center; }
+.container .section .flourish { position: absolute; bottom: 0; left: 0; right: 0; height: 200px; background: url(../img/icons/consultation-deco.png) no-repeat bottom center; }
 .container .section.no-bg:after { display: none; }
 .container .section.large-pad .section__in { padding-top: 300px; }
 .container .section:last-child .section__in { padding-bottom: 0; }
