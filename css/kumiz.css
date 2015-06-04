@@ -198,7 +198,7 @@ body { font-family: "HelveticaNeueCyrRoman"; font-size: 1.3rem; line-height: 1.4
 .video.video_service { background: url(../img/topper-bg2.jpg); }
 
 .menu { position: relative; float: left; padding-top: 5px; }
-.menu .menu__text { display: inline-block; vertical-align: middle; font-size: 1.1rem; letter-spacing: 1px; text-transform: uppercase; font-family: "HelveticaNeueCyrBold"; color: #e8c29a; }
+.menu .menu__text { display: inline-block; vertical-align: middle; font-size: 1.1rem; letter-spacing: 1px; text-transform: uppercase; font-family: "HelveticaNeueCyrBold"; color: #e8c29a; -moz-transition: color 300ms; -o-transition: color 300ms; -webkit-transition: color 300ms; transition: color 300ms; }
 
 .video-btn { margin-top: 60px; }
 .video-btn.video-btn_white { margin-top: 16rem; }
@@ -782,6 +782,8 @@ body { font-family: "HelveticaNeueCyrRoman"; font-size: 1.3rem; line-height: 1.4
 .slick-dots button:hover { box-shadow: none; }
 
 .menu-button { position: relative; display: block; background: none; outline: none; border: none; -webkit-tap-highlight-color: transparent; -webkit-tap-highlight-color: transparent; }
+.menu-button.is-open .menu__text { color: #ef7e07; }
+.menu-button.is-open .morph-shape svg path, .menu-button.is-open .morph-shape svg line { stroke: #ef7e07; }
 .menu-button .morph-shape { display: inline-block; vertical-align: middle; width: 40px; height: 40px; margin-right: 21px; }
 .menu-button .morph-shape svg path, .menu-button .morph-shape svg line { stroke: #e8c29a; stroke-width: 2px; -webkit-transition: -webkit-transform 0.3s; transition: transform 0.3s; }
 
