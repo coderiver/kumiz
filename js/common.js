@@ -5,13 +5,13 @@ head.ready(function() {
   	function appeareAnimation(){
   		$('.animate').each(function(){
   			var item_coor = $(this).offset().top,
-  				start_Y = ($(document).scrollTop() + $(window).height());
+  				start_Y = ($(window).scrollTop() + $(window).height());
   			if (start_Y >= item_coor) {
   				$(this).addClass('is-animated');
   			};
 
   		});
-  	}
+  	};
   	appeareAnimation();
 
 	// usefull
