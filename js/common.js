@@ -356,21 +356,27 @@ $(document).ready(function() {
     	    	var delta = (x - m);
     	    	var koef = (100 - (delta/w)*100);
 
+    	    if(koef < 50){
+    	    	$('.js-room-text-r').addClass('is-visible');
+    	    	$('.js-room-text-l').removeClass('is-visible');
+    	    }
+    	    else{
+    	    	$('.js-room-text-l').addClass('is-visible');
+    	    	$('.js-room-text-r').removeClass('is-visible');
+    	    };
+
     	    if(koef < 15){
     	    	$(".js-room-clean").css('width', '15%');
     	    	$(".js-room-line").css('left', '15%');
-    	    	$('.js-room-text-l').addClass('is-visible');
+    	    	
     	    }
     	    else if(koef > 85){
     	    	$(".js-room-clean").css('width', '85%');
     	    	$(".js-room-line").css('left', '85%');
-    	    	$('.js-room-text-r').addClass('is-visible');
     	    }
     	    else {
     	    	$(".js-room-clean").css('width', koef+'%');
     	    	$(".js-room-line").css('left', koef+'%');
-    	    	$('.js-room-text-l').removeClass('is-visible');
-    	    	$('.js-room-text-r').removeClass('is-visible');
     	    }
     	});
     };

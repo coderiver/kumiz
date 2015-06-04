@@ -595,7 +595,7 @@ body { font-family: "HelveticaNeueCyrRoman"; font-size: 1.3rem; line-height: 1.4
 .usage { position: relative; padding: 9.5rem 0; background: #ffe5ff; }
 .usage .usage__list { max-width: 940px; margin: 0 auto 50px; *zoom: 1; }
 .usage .usage__list:after { content: " "; display: table; clear: both; }
-.usage .usage__item { position: relative; float: left; width: 31%; padding: 41px; margin-left: 3.5%; }
+.usage .usage__item { position: relative; float: left; width: 31%; padding: 41px; margin-left: 3.5%; cursor: pointer; }
 .usage .usage__item:before { content: ""; position: absolute; top: 0; bottom: 0; right: 0; left: 0; background: url(../img/border.png); -webkit-background-size: 100% 100%; -o-background-size: 100% 100%; background-size: 100% 100%; opacity: 0; -moz-transition: opacity 200ms; -o-transition: opacity 200ms; -webkit-transition: opacity 200ms; transition: opacity 200ms; }
 .usage .usage__item a { visibility: hidden; color: #b151b0; opacity: 0; -moz-transition: opacity 200ms; -o-transition: opacity 200ms; -webkit-transition: opacity 200ms; transition: opacity 200ms; }
 .usage .usage__item a:hover { text-decoration: none; }
@@ -667,19 +667,19 @@ body { font-family: "HelveticaNeueCyrRoman"; font-size: 1.3rem; line-height: 1.4
 @media only screen and (max-width: 768px) { .labels .labels__slider { display: block; } }
 .labels .labels__list { padding-top: 5rem; font-size: 0; text-align: center; }
 @media only screen and (max-width: 768px) { .labels .labels__list { display: none; } }
-.labels .labels__item { position: relative; display: inline-block; vertical-align: middle; width: 220px; text-align: center; margin: 0 4rem 7rem; border-radius: 50%; }
+.labels .labels__item { position: relative; display: inline-block; vertical-align: middle; width: 220px; text-align: center; color: #1a142f; margin: 0 4rem 7rem; border-radius: 50%; }
 .labels .labels__item:hover .labels__info { opacity: 1; visibility: visible; }
-.labels .labels__item > a { display: block; height: 150px; text-align: center; font-size: 0; }
-.labels .labels__item > a:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
-.labels .labels__item > a img { display: inline-block; vertical-align: middle; }
+.labels .labels__item > span { display: block; height: 150px; text-align: center; font-size: 0; }
+.labels .labels__item > span:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
+.labels .labels__item > span img { display: inline-block; vertical-align: middle; }
 @media only screen and (max-width: 1280px) { .labels .labels__item { margin: 0 3rem 5rem; } }
 .labels .labels__item .labels__logo { display: inline-block; font-size: 0; }
 .labels .labels__item .labels__info { position: absolute; top: 50%; left: 50%; width: 220px; height: 220px; -moz-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); border-radius: 50%; background: #faf8f5; opacity: 0; text-align: center; font-size: 0; visibility: hidden; -moz-transition: opacity 200ms; -o-transition: opacity 200ms; -webkit-transition: opacity 200ms; transition: opacity 200ms; z-index: 2; }
 .labels .labels__item .labels__info:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
 .labels .labels__item .labels__in { display: inline-block; vertical-align: middle; }
 .labels .labels__item .labels__in p { font-size: 1.4rem; }
-.labels .labels__item .labels__in a { color: #3da5c7; font-size: 1.4rem; }
-.labels .labels__item .labels__in a:hover { text-decoration: none; }
+.labels .labels__item .labels__in span { color: #3da5c7; font-size: 1.4rem; }
+.labels .labels__item .labels__in span:hover { text-decoration: none; }
 
 .footer { position: relative; padding: 12rem 0 7.2rem; margin-bottom: 92px; background: url(../img/footer-bg.jpg); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; }
 .footer .center { max-width: 100%; padding: 0 50px; }
@@ -820,6 +820,7 @@ body { font-family: "HelveticaNeueCyrRoman"; font-size: 1.3rem; line-height: 1.4
 .dialog_brain .dialog__overlay { background: rgba(243, 219, 83, 0.8); }
 .dialog_stomach .dialog__overlay { background: rgba(238, 111, 117, 0.8); }
 .dialog_lungs .dialog__overlay { background: rgba(114, 158, 231, 0.8); }
+.dialog_violet .dialog__overlay { background: rgba(255, 229, 255, 0.8); }
 
 .dialog--open .dialog__overlay { opacity: 1; pointer-events: auto; }
 

@@ -1196,6 +1196,7 @@
 		width: 31%
 		padding: 41px 
 		margin-left: 3.5%
+		cursor: pointer
 		&:before
 			content: ""
 			position: absolute
@@ -1468,13 +1469,14 @@
 		vertical-align: middle
 		width: 220px
 		text-align: center
+		color: $dark
 		margin: 0 4rem 7rem
 		border-radius: 50%
 		&:hover
 			.labels__info
 				opacity: 1
 				visibility: visible
-		& > a
+		& > span
 			display: block
 			height: 150px
 			+vertical
@@ -1505,7 +1507,7 @@
 			vertical-align: middle
 			p
 				font-size: 1.4rem
-			a
+			span
 				color: #3da5c7
 				font-size: 1.4rem
 				&:hover
