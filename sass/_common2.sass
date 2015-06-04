@@ -192,12 +192,12 @@ h1, h2, h3, h4, h5, h6, strong
 	border-radius: 19px
 	line-height: 1
 	border: 1px solid $peach
+	+transition(color, border-color, background 0.3s)
 	+hb
 	+box
 	&:hover
 		color: #F0D6BC
 		border-color: #F0D6BC
-		+transition(all 0.3s ease)
 	&.is-peach
 		background: $peach
 		color: #fff

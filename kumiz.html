@@ -75,8 +75,8 @@
 							<hr>
 						</div>
 						<h3 class="h3">дирижёры, которые настраивают наш организм на здоровый лад</h3>
-						<div class="video-btn">
-							<a href="#" class="video-btn__icon js-video">
+						<button class="video-btn">
+							<span class="video-btn__icon js-video">
 								<span class="icon-play"></span>
 								<i class="video-btn__dot1"></i>
 								<i class="video-btn__dot2"></i>
@@ -86,9 +86,9 @@
 								<i class="video-btn__dot6"></i>
 								<i class="video-btn__dot7"></i>
 								<i class="video-btn__dot8"></i>
-							</a><br>
-							<a href="#" class="video-btn__text js-video">интервью с диетологом</a>
-						</div>
+							</span><br>
+							<apan class="video-btn__text js-video">интервью с диетологом</apan>
+						</button>
 					</div>
 				</section>
 				<!-- organism -->
@@ -103,7 +103,7 @@
 							<div class="human__in" data-sr>
 								<div class="human__left">
 									<div class="human__item">
-										<div class="system system_endo" data-name="endo">
+										<div class="system system_endo js-popup" data-name="endo" data-dialog="endo-popup">
 											<div class="system__main">
 												<div class="system__left">
 													<img src="img/endo.png" alt="">
@@ -112,11 +112,11 @@
 													<div class="system__title">эндокринная<br> система</div>
 												</div>
 											</div>
-											<div class="system__hint">Укрепляет кишечную микрофлору, стимулируя образование полезных бактерий в ней. <span class="icon-info js-popup" data-dialog="endo-popup"></span></div>
+											<div class="system__hint">Укрепляет кишечную микрофлору, стимулируя образование полезных бактерий в ней. <span class="icon-info"></span></div>
 										</div>
 									</div>
 									<div class="human__item">
-										<div class="system system_skin" data-name="skin">
+										<div class="system system_skin js-popup" data-name="skin" data-dialog="skin-popup">
 											<div class="system__main">
 												<div class="system__left">
 													<img src="img/skin.png" alt="">
@@ -125,11 +125,11 @@
 													<div class="system__title">эндокринная<br> система</div>
 												</div>
 											</div>
-											<div class="system__hint">Укрепляет кишечную микрофлору, стимулируя образование полезных бактерий в ней. <span class="icon-info js-popup" data-dialog="skin-popup"></span></div>
+											<div class="system__hint">Укрепляет кишечную микрофлору, стимулируя образование полезных бактерий в ней. <span class="icon-info"></span></div>
 										</div>
 									</div>
 									<div class="human__item">
-										<div class="system system_heart" data-name="heart">
+										<div class="system system_heart js-popup" data-name="heart" data-dialog="heart-popup">
 											<div class="system__main">
 												<div class="system__left">
 													<img src="img/heart.png" alt="">
@@ -138,13 +138,13 @@
 													<div class="system__title">эндокринная<br> система</div>
 												</div>
 											</div>
-											<div class="system__hint">Укрепляет кишечную микрофлору, стимулируя образование полезных бактерий в ней. <span class="icon-info js-popup" data-dialog="heart-popup"></span></div>
+											<div class="system__hint">Укрепляет кишечную микрофлору, стимулируя образование полезных бактерий в ней. <span class="icon-info"></span></div>
 										</div>
 									</div>
 								</div>
 								<div class="human__right">
 									<div class="human__item">
-										<div class="system system_brain" data-name="brain">
+										<div class="system system_brain js-popup" data-name="brain" data-dialog="brain-popup">
 											<div class="system__main">
 												<div class="system__left">
 													<img src="img/brain.png" alt="">
@@ -153,11 +153,11 @@
 													<div class="system__title">эндокринная<br> система</div>
 												</div>
 											</div>
-											<div class="system__hint">Укрепляет кишечную микрофлору, стимулируя образование полезных бактерий в ней. <span class="icon-info js-popup" data-dialog="brain-popup"></span></div>
+											<div class="system__hint">Укрепляет кишечную микрофлору, стимулируя образование полезных бактерий в ней. <span class="icon-info"></span></div>
 										</div>
 									</div>
 									<div class="human__item">
-										<div class="system system_stomach" data-name="stomach">
+										<div class="system system_stomach js-popup" data-name="stomach" data-dialog="stomach-popup">
 											<div class="system__main">
 												<div class="system__left">
 													<img src="img/stomach.png" alt="">
@@ -166,11 +166,11 @@
 													<div class="system__title">эндокринная<br> система</div>
 												</div>
 											</div>
-											<div class="system__hint">Укрепляет кишечную микрофлору, стимулируя образование полезных бактерий в ней. <span class="icon-info js-popup" data-dialog="stomach-popup"></span></div>
+											<div class="system__hint">Укрепляет кишечную микрофлору, стимулируя образование полезных бактерий в ней. <span class="icon-info"></span></div>
 										</div>
 									</div>
 									<div class="human__item">
-										<div class="system system_lungs" data-name="lungs">
+										<div class="system system_lungs js-popup" data-name="lungs" data-dialog="lungs-popup">
 											<div class="system__main">
 												<div class="system__left">
 													<img src="img/lungs.png" alt="">
@@ -179,7 +179,7 @@
 													<div class="system__title">эндокринная<br> система</div>
 												</div>
 											</div>
-											<div class="system__hint">Укрепляет кишечную микрофлору, стимулируя образование полезных бактерий в ней. <span class="icon-info js-popup" data-dialog="lungs-popup"></span></div>
+											<div class="system__hint">Укрепляет кишечную микрофлору, стимулируя образование полезных бактерий в ней. <span class="icon-info"></span></div>
 										</div>
 									</div>
 								</div>
@@ -232,7 +232,7 @@
 									<li><a href="js-tab2"><span>витамины</span></a></li>
 								</ul>
 								<!-- chemistry -->
-								<div class="chemistry js-tab-cont js-tab1">
+								<div class="chemistry js-tab-cont is-active js-tab1">
 									<div class="chemistry__table">
 										<div class="chemistry__in">
 											<div class="row">
@@ -240,21 +240,21 @@
 													<div class="chemistry__title"><span>химический<br> состав</span></div>
 												</div>
 												<div class="col2">
-													<div class="chemistry__subtitle red">Казеиновая группа <span class="icon-info-small js-popup" data-dialog="endo-popup"></span></div>
+													<div class="chemistry__subtitle red js-popup" data-dialog="endo-popup">Казеиновая группа <span class="icon-info-small"></span></div>
 													<div class="chemistry__type">
 														<div class="chemistry__type-col">коровье</div>
 														<div class="chemistry__type-col">козье</div>
 													</div>
 												</div>
 												<div class="col3">
-													<div class="chemistry__subtitle green">Казеиновая группа <span class="icon-info-small js-popup" data-dialog="endo-popup"></span></div>
+													<div class="chemistry__subtitle green js-popup" data-dialog="endo-popup">Казеиновая группа <span class="icon-info-small"></span></div>
 													<div class="chemistry__type">
 														<div class="chemistry__type-col highlighted">кобылье</div>
 														<div class="chemistry__type-col">женское<p>(эталон)</p></div>
 													</div>
 												</div>
 											</div>
-											<div class="row row_in">
+											<div class="row row_in js-popup" data-dialog="chemistry-popup">
 												<div class="col1">
 													<div class="span">
 														<span>вода</span>
@@ -280,9 +280,9 @@
 														</div>
 													</div>
 												</div>
-												<div class="chemistry__details js-popup" data-dialog="chemistry-popup"><i class="icon-info-white"></i></div>
+												<div class="chemistry__details"><i class="icon-info-white"></i></div>
 											</div>
-											<div class="row row_in">
+											<div class="row row_in js-popup" data-dialog="chemistry-popup">
 												<div class="col1">
 													<div class="span">
 														<span>вода</span>
@@ -308,9 +308,9 @@
 														</div>
 													</div>
 												</div>
-												<div class="chemistry__details js-popup" data-dialog="chemistry-popup"><i class="icon-info-white"></i></div>
+												<div class="chemistry__details"><i class="icon-info-white"></i></div>
 											</div>
-											<div class="row row_in">
+											<div class="row row_in js-popup" data-dialog="chemistry-popup">
 												<div class="col1">
 													<div class="span span_sub">
 														<span>вода</span>
@@ -336,9 +336,9 @@
 														</div>
 													</div>
 												</div>
-												<div class="chemistry__details js-popup" data-dialog="chemistry-popup"><i class="icon-info-white"></i></div>
+												<div class="chemistry__details"><i class="icon-info-white"></i></div>
 											</div>
-											<div class="row row_in">
+											<div class="row row_in js-popup" data-dialog="chemistry-popup">
 												<div class="col1">
 													<div class="span span_sub">
 														<span>Альбумин и глобулин</span>
@@ -364,9 +364,9 @@
 														</div>
 													</div>
 												</div>
-												<div class="chemistry__details js-popup" data-dialog="chemistry-popup"><i class="icon-info-white"></i></div>
+												<div class="chemistry__details"><i class="icon-info-white"></i></div>
 											</div>
-											<div class="row row_in">
+											<div class="row row_in js-popup" data-dialog="chemistry-popup">
 												<div class="col1">
 													<div class="span">
 														<span>вода</span>
@@ -392,7 +392,7 @@
 														</div>
 													</div>
 												</div>
-												<div class="chemistry__details js-popup" data-dialog="chemistry-popup"><i class="icon-info-white"></i></div>
+												<div class="chemistry__details"><i class="icon-info-white"></i></div>
 											</div>
 										</div>
 									</div>
@@ -1029,8 +1029,6 @@
 			<span>Закрыть</span>
 		</div>
 	</div>
-	<!-- scroll arrow -->
-	<a href="#" class="scroll-down js-scroll-down"><span class="icon-down"></span></a>
 <!-- popups -->
 <div id="endo-popup" class="dialog dialog_endo">
 	<div class="dialog__overlay"></div>

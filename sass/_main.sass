@@ -65,6 +65,26 @@
 		+tr(color 300ms)
 .video-btn
 	margin-top: 60px
+	background: transparent
+	&:hover
+		.video-btn__icon
+			& > i
+				&.video-btn__dot1
+					+translate(7px, -20px)
+				&.video-btn__dot2
+					+translate(32px, -11px)
+				&.video-btn__dot3
+					+translate(42px, 14px)
+				&.video-btn__dot4
+					+translate(32px, 39px)
+				&.video-btn__dot5
+					+translate(8px, 50px)
+				&.video-btn__dot6
+					+translate(-19px, 39px)
+				&.video-btn__dot7
+					+translate(-27px, 14px)
+				&.video-btn__dot8
+					+translate(-19px, -11px)
 	&.video-btn_white
 		margin-top: 16rem
 		.video-btn__icon
@@ -128,25 +148,8 @@
 				+translate(-24px, 14px)
 			&.video-btn__dot8
 				+translate(-16px, -8px)
-		&:hover
-			& > i
-				&.video-btn__dot1
-					+translate(7px, -20px)
-				&.video-btn__dot2
-					+translate(32px, -11px)
-				&.video-btn__dot3
-					+translate(42px, 14px)
-				&.video-btn__dot4
-					+translate(32px, 39px)
-				&.video-btn__dot5
-					+translate(8px, 50px)
-				&.video-btn__dot6
-					+translate(-19px, 39px)
-				&.video-btn__dot7
-					+translate(-27px, 14px)
-				&.video-btn__dot8
-					+translate(-19px, -11px)
 	.video-btn__text
+		display: inline-block
 		padding-bottom: 2px
 		+hb
 		color: $dark
@@ -216,7 +219,17 @@
 	position: relative
 	padding: 9rem 0 12rem 
 	background: #ebece8
-	z-index: 2				
+	z-index: 2		
+	&:before
+		content: ""
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		background: -webkit-radial-gradient(50% 50% at center, rgba(#fff, 0.7), rgba(#fff, 0))
+		background: radial-gradient(50% 50% at center, rgba(#fff, 0.7), rgba(#fff, 0))
+		z-index: 0		
 .human
 	.human__in
 		+clr
@@ -233,8 +246,8 @@
 		z-index: 2
 		.human__item
 			height: 200px
-			padding-left: 110px
-		+r(1023)
+			margin-left: 180px
+		+r(1280)
 			width: 50%
 			.human__item
 				padding-left: 30px
@@ -246,8 +259,6 @@
 		position: relative
 		float: right
 		z-index: 2
-		+r(1023)
-			width: 50%
 		.human__item
 			+clr
 			height: 200px
@@ -255,7 +266,9 @@
 				float: right
 			+r(768)
 				margin-bottom: 20px
-				height: auto	
+				height: auto
+		+r(1280)
+			width: 50%			
 	.human__systems
 		position: absolute
 		top: 0
@@ -264,7 +277,7 @@
 		left: 0
 		font-size: 0
 		z-index: 1
-		+r(1023)
+		+r(1280)
 			display: none
 		& > div
 			position: absolute
@@ -295,20 +308,21 @@
 	+clr
 	padding-bottom: 30px
 	+tr(opacity 300ms)
+	cursor: pointer
 	+r(768)
 		max-width: 100%
 	&.non-active
 		opacity: 0.5 		
 	&.system_endo
-		padding-left: 50px
+		padding-left: 90px
 		&:hover
 			.system__left
 				background: rgba(255,255,255,0.05)
 				+scale(0.93)
 				color: #fff
 				&:after
-					+animation(sonarEffect1 1.3s ease-out 75ms)
-		+r(1023)
+					+animation(sonarEffect1 1.3s ease-out 75ms infinite)
+		+r(1280)
 			padding-left: 0	
 		.system__title
 			color: #55c977
@@ -319,19 +333,19 @@
 				+scale(0.93)
 				color: #fff
 				&:after
-					+animation(sonarEffect2 1.3s ease-out 75ms)
+					+animation(sonarEffect2 1.3s ease-out 75ms infinite)
 		.system__title
 			color: #eaae89
 	&.system_heart
-		padding-left: 50px
+		padding-left: 90px
 		&:hover
 			.system__left
 				background: rgba(255,255,255,0.05)
 				+scale(0.93)
 				color: #fff
 				&:after
-					+animation(sonarEffect3 1.3s ease-out 75ms)
-		+r(1023)
+					+animation(sonarEffect3 1.3s ease-out 75ms infinite)
+		+r(1280)
 			padding-left: 0	
 		.system__title
 			color: #fb6e6d
@@ -343,8 +357,8 @@
 				+scale(0.93)
 				color: #fff
 				&:after
-					+animation(sonarEffect4 1.3s ease-out 75ms)
-		+r(1023)
+					+animation(sonarEffect4 1.3s ease-out 75ms infinite)
+		+r(1280)
 			margin-right: 0			
 		.system__title
 			color: #eccd00
@@ -356,8 +370,8 @@
 				+scale(0.93)
 				color: #fff
 				&:after
-					+animation(sonarEffect5 1.3s ease-out 75ms)
-		+r(1023)
+					+animation(sonarEffect5 1.3s ease-out 75ms infinite)
+		+r(1280)
 			padding-right: 0
 		.system__title
 			color: #ee6f75
@@ -369,8 +383,8 @@
 				+scale(0.93)
 				color: #fff
 				&:after
-					+animation(sonarEffect6 1.3s ease-out 75ms)
-		+r(1023)
+					+animation(sonarEffect6 1.3s ease-out 75ms infinite)
+		+r(1280)
 			margin-right: 0			
 		.system__title
 			color: #729ee7											
@@ -411,15 +425,12 @@
 		+hb
 		text-transform: uppercase
 		border-bottom: 1px dotted
-		cursor: default
 	.system__hint
 		display: none
 		margin-left: 70px
 		padding-top: 15px
 		color: #453b65
 		+tr(opacity 200ms)
-		span
-			cursor: pointer
 +keyframes(sonarEffect1)
 	0%
 		opacity: 0.3
@@ -566,7 +577,7 @@
 	background: #9deeb4
 	.consist__in
 		position: relative
-		z-index: 2
+		z-index: 2	
 
 // tabs
 .tabs
@@ -646,9 +657,15 @@
 					span
 						border-color: $orange
 .chemistry
+	opacity: 0
+	+transform(translateY(-50px)) 
+	+transition(transform 400ms, opacity 400ms)
 	max-width: 746px
 	margin: 0 auto
 	overflow-x: auto
+	&.is-active
+		opacity: 1
+		+transform(translateY(0))  
 	.chemistry__table
 		width: 746px
 		padding: 50px 
@@ -678,7 +695,8 @@
 		color: #fff
 		text-transform: uppercase
 		font-size: 11px
-		letter-spacing: 1px 
+		letter-spacing: 1px
+		cursor: pointer 
 		&.red
 			background: #fd4040
 		&.green
@@ -768,6 +786,8 @@
 						background: #fff
 						z-index: 9 
 	&.row_in
+		.chemistry &
+			cursor: pointer
 		&:hover
 			.span
 				background: #f4f3f6
@@ -801,6 +821,7 @@
 			font-size: 1.1rem
 		&.span_sub
 			padding-left: 60px
+			padding-right: 10px 
 			span
 				font-size: 1.3rem
 				text-transform: none
@@ -817,6 +838,12 @@
 	margin: 8px auto 0
 	padding: 90px 0 70px
 	background: url(../img/glass.png) 53% 50% no-repeat
+	opacity: 0
+	+transform(translateY(-50px)) 
+	+transition(transform 400ms, opacity 400ms)
+	&.is-active
+		opacity: 1
+		+transform(translateY(0))  
 	.vitamins__btn
 		position: absolute
 		width: 53px
