@@ -86,6 +86,8 @@ body
 .out
 	min-width: 320px
 	position: relative
+	height: 100%
+	overflow: hidden
 	&.open-menu
 		.container
 			&:after
@@ -100,6 +102,8 @@ body
 
 .container
 	position: relative
+	perspective: 1000px
+	height: 100%
 	left: 0
 	z-index: 99
 	+tr(transform 500ms)
@@ -117,6 +121,9 @@ body
 
 .main
 	position: relative
+	overflow-y: scroll
+	-webkit-overflow-scrolling: touch
+	height: 100% 
 	z-index: 1
 
 a
@@ -235,16 +242,3 @@ h1, h2, h3, h4, h5, h6, strong
 			color: #FFF
 	.button__text
 		letter-spacing: 0.1em
-
-// appearence
-.animate
-	opacity: 0
-	+transition(opacity 0.4s ease)
-	&.is-animated
-		opacity: 1
-@for $i from 1 through 10
-	.animate_#{$i}
-		transition-delay: #{300*$i}ms !important
-	+r(768)
-		.animate
-			opacity: 1

@@ -13,9 +13,9 @@
 <!-- BEGIN  out-->
 <div class="out is-inner">
 	<div class="container">
-		<div class="main">
+		<div id="viewport" class="main">
 			<!-- begin header  -->
-			<header class="header">
+			<header class="header" data-sr>
 				<div class="header__in">
 					<a href="#" class="logo logo_inner js-top"></a>
 					<!-- begin header__wrap  -->
@@ -59,24 +59,24 @@
 				</div>
 			</header>
 			<!-- end header -->
-			<div class="section is-blog animate">
+			<div class="section is-blog">
 				<div class="section__in small-pad">
-					<h2 class="h2 animate animate_1">Заказать</h2>
-					<ul class="breadcrumbs animate animate_1">
+					<h2 class="h2" data-sr>Заказать</h2>
+					<ul class="breadcrumbs" data-sr>
 						<li><a href="#">Главная</a></li>
 					</ul>
-					<div class="order">
+					<div class="order" data-sr="wait 0.3s">
 						<ul class="order__tabs">
-							<li><a href="#" class="is-active animate animate_2"><span>Молоко</span></a></li>
-							<li><a href="#" class="animate animate_3"><span>Кумыс</span></a></li>
+							<li><a href="#" class="is-active"><span>Молоко</span></a></li>
+							<li><a href="#"><span>Кумыс</span></a></li>
 						</ul>
-						<div class="order__inner animate animate_4">
+						<div class="order__inner">
 							<ul class="order__filter">
 								<li><a href="#" class="is-active"><span>Купить</span></a></li>
 								<li><a href="#"><span>Подписка</span></a></li>
 								<li><a href="#"><span>Подарочный сертификат</span></a></li>
 							</ul>
-							<div class="order__content animate animate_5">
+							<div class="order__content">
 								<div class="order__block">
 									<div class="order__img">
 										<img src="img/milk.jpg" alt="">
@@ -106,7 +106,7 @@
 			</div>
 
 			<!-- begin footer  -->
-			<footer class="footer animate animate_1">
+			<footer class="footer" data-sr>
 				<div class="footer__in">
 					<button class="button button--fill button--effect-1 js-top">
 						<span class="morph-shape" data-morph-active="M286.5,62.5c0,27.891-22.609,50.5-50.5,50.5c0,0-64.355-6-86-6c-21.645,0-86,6-86,6c-27.891,0-50.5-22.609-50.5-50.5l0,0C13.5,34.609,36.109,12,64,12c0,0,64.355,6,86,6c21.645,0,86-6,86-6C263.891,12,286.5,34.609,286.5,62.5L286.5,62.5z">
@@ -251,6 +251,23 @@
 	</div>
 </div>
 <!-- load scripts -->
-<script src="js/lib/head.js" data-headjs-load="js/init.js"></script>
+<script src='js/lib/jquery.js'></script>
+<script src='js/lib/slick.min.js'></script>
+<script src='js/lib/modernizr.custom.js'></script>
+<script src='js/lib/snap.svg-min.js'></script>
+<script src='js/lib/classie.js'></script>
+<script src='js/lib/dialogFx.js'></script>
+<script src='js/lib/scrollTo.min.js'></script>
+<script src='js/lib/jquery.form-validator.min.js'></script>
+<script src='js/lib/scrollReveal.min.js'></script>
+<script src='js/common.js'></script>
+<script>
+	var config = { 
+		viewport: document.getElementById('viewport'),
+		vFactor:  0.50,
+		scale: false
+	}
+	window.sr = new scrollReveal( config);
+</script>
 </body>
 </html>

@@ -13,9 +13,9 @@
 <!-- BEGIN  out-->
 <div class="out is-inner">
 	<div class="container">
-		<div class="main">
+		<div id="viewport" class="main">
 			<!-- begin header  -->
-			<header class="header">
+			<header class="header" data-sr>
 				<div class="header__in">
 					<a href="#" class="logo logo_inner js-top"></a>
 					<!-- begin header__wrap  -->
@@ -59,15 +59,15 @@
 				</div>
 			</header>
 			<!-- end header -->
-			<div class="section is-blog animate">
+			<div class="section is-blog">
 				<div class="section__in small-pad">
-					<h2 class="h2 animate animate_1">Наш блог</h2>
-					<ul class="breadcrumbs animate animate_1">
+					<h2 class="h2" data-sr>Наш блог</h2>
+					<ul class="breadcrumbs" data-sr>
 						<li><a href="#">Главная</a></li>
 						<li><a href="#">Наш блог</a></li>
 					</ul>
-					<div class="inner">
-						<div class="in-title animate animate_1">Кобылье молоко и кумыс - здоровье в каждой капле</div>
+					<div class="inner" data-sr="wait 0.3s, vFactor 0.1">
+						<div class="in-title">Кобылье молоко и кумыс - здоровье в каждой капле</div>
 						<p class="animate animate_1">Кумыс известен кочевым народам с глубокой древности. Его готовили кочевники юго-восточной части России и Средней Азии, а также южных причерноморских степных районов. Первое упоминание о кумысе можно встретить у древнегреческого историка и путешественника Геродота, жившего в V веке до н.э. Он писал, что излюбленным напитком скифов-кочевников было кобылье молоко, приготовенное по особому методу. Кочевники тщательно скрывали секрет приготовления кумыса. Тех, кто разглашал эту тайну, ослепляли.</p>
 						<img class="animate animate_1" src="img/blog-img1.jpg" alt="">
 						<p class="animate animate_1">Кумыс известен кочевым народам с глубокой древности. Его готовили кочевники юго-восточной части России и Средней Азии, а также южных причерноморских степных районов. Первое упоминание о кумысе можно встретить у древнегреческого историка и путешественника Геродота, жившего в V веке до н.э. Он писал, что излюбленным напитком скифов-кочевников было кобылье молоко, приготовленное по особому методу. Кочевники тщательно скрывали секрет приготовления кумыса. Тех, кто разглашал эту тайну, ослепляли.</p>
@@ -117,7 +117,7 @@
 							<li><a href="#"><img src="img/tw.jpg" alt=""></a></li>
 						</ul>
 					</div>
-					<div class="txt-center">
+					<div class="txt-center" data-sr>
 						<div class="in-title">Читайте также:</div>
 						<div class="blog animate animate_1">
 							<div class="blog__item">
@@ -153,7 +153,7 @@
 			</div>
 
 			<!-- begin footer  -->
-			<footer class="footer animate animate_1">
+			<footer class="footer" data-sr="wait 0.3s">
 				<div class="footer__in">
 					<button class="button button--fill button--effect-1 js-top">
 						<span class="morph-shape" data-morph-active="M286.5,62.5c0,27.891-22.609,50.5-50.5,50.5c0,0-64.355-6-86-6c-21.645,0-86,6-86,6c-27.891,0-50.5-22.609-50.5-50.5l0,0C13.5,34.609,36.109,12,64,12c0,0,64.355,6,86,6c21.645,0,86-6,86-6C263.891,12,286.5,34.609,286.5,62.5L286.5,62.5z">
@@ -198,6 +198,23 @@
 </div>
 <!-- END out-->
 <!-- load scripts -->
-<script src="js/lib/head.js" data-headjs-load="js/init.js"></script>
+<script src='js/lib/jquery.js'></script>
+<script src='js/lib/slick.min.js'></script>
+<script src='js/lib/modernizr.custom.js'></script>
+<script src='js/lib/snap.svg-min.js'></script>
+<script src='js/lib/classie.js'></script>
+<script src='js/lib/dialogFx.js'></script>
+<script src='js/lib/scrollTo.min.js'></script>
+<script src='js/lib/jquery.form-validator.min.js'></script>
+<script src='js/lib/scrollReveal.min.js'></script>
+<script src='js/common.js'></script>
+<script>
+	var config = { 
+		viewport: document.getElementById('viewport'),
+		vFactor:  0.50,
+		scale: false
+	}
+	window.sr = new scrollReveal( config);
+</script>
 </body>
 </html>
