@@ -45,6 +45,8 @@ body { font-family: "HelveticaNeueCyrRoman"; font-size: 1.3rem; line-height: 1.4
 .out.open-menu .container:after { width: 100%; height: 100%; opacity: 1; -moz-transition: opacity 500ms; -o-transition: opacity 500ms; -webkit-transition: opacity 500ms; transition: opacity 500ms; }
 .out.open-menu .mob, .out.open-menu .mob-close { -moz-transform: translate3d(0, 0, 0); -ms-transform: translate3d(0, 0, 0); -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
 .out.open-menu .mob-close { visibility: visible; }
+.out.open-menu .main { -webkit-overflow-scrolling: auto; }
+.out.no-scroll .main { -webkit-overflow-scrolling: auto; }
 
 .container { position: relative; perspective: 1000px; height: 100%; left: 0; z-index: 99; -moz-transition: -moz-transform 500ms; -o-transition: -o-transform 500ms; -webkit-transition: -webkit-transform 500ms; transition: transform 500ms; }
 .container:after { content: ""; position: absolute; top: 0; right: 0; width: 0; height: 0; background: rgba(72, 60, 49, 0.6); opacity: 0; -moz-transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s; -o-transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s; -webkit-transition: opacity 0.5s, width 0.1s, height 0.1s; -webkit-transition-delay: 0s, 0.5s, 0.5s; transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s; z-index: 1; }
@@ -230,7 +232,7 @@ body { font-family: "HelveticaNeueCyrRoman"; font-size: 1.3rem; line-height: 1.4
 .video-btn .video-btn__text:hover { border-color: transparent; }
 
 .scroll-down { position: absolute; bottom: 164px; left: 50%; background: transparent; -moz-transform: translateX(-50%); -ms-transform: translateX(-50%); -webkit-transform: translateX(-50%); transform: translateX(-50%); -moz-transition: -moz-transform 300ms, opacity 300ms; -o-transition: -o-transform 300ms, opacity 300ms; -webkit-transition: -webkit-transform 300ms, opacity 300ms; transition: transform 300ms, opacity 300ms; z-index: 99; }
-.scroll-down.is-hidden { z-index: 1; }
+.scroll-down.is-hidden { z-index: 1; opacity: 0; visibility: hidden; }
 @media only screen and (max-width: 1280px) { .scroll-down { bottom: 120px; } }
 @media only screen and (max-width: 768px) { .scroll-down { bottom: 80px; } }
 @media only screen and (max-width: 568px) { .scroll-down { bottom: 40px; } }

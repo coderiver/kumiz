@@ -78,7 +78,12 @@ body
 		.mob, .mob-close
 			+transform(translate3d(0, 0, 0))
 		.mob-close
-			visibility: visible		
+			visibility: visible	
+		.main
+			-webkit-overflow-scrolling: auto
+	&.no-scroll
+		.main
+			-webkit-overflow-scrolling: auto					
 .container
 	position: relative
 	perspective: 1000px

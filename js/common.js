@@ -666,6 +666,8 @@ $(document).ready(function() {
 			} );
 
 			dlg.toggle();
+			$('.out').toggleClass('no-scroll');
+			event.stopPropagation();
 		});
 
 
