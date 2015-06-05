@@ -35,7 +35,10 @@ $(document).ready(function() {
         	   	
         	});
 	  	}
-	  	tab2();
+	  	if ($('.js-birth').length) {
+	  		tab2();
+	  	};
+	  	
 
 	// target tree load animation
 	function treeLoad(){
