@@ -1516,47 +1516,57 @@
 // footer
 .footer
 	position: relative
-	padding: 12rem 0 7.2rem
-	margin-bottom: 92px
-	background: url(../img/footer-bg.jpg)
-	+cover 	
-	.center
-		max-width: 100%
-		padding: 0 50px 
+	background: #000 
 	+r(1280)
 		margin-bottom: 0
 	+r(600)
-		padding: 9rem 0 5rem 	
+		padding: 9rem 0 5rem 
+	.footer__link
+		display: block
+		padding: 12rem 0 7.2rem
+		margin-bottom: 92px
+		background: url(../img/footer-bg.jpg)
+		+cover 	
+		text-decoration: none
+		+tr(opacity 200ms)
+		&:hover
+			opacity: 0.8 
+			.footer__topper
+				span
+					color: $orange-b
+					border-color: transparent
 	&.footer_producing
-		background: url(../img/footer-bg2.jpg)
-		+cover
+		.footer__link
+			background: url(../img/footer-bg2.jpg)
+			+cover
 	&.footer_service
-		background: url(../img/footer-bg3.jpg)
-		+cover					
+		.footer__link
+			background: url(../img/footer-bg3.jpg)
+			+cover					
 	.footer__topper
 		margin-bottom: 100px
 		text-align: center
 		.title
 			color: #fff
 			margin-bottom: 0
+		span
+			+pf
+			font-size: 4rem
+			font-weight: bold
+			color: #fff
+			text-decoration: none
+			border-bottom: 1px solid #fff
+			+transition(color 200ms, border-color 200ms)	
 		+r(600)
 			margin-bottom: 20px	
-	.footer__link
-		display: inline-block
-		+pf
-		font-size: 4rem
-		font-weight: bold
-		color: #fff
-		text-decoration: none
-		border-bottom: 1px solid #fff
-		+transition(border-color 200ms, color 200ms)
-		&:hover
-			color: $orange-b
-			border-color: transparent
 	.footer__bottom
-		position: relative
+		position: absolute
+		bottom: 50px
+		left: 50px
+		right: 50px 
 		+clr	
 		color: #fff
+		z-index: 2
 		+r(600)
 			text-align: center
 	.footer__left
