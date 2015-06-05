@@ -237,7 +237,7 @@ body { font-family: "HelveticaNeueCyrRoman"; font-size: 1.3rem; line-height: 1.4
 @media only screen and (max-width: 768px) { .scroll-down { bottom: 80px; } }
 @media only screen and (max-width: 568px) { .scroll-down { bottom: 40px; } }
 
-.nav { position: fixed; bottom: 0; left: 0; right: 0; height: 92px; background: #fff; box-shadow: 0 0 7px #ccc; z-index: 9; }
+.nav { position: fixed; bottom: 0; left: 0; right: 0; height: 92px; overflow: hidden; background: #fff; box-shadow: 0 0 7px #ccc; z-index: 9; }
 .nav ul { font-size: 0; text-align: center; }
 .nav ul li { display: inline-block; vertical-align: middle; height: 92px; text-align: center; font-size: 0; margin: 0 16px; }
 .nav ul li:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
@@ -681,10 +681,10 @@ body { font-family: "HelveticaNeueCyrRoman"; font-size: 1.3rem; line-height: 1.4
 .labels .labels__item .labels__in span { color: #3da5c7; font-size: 1.4rem; }
 .labels .labels__item .labels__in span:hover { text-decoration: none; }
 
-.footer { position: relative; background: #000; }
+.footer { position: relative; background: #000; margin-bottom: 92px; }
 @media only screen and (max-width: 1280px) { .footer { margin-bottom: 0; } }
 @media only screen and (max-width: 600px) { .footer { padding: 9rem 0 5rem; } }
-.footer .footer__link { display: block; padding: 12rem 0 7.2rem; margin-bottom: 92px; background: url(../img/footer-bg.jpg); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; text-decoration: none; -moz-transition: opacity 200ms; -o-transition: opacity 200ms; -webkit-transition: opacity 200ms; transition: opacity 200ms; }
+.footer .footer__link { display: block; padding: 12rem 0 7.2rem; background: url(../img/footer-bg.jpg); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; text-decoration: none; -moz-transition: opacity 200ms; -o-transition: opacity 200ms; -webkit-transition: opacity 200ms; transition: opacity 200ms; }
 .footer .footer__link:hover { opacity: 0.8; }
 .footer .footer__link:hover .footer__topper span { color: #e8c29a; border-color: transparent; }
 .footer.footer_producing .footer__link { background: url(../img/footer-bg2.jpg); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; }

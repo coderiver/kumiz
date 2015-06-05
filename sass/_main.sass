@@ -186,6 +186,7 @@
 	left: 0
 	right: 0
 	height: 92px
+	overflow: hidden
 	background: #fff
 	box-shadow: 0 0 7px #ccc
 	z-index: 9
@@ -1516,15 +1517,16 @@
 // footer
 .footer
 	position: relative
-	background: #000 
+	background: #000
+	margin-bottom: 92px
 	+r(1280)
 		margin-bottom: 0
 	+r(600)
-		padding: 9rem 0 5rem 
+		padding: 9rem 0 5rem
 	.footer__link
 		display: block
 		padding: 12rem 0 7.2rem
-		margin-bottom: 92px
+		
 		background: url(../img/footer-bg.jpg)
 		+cover 	
 		text-decoration: none
@@ -1534,7 +1536,7 @@
 			.footer__topper
 				span
 					color: $orange-b
-					border-color: transparent
+					border-color: transparent			
 	&.footer_producing
 		.footer__link
 			background: url(../img/footer-bg2.jpg)
