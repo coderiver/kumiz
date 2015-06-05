@@ -474,12 +474,12 @@ $(document).ready(function() {
 			var name = $(this).data('name');
 			$('.system').addClass('non-active');
 			$(this).removeClass('non-active');
-			$(this).find('.system__hint').slideDown('fast');
+			$(this).find('.system__hint').addClass('is-visible');
 			$('.' + name).addClass('is-visible');
 		}, function() {
 			var name = $(this).data('name');
 			$('.system').removeClass('non-active');
-			$(this).find('.system__hint').slideUp('fast');
+			$(this).find('.system__hint').removeClass('is-visible');
 			$('.' + name).removeClass('is-visible');
 		});
 	}

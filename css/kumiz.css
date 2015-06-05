@@ -310,7 +310,8 @@ body { font-family: "HelveticaNeueCyrRoman"; font-size: 1.3rem; line-height: 1.4
 @media only screen and (max-width: 480px) { .system .system__left { float: none; margin-right: 0; margin-bottom: 10px; } }
 .system .system__right { overflow: hidden; }
 .system .system__title { display: inline; font-size: 12px; font-family: "HelveticaNeueCyrBold"; text-transform: uppercase; border-bottom: 1px dotted; }
-.system .system__hint { display: none; margin-left: 70px; padding-top: 15px; color: #453b65; -moz-transition: opacity 200ms; -o-transition: opacity 200ms; -webkit-transition: opacity 200ms; transition: opacity 200ms; }
+.system .system__hint { visibility: hidden; margin-left: 70px; padding-top: 15px; color: #453b65; opacity: 0; -moz-transform: translateY(-30px); -ms-transform: translateY(-30px); -webkit-transform: translateY(-30px); transform: translateY(-30px); -moz-transition: opacity 300ms, -moz-transform 300ms, visibility 300ms; -o-transition: opacity 300ms, -o-transform 300ms, visibility 300ms; -webkit-transition: opacity 300ms, -webkit-transform 300ms, visibility 300ms; transition: opacity 300ms, transform 300ms, visibility 300ms; }
+.system .system__hint.is-visible { visibility: visible; opacity: 1; -moz-transform: translateY(0); -ms-transform: translateY(0); -webkit-transform: translateY(0); transform: translateY(0); }
 
 @-moz-keyframes sonarEffect1 { 0% { opacity: 0.3; }
   40% { opacity: 0.5; box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1), 0 0 5px 5px #55c977, 0 0 0 5px rgba(255, 255, 255, 0.5); }
