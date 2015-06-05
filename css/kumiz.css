@@ -687,7 +687,7 @@ body { font-family: "HelveticaNeueCyrRoman"; font-size: 1.3rem; line-height: 1.4
 .footer { position: relative; background: #000; margin-bottom: 92px; }
 @media only screen and (max-width: 1280px) { .footer { margin-bottom: 0; } }
 @media only screen and (max-width: 600px) { .footer { padding: 9rem 0 5rem; } }
-.footer .footer__link { display: block; padding: 12rem 0 7.2rem; background: url(../img/footer-bg.jpg); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; text-decoration: none; -moz-transition: opacity 200ms; -o-transition: opacity 200ms; -webkit-transition: opacity 200ms; transition: opacity 200ms; }
+.footer .footer__link { display: block; padding: 12rem 0 7.2rem; -moz-transform: translate3d(0, 0, 0); -ms-transform: translate3d(0, 0, 0); -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); background: url(../img/footer-bg.jpg); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; text-decoration: none; -moz-transition: opacity 200ms; -o-transition: opacity 200ms; -webkit-transition: opacity 200ms; transition: opacity 200ms; }
 .footer .footer__link:hover { opacity: 0.8; }
 .footer .footer__link:hover .footer__topper span { color: #e8c29a; border-color: transparent; }
 .footer.footer_producing .footer__link { background: url(../img/footer-bg2.jpg); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; }
