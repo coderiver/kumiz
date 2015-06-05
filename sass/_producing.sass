@@ -20,7 +20,8 @@
 			text-align: center
 			font-style: italic
 			+r(768)
-				+transform(translateX(0))		
+				+transform(translateX(0))
+				bottom: 0		
 	.farm__in
 		position: absolute
 		top: 50%
@@ -524,7 +525,24 @@
 			top: 50px
 	.birth__tabs
 		position: relative
+		min-height: 985px
 		z-index: 1
+		+r(568)
+			min-height: 900px
+		+r(360)
+			min-height: 800px	
+	.birth__content
+		position: absolute
+		top: 0
+		bottom: 0
+		right: 0
+		left: 0
+		visibility: hidden
+		opacity: 0
+		+transition(opacity 300ms, visibility 300ms)
+		&.is-active
+			visibility: visible
+			opacity: 1
 	.birth__nav
 		position: absolute
 		top: 50%
@@ -532,14 +550,6 @@
 		margin-left: -400px
 		+transform(translateY(-50%))
 		z-index: 3
-		&:before
-			content: ""
-			position: absolute
-			top: 10px
-			bottom: 10px
-			right: 4px
-			width: 3px
-			background: #4e4a5f
 		+r(1023)
 			top: 250px
 			left: 0
@@ -549,69 +559,85 @@
 			+transform(translateY(0))
 			&:before
 				display: none
-		li
-			position: relative
-			text-align: right
-			margin-top: 120px
-			&:first-child
-				margin-top: 0	
-			&.is-active
-				a
-					&:after
-						content: ""
-						position: absolute
-						top: 0
-						right: -5px
-						width: 22px
-						height: 22px
-						border-radius: 50%
-						background: #fff
-						box-shadow: 0 0 10px rgba(94,94,94,.4)
-						z-index: 1
-			a
-				display: inline-block
-				padding-right: 37px
-				color: #4e4a5f
-				font-size: 1.3rem
-				text-decoration: none
+		#slider-vertical
+			position: absolute
+			top: 10px
+			right: 0
+			bottom: 0	
+			width: 3px 
+			background: #4e4a5f
+			z-index: 2
+			+r(1023)
+				display: none
+			.ui-slider-handle
+				position: relative
+				display: block
+				width: 24px
+				height: 24px
+				left: -12px
+				top: -12px
+				border-radius: 50%
+				background: #fff
+				box-shadow: 0 0 10px rgba(94,94,94,.4)
+				cursor: pointer
 				&:before
 					content: ""
 					position: absolute
-					top: 5px
-					right: 0
-					width: 12px
-					height: 12px
+					top: 7px
+					left: 7px
+					width: 10px
+					height: 10px
 					border-radius: 50%
 					background: #4e4a5f
-					z-index: 2
-			+r(1023)
-				display: inline-block
-				margin-top: 0
-				padding: 5px 16px
-				border-radius: 20px
-				&.is-active
-					background: #fff 
-					a
-						border-color: transparent
-						&:after
-							display: none 
-				a
-					font-size: 11px
-					padding-right: 0 
-					text-transform: uppercase
-					+hb
-					border-bottom: 1px dotted 
+		.birth__values
+			position: relative
+			li
+				position: relative
+				text-align: right
+				margin-top: 120px
+				&:before
+					content: ""
+					position: absolute
+					top: 6px
+					right: -3px
+					width: 10px
+					height: 10px
+					border-radius: 50%
+					background: #4e4a5f  
+				&:first-child
+					margin-top: 0
 					&:before
-						display: none		  
+						top: 0
+				&:last-child
+					&:before
+						top: 8px		
+				span
+					display: inline-block
+					padding-right: 37px
+					color: #4e4a5f
+					font-size: 1.3rem
+					text-decoration: none
+					cursor: pointer
+				+r(1023)
+					display: inline-block
+					margin-top: 0
+					padding: 5px 16px
+					border-radius: 20px
+					&:before
+						display: none
+					&.is-active
+						background: #fff 
+						span
+							border-color: transparent
+					span
+						font-size: 11px
+						padding-right: 0 
+						text-transform: uppercase
+						+hb
+						border-bottom: 1px dotted 	  
 .kind
-	opacity: 0
-	visibility: hidden
-	+tr(opacity 0.5s)
 	padding: 310px 0 75px
 	background: #ff6262
-	&.is-visible
-		visibility: visible
-		opacity: 1 
 	&.kind_strong
 		background: #ff6262
 	&.kind_mid

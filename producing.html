@@ -649,20 +649,23 @@
 							</div>
 						</div>
 					</div>
-					<div class="birth__tabs js-tab-group">
-						<ul class="birth__nav js-tab">
-							<li>
-								<a href="js-tab1">5 суток</a>
-							</li>
-							<li>
-								<a href="js-tab2">3 суток</a>
-							</li>
-							<li>
-								<a href="js-tab3">1 сутки</a>
-							</li>
-						</ul>
+					<div class="birth__tabs">
+						<div class="birth__nav">
+							<ul class="birth__values js-birth">
+								<li class="is-active">
+									<span data-number="3">5 суток</span>
+								</li>
+								<li>
+									<span data-number="2">3 суток</span>
+								</li>
+								<li>
+									<span data-number="1">1 сутки</span>
+								</li>
+							</ul>
+							<div id="slider-vertical"></div>
+						</div>
 						<!-- tab1 -->
-						<div class="birth__content js-tab-cont js-tab1">
+						<div class="birth__content js-birth-cont js-tab3">
 							<div class="kind kind_strong is-visible">
 								<div class="kind__in">
 									<div class="kind__bottle">
@@ -677,7 +680,7 @@
 							</div>
 						</div>
 						<!-- tab1 -->
-						<div class="birth__content js-tab-cont js-tab2">
+						<div class="birth__content js-birth-cont js-tab2">
 							<div class="kind kind_mid">
 								<div class="kind__in">
 									<div class="kind__bottle">
@@ -692,7 +695,7 @@
 							</div>
 						</div>
 						<!-- tab1 -->
-						<div class="birth__content js-tab-cont js-tab3">
+						<div class="birth__content js-birth-cont js-tab1">
 							<div class="kind kind_low">
 								<div class="kind__in">
 									<div class="kind__bottle">
@@ -1069,6 +1072,8 @@
 <script src='js/lib/scrollTo.min.js'></script>
 <script src='js/lib/jquery.form-validator.min.js'></script>
 <script src='js/lib/scrollReveal.min.js'></script>
+<script src='js/lib/jquery-ui.min.js'></script>
+<script src='js/lib/jquery.ui.touch-punch.js'></script>
 <script src='js/common.js'></script>
 <script>
 	var config = { 

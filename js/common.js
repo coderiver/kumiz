@@ -1,5 +1,42 @@
 $(document).ready(function() {
 
+	// ui slider nav for tabs
+
+		function tab2() {
+
+			var tab_link = $(".js-birth").find("span");
+        	var tab_cont = $(".js-birth-cont");
+        	
+        	$(".js-tab3").addClass('is-active');
+
+        	// init slider ui
+			var slider = $( "#slider-vertical" ).slider({
+	    		orientation: "vertical",
+	    		range: "max",
+	    		min: 1,
+	    		max: 3,
+	    		value: 3,
+	    		animate: "fast",
+	    		change: function( event, ui ) {
+	    			var tabNumber = ui.value;
+	    			
+	    			tab_link.parent().removeClass('is-active');
+	    			$('.js-birth').find('span[data-number = '+tabNumber+']').parent().addClass('is-active');
+	    			tab_cont.removeClass('is-active');
+	    			$('.js-tab'+tabNumber+'').addClass('is-active');
+
+	    		}
+	    	});
+	       		
+			// native tabs click event
+        	tab_link.on("click", function() {
+        	   	var tabIndex = $(this).data('number');
+        	   	slider.slider( 'value', tabIndex);
+        	   	
+        	});
+	  	}
+	  	tab2();
+
 	// target tree load animation
 	function treeLoad(){
 		var height = $(window).height(),
@@ -10,7 +47,10 @@ $(document).ready(function() {
 			$('.js-target-tree').addClass('is-loaded');
 		};	
 	}
-	treeLoad();
+	if ($('.js-target-tree').length) {
+		treeLoad();
+	};
+	
 
 	// usefull
 	$('.usefull__more').on('click', function(){
@@ -71,7 +111,9 @@ $(document).ready(function() {
 
 	$('#viewport').scroll(function(){
 		moveAll();
-		treeLoad();
+		if ($('.js-target-tree').length) {
+			treeLoad();
+		};
 	});
 
 	// slick slider
@@ -405,11 +447,6 @@ $(document).ready(function() {
         	tab_item.first().addClass("is-active");
         	$(this).parents(".js-tab-group").find(".js-tab1").show();
 
-        	if ($('.kind').length) {
-        		$(this).parents(".js-tab-group").find(".js-tab1").find('.kind').addClass('is-visible');
-
-        	};
-
         	tab_link.on("click", function() {
         	   	var index = $(this).attr("href");
         	   	var activeTab = $(this).parents(".js-tab-group").find("."+index);
@@ -420,13 +457,6 @@ $(document).ready(function() {
         	   	setTimeout(function(){
         	   		activeTab.addClass('is-active');
         	   	}, 10);
-        	   	if ($(this).parents(".js-tab-group").find('.kind').length) {
-        	   		setTimeout(function(){
-        	   			$('.kind').removeClass('is-visible');
-        	   			activeTab.find('.kind').addClass('is-visible');
-        	   		}, 10);
-
-        	   	};
         	   	return false;
         	});
 
