@@ -1275,6 +1275,10 @@
 	position: relative
 	padding: 9.5rem 0 7rem
 	text-align: center
+	&.is-loaded
+		.target__mid, .target__item
+			opacity: 1
+			+transform(translateY(0)) 
 	.target__in
 		position: relative
 		display: inline-block			 
@@ -1298,11 +1302,18 @@
 		position: absolute
 		top: 35%
 		left: 50%
-		+transform(translate(-50%, -50%))
-		font-size: 4rem
+		margin: -20px 0 0 -90px 
+		font-size: 40px
 		+pf
 		font-weight: bold
 		font-style: italic
+		opacity: 0
+		+transform(translateY(-50px))
+		+transition(transform 300ms 2100ms, opacity 300ms 2100ms)
+		
+		+r(1024)
+			opacity: 1
+			+transform(translateY(0)) 
 		+r(768)
 			top: 0
 	.target__list
@@ -1326,27 +1337,39 @@
 		position: absolute
 		width: 180px
 		text-align: center
+		opacity: 0
+		+transform(translateY(-50px))
+		+transition(transform 300ms, opacity 300ms) 
+		+r(1024)
+			opacity: 1
+			+transform(translateY(0)) 
 		&.target__item_1
 			top: 30px
 			left: 40%
 		&.target__item_2
 			top: 13%
 			right: 9%
+			transition-delay: 300ms
 		&.target__item_3
 			top: 35%
 			right: 7%
+			transition-delay: 600ms
 		&.target__item_4
 			top: 56%
 			right: 23%
+			transition-delay: 900ms
 		&.target__item_5
 			top: 56%
 			left: 23%
+			transition-delay: 1200ms
 		&.target__item_6
 			top: 35%
 			left: 7%
+			transition-delay: 1500ms
 		&.target__item_7
 			top: 13%
-			left: 9%						
+			left: 9%
+			transition-delay: 1800ms			
 	.target__img
 		display: inline-block
 		width: 120px

@@ -1,5 +1,17 @@
 $(document).ready(function() {
 
+	// target tree load animation
+	function treeLoad(){
+		var height = $(window).height(),
+			tree = $('.js-target-tree').position().top;
+			console.log(height/2, tree);
+
+		if (tree < (height/2)) {
+			$('.js-target-tree').addClass('is-loaded');
+		};	
+	}
+	treeLoad();
+
 	// usefull
 	$('.usefull__more').on('click', function(){
 		$(this).parents('.usefull').find('.usefull__wrap').slideToggle();
@@ -59,6 +71,7 @@ $(document).ready(function() {
 
 	$('#viewport').scroll(function(){
 		moveAll();
+		treeLoad();
 	});
 
 	// slick slider
