@@ -330,8 +330,8 @@ h1, h2, h3, h4, h5, h6, strong { font-weight: normal; }
 .mob .mob__order:hover { text-decoration: none; }
 
 .mob-close { position: fixed; top: 60px; left: 340px; font-size: 0; cursor: pointer; visibility: hidden; z-index: 100; -moz-transform: translate3d(-320px, 0, 0); -ms-transform: translate3d(-320px, 0, 0); -webkit-transform: translate3d(-320px, 0, 0); transform: translate3d(-320px, 0, 0); -moz-transition: -moz-transform 500ms; -o-transition: -o-transform 500ms; -webkit-transition: -webkit-transform 500ms; transition: transform 500ms; }
-.mob-close span { display: inline-block; vertical-align: middle; font-size: 11px; color: #fff; letter-spacing: 1px; text-transform: uppercase; }
-.mob-close i { position: relative; margin-right: 40px; }
+.mob-close span { position: absolute; top: -6px; left: 40px; font-size: 11px; color: #fff; letter-spacing: 1px; text-transform: uppercase; }
+.mob-close i { position: absolute; top: 0; left: 0; }
 .mob-close i:before { content: ""; position: absolute; top: 0; left: 0; width: 35px; height: 2px; background: #fff; -ms-transform: rotate(45deg); -webkit-transform: rotate(45deg); transform: rotate(45deg); }
 .mob-close i:after { content: ""; position: absolute; top: 0; left: 0; width: 35px; height: 2px; background: #fff; -ms-transform: rotate(-45deg); -webkit-transform: rotate(-45deg); transform: rotate(-45deg); }
 @media only screen and (max-width: 768px) { .mob-close span { display: none; } }
