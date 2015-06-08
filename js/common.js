@@ -44,7 +44,6 @@ $(document).ready(function() {
 	function treeLoad(){
 		var height = $(window).height(),
 			tree = $('.js-target-tree').position().top;
-			console.log(height/2, tree);
 
 		if (tree < (height/2)) {
 			$('.js-target-tree').addClass('is-loaded');
@@ -536,13 +535,12 @@ $(document).ready(function() {
 	});
 
 	$(".nav a").on('click', function (){
-		    var page = $(this).attr("href");
-		    console.log(page);
-		    $('#viewport').animate({
-		        scrollTop: $(page).offset().top
-		    }, 500);
-		    return false;
-		});
+	    var page = $(this).attr("href");
+	    $('#viewport').animate({
+	        scrollTop: $(page).position().top
+	    }, 500);
+	    return false;
+	});
 
 	// svg snap animations
 	(function() {

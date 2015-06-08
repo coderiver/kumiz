@@ -52,6 +52,7 @@ body { font-family: "HelveticaNeueCyrRoman"; font-size: 1.3rem; line-height: 1.4
 .container:after { content: ""; position: absolute; top: 0; right: 0; width: 0; height: 0; background: rgba(72, 60, 49, 0.6); opacity: 0; -moz-transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s; -o-transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s; -webkit-transition: opacity 0.5s, width 0.1s, height 0.1s; -webkit-transition-delay: 0s, 0.5s, 0.5s; transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s; z-index: 1; }
 
 .main { position: relative; overflow-y: scroll; -webkit-overflow-scrolling: touch; height: 100%; z-index: 1; }
+.main .main__in { position: relative; }
 
 .center { max-width: 1280px; margin: 0 auto; }
 @media only screen and (max-width: 1280px) { .center { padding: 0 15px; } }
@@ -180,8 +181,8 @@ body { font-family: "HelveticaNeueCyrRoman"; font-size: 1.3rem; line-height: 1.4
 .l .l-col1 { float: left; width: 20%; }
 .l .l-col2 { float: right; width: 70%; }
 
-.header { position: fixed; top: 0; left: 50px; right: 50px; padding: 58px 0 0; z-index: 9; }
-.header .header__tools { float: right; }
+.header { position: fixed; top: 0; left: 50px; right: 50px; padding: 58px 0 0; z-index: 9; pointer-events: none; }
+.header .header__tools { float: right; pointer-events: visible; }
 @media only screen and (max-width: 1024px) { .header { padding: 20px 0 0; } }
 @media only screen and (max-width: 600px) { .header { left: 30px; right: 30px; }
   .header .header__tools { display: none; } }
@@ -789,7 +790,7 @@ body { font-family: "HelveticaNeueCyrRoman"; font-size: 1.3rem; line-height: 1.4
 .slick-dots button { display: block; width: 6px; height: 6px; background: #fff; -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25); -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25); box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25); cursor: pointer; font: 0/0 a; text-shadow: none; color: transparent; border-radius: 50%; }
 .slick-dots button:hover { box-shadow: none; }
 
-.menu-button { position: relative; display: block; background: none; outline: none; border: none; -webkit-tap-highlight-color: transparent; -webkit-tap-highlight-color: transparent; }
+.menu-button { position: relative; display: block; background: none; outline: none; border: none; -webkit-tap-highlight-color: transparent; -webkit-tap-highlight-color: transparent; pointer-events: visible; }
 .menu-button.is-open .menu__text { color: #ef7e07; }
 .menu-button.is-open .morph-shape svg path, .menu-button.is-open .morph-shape svg line { stroke: #ef7e07; }
 .menu-button .morph-shape { display: inline-block; vertical-align: middle; width: 40px; height: 40px; margin-right: 21px; }

@@ -32,6 +32,7 @@
 	right: 50px
 	z-index: 10
 	+transition(top 0.6s ease)
+	pointer-events: none
 	&__in
 		text-align: center
 	&__wrap
@@ -41,8 +42,11 @@
 		right: 0
 		+clr
 	&__bl
+		pointer-events: visible
 		&:first-child
 			margin-top: 4px
+		.button
+			padding: 15px 13px 13px 	
 	&__menu
 		display: inline-block
 		vertical-align: middle
@@ -81,6 +85,7 @@
 	background: url(../img/logo.png) no-repeat
 	z-index: 2
 	+transition(all 0.8s ease)
+	pointer-events: visible
 	&.small,
 	&.logo_inner
 		margin-top: 15px
@@ -195,11 +200,11 @@
 				display: none
 	&__link
 		font-size: 20px
-		color: $lavender
-		+opacity(0.8)
+		color: rgba($lavender, 0.8)
 		+pfi
+		+tr(color 200ms)
 		&:hover
-			+opacity(1)
+			color: rgba($lavender, 1)
 	+r(768)
 		margin-top: 30px
 		li
