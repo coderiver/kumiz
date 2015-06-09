@@ -195,7 +195,9 @@ body { font-family: "HelveticaNeueCyrRoman"; font-size: 1.3rem; line-height: 1.4
   .topper:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
   .topper .topper__in { display: inline-block; vertical-align: middle; padding: 0 20px; } }
 
-.video { position: absolute; top: 0; bottom: 0; right: 0; left: 0; background: url(../img/video-bg.jpg); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; z-index: 1; }
+.video { position: absolute; top: 0; bottom: 0; right: 0; left: 0; background: url(../img/video-bg.jpg); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; overflow: hidden; z-index: 1; }
+.video video { position: absolute; top: 50%; left: 50%; min-width: 100%; min-height: 100%; -moz-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
+@media only screen and (max-width: 1023px) { .video video { display: none; } }
 .video.video_producing { background: url(../img/topper-bg.jpg); }
 .video.video_service { background: url(../img/topper-bg2.jpg); }
 
