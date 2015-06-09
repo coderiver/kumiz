@@ -51,7 +51,7 @@ body { font-family: "HelveticaNeueCyrRoman"; font-size: 1.3rem; line-height: 1.4
 .container { position: relative; perspective: 1000px; height: 100%; left: 0; z-index: 99; -moz-transition: -moz-transform 500ms; -o-transition: -o-transform 500ms; -webkit-transition: -webkit-transform 500ms; transition: transform 500ms; }
 .container:after { content: ""; position: absolute; top: 0; right: 0; width: 0; height: 0; background: rgba(72, 60, 49, 0.6); opacity: 0; -moz-transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s; -o-transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s; -webkit-transition: opacity 0.5s, width 0.1s, height 0.1s; -webkit-transition-delay: 0s, 0.5s, 0.5s; transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s; z-index: 1; }
 
-.main { position: relative; overflow-y: scroll; -webkit-overflow-scrolling: touch; height: 100%; z-index: 1; }
+.main { position: relative; overflow-y: scroll; height: 100%; z-index: 1; }
 .main .main__in { position: relative; }
 
 .center { max-width: 1280px; margin: 0 auto; }
@@ -165,6 +165,7 @@ body { font-family: "HelveticaNeueCyrRoman"; font-size: 1.3rem; line-height: 1.4
 .mob .mob__link:hover, .mob .mob__link.is-active { text-decoration: none; }
 .mob .mob__menu li { margin-bottom: 10px; }
 .mob .mob__menu li a { font-family: "Playfair Display", serif; font-size: 1.8rem; color: #e8c29a; }
+.mob .mob__menu li a:hover { text-decoration: none; }
 .mob .mob__order { font-size: 1.8rem; color: #4c4369; font-family: "Playfair Display", serif; font-weight: bold; }
 .mob .mob__order:hover { text-decoration: none; }
 
@@ -280,34 +281,34 @@ body { font-family: "HelveticaNeueCyrRoman"; font-size: 1.3rem; line-height: 1.4
 .system.non-active { opacity: 0.5; }
 .system.system_endo { padding-left: 90px; }
 .system.system_endo:hover .system__left { background: rgba(255, 255, 255, 0.05); -ms-transform: scale(0.93); -webkit-transform: scale(0.93); transform: scale(0.93); color: #fff; }
-.system.system_endo:hover .system__left:after { -webkit-animation: sonarEffect1 1.3s ease-out 75ms infinite; -moz-animation: sonarEffect1 1.3s ease-out 75ms infinite; -ms-animation: sonarEffect1 1.3s ease-out 75ms infinite; -o-animation: sonarEffect1 1.3s ease-out 75ms infinite; animation: sonarEffect1 1.3s ease-out 75ms infinite; }
+.system.system_endo:hover .system__left:after { border-color: #55c977; -webkit-animation: pulse 1.5s infinite; -moz-animation: pulse 1.5s infinite; -ms-animation: pulse 1.5s infinite; -o-animation: pulse 1.5s infinite; animation: pulse 1.5s infinite; }
 @media only screen and (max-width: 1280px) { .system.system_endo { padding-left: 0; } }
 .system.system_endo .system__title { color: #55c977; }
 .system.system_skin:hover .system__left { background: rgba(255, 255, 255, 0.05); -ms-transform: scale(0.93); -webkit-transform: scale(0.93); transform: scale(0.93); color: #fff; }
-.system.system_skin:hover .system__left:after { -webkit-animation: sonarEffect2 1.3s ease-out 75ms infinite; -moz-animation: sonarEffect2 1.3s ease-out 75ms infinite; -ms-animation: sonarEffect2 1.3s ease-out 75ms infinite; -o-animation: sonarEffect2 1.3s ease-out 75ms infinite; animation: sonarEffect2 1.3s ease-out 75ms infinite; }
+.system.system_skin:hover .system__left:after { border-color: #eaae89; -webkit-animation: pulse 1.5s infinite; -moz-animation: pulse 1.5s infinite; -ms-animation: pulse 1.5s infinite; -o-animation: pulse 1.5s infinite; animation: pulse 1.5s infinite; }
 .system.system_skin .system__title { color: #eaae89; }
 .system.system_heart { padding-left: 90px; }
 .system.system_heart:hover .system__left { background: rgba(255, 255, 255, 0.05); -ms-transform: scale(0.93); -webkit-transform: scale(0.93); transform: scale(0.93); color: #fff; }
-.system.system_heart:hover .system__left:after { -webkit-animation: sonarEffect3 1.3s ease-out 75ms infinite; -moz-animation: sonarEffect3 1.3s ease-out 75ms infinite; -ms-animation: sonarEffect3 1.3s ease-out 75ms infinite; -o-animation: sonarEffect3 1.3s ease-out 75ms infinite; animation: sonarEffect3 1.3s ease-out 75ms infinite; }
+.system.system_heart:hover .system__left:after { border-color: #fb6e6d; -webkit-animation: pulse 1.5s infinite; -moz-animation: pulse 1.5s infinite; -ms-animation: pulse 1.5s infinite; -o-animation: pulse 1.5s infinite; animation: pulse 1.5s infinite; }
 @media only screen and (max-width: 1280px) { .system.system_heart { padding-left: 0; } }
 .system.system_heart .system__title { color: #fb6e6d; }
 .system.system_brain { margin-right: 90px; }
 .system.system_brain:hover .system__left { background: rgba(255, 255, 255, 0.05); -ms-transform: scale(0.93); -webkit-transform: scale(0.93); transform: scale(0.93); color: #fff; }
-.system.system_brain:hover .system__left:after { -webkit-animation: sonarEffect4 1.3s ease-out 75ms infinite; -moz-animation: sonarEffect4 1.3s ease-out 75ms infinite; -ms-animation: sonarEffect4 1.3s ease-out 75ms infinite; -o-animation: sonarEffect4 1.3s ease-out 75ms infinite; animation: sonarEffect4 1.3s ease-out 75ms infinite; }
+.system.system_brain:hover .system__left:after { border-color: #eccd00; -webkit-animation: pulse 1.5s infinite; -moz-animation: pulse 1.5s infinite; -ms-animation: pulse 1.5s infinite; -o-animation: pulse 1.5s infinite; animation: pulse 1.5s infinite; }
 @media only screen and (max-width: 1280px) { .system.system_brain { margin-right: 0; } }
 .system.system_brain .system__title { color: #eccd00; }
 .system.system_stomach { padding-right: 50px; }
 .system.system_stomach:hover .system__left { background: rgba(255, 255, 255, 0.05); -ms-transform: scale(0.93); -webkit-transform: scale(0.93); transform: scale(0.93); color: #fff; }
-.system.system_stomach:hover .system__left:after { -webkit-animation: sonarEffect5 1.3s ease-out 75ms infinite; -moz-animation: sonarEffect5 1.3s ease-out 75ms infinite; -ms-animation: sonarEffect5 1.3s ease-out 75ms infinite; -o-animation: sonarEffect5 1.3s ease-out 75ms infinite; animation: sonarEffect5 1.3s ease-out 75ms infinite; }
+.system.system_stomach:hover .system__left:after { border-color: #ee6f75; -webkit-animation: pulse 1.5s infinite; -moz-animation: pulse 1.5s infinite; -ms-animation: pulse 1.5s infinite; -o-animation: pulse 1.5s infinite; animation: pulse 1.5s infinite; }
 @media only screen and (max-width: 1280px) { .system.system_stomach { padding-right: 0; } }
 .system.system_stomach .system__title { color: #ee6f75; }
 .system.system_lungs { margin-right: 90px; }
 .system.system_lungs:hover .system__left { background: rgba(255, 255, 255, 0.05); -ms-transform: scale(0.93); -webkit-transform: scale(0.93); transform: scale(0.93); color: #fff; }
-.system.system_lungs:hover .system__left:after { -webkit-animation: sonarEffect6 1.3s ease-out 75ms infinite; -moz-animation: sonarEffect6 1.3s ease-out 75ms infinite; -ms-animation: sonarEffect6 1.3s ease-out 75ms infinite; -o-animation: sonarEffect6 1.3s ease-out 75ms infinite; animation: sonarEffect6 1.3s ease-out 75ms infinite; }
+.system.system_lungs:hover .system__left:after { border-color: #729ee7; -webkit-animation: pulse 1.5s infinite; -moz-animation: pulse 1.5s infinite; -ms-animation: pulse 1.5s infinite; -o-animation: pulse 1.5s infinite; animation: pulse 1.5s infinite; }
 @media only screen and (max-width: 1280px) { .system.system_lungs { margin-right: 0; } }
 .system.system_lungs .system__title { color: #729ee7; }
 .system .system__left { position: relative; top: -10px; float: left; border-radius: 50%; margin-right: 10px; font-size: 0; -moz-transition: -moz-transform 0.1s ease-out, background 0.2s; -o-transition: -o-transform 0.1s ease-out, background 0.2s; -webkit-transition: -webkit-transform 0.1s ease-out, background 0.2s; transition: transform 0.1s ease-out, background 0.2s; }
-.system .system__left:after { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 50%; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; pointer-events: none; padding: 0; box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1); opacity: 0; -ms-transform: scale(0.9); -webkit-transform: scale(0.9); transform: scale(0.9); z-index: -1; }
+.system .system__left:after { content: ""; position: absolute; top: 0; left: 0; width: 75px; height: 75px; margin: -7px 0 0 -7px; border-radius: 50%; border: 1px solid transparent; background: transparent; -moz-transition: -moz-transform 400ms; -o-transition: -o-transform 400ms; -webkit-transition: -webkit-transform 400ms; transition: transform 400ms; z-index: -1; }
 @media only screen and (max-width: 480px) { .system .system__left { float: none; margin-right: 0; margin-bottom: 10px; } }
 .system .system__right { overflow: hidden; }
 .system .system__title { display: inline; font-size: 12px; font-family: "HelveticaNeueCyrBold"; text-transform: uppercase; border-bottom: 1px dotted; }

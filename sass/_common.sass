@@ -105,9 +105,10 @@ body
 .main
 	position: relative
 	overflow-y: scroll
-	-webkit-overflow-scrolling: touch
 	height: 100% 
 	z-index: 1
+	//+r(1024)
+	//	-webkit-overflow-scrolling: touch
 	.main__in
 		position: relative	
 				 	
@@ -332,6 +333,8 @@ body
 				+pf
 				font-size: 1.8rem
 				color: $orange-b
+				&:hover
+					text-decoration: none
 	.mob__order
 		font-size: 1.8rem
 		color: #4c4369
