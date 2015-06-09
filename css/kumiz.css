@@ -259,13 +259,15 @@ body { font-family: "HelveticaNeueCyrRoman"; font-size: 1.3rem; line-height: 1.4
 .human .human__left .human__item { height: 200px; margin-left: 180px; }
 @media only screen and (max-width: 1280px) { .human .human__left { width: 50%; }
   .human .human__left .human__item { padding-left: 30px; } }
-@media only screen and (max-width: 768px) { .human .human__left .human__item { height: auto; margin-bottom: 20px; } }
+@media only screen and (max-width: 768px) { .human .human__left .human__item { height: auto; margin-left: 0; margin-bottom: 20px; } }
+@media only screen and (max-width: 600px) { .human .human__left .human__item { padding-left: 0; } }
 .human .human__right { position: relative; float: right; z-index: 2; }
 .human .human__right .human__item { *zoom: 1; height: 200px; }
 .human .human__right .human__item:after { content: " "; display: table; clear: both; }
 .human .human__right .human__item .system { float: right; }
 @media only screen and (max-width: 768px) { .human .human__right .human__item { margin-bottom: 20px; height: auto; } }
 @media only screen and (max-width: 1280px) { .human .human__right { width: 50%; } }
+@media only screen and (max-width: 600px) { .human .human__right .human__item { padding-left: 0; } }
 .human .human__systems { position: absolute; top: 0; bottom: 0; right: 0; left: 0; font-size: 0; z-index: 1; }
 @media only screen and (max-width: 1280px) { .human .human__systems { display: none; } }
 .human .human__systems > div { position: absolute; opacity: 0; -moz-transition: opacity 300ms; -o-transition: opacity 300ms; -webkit-transition: opacity 300ms; transition: opacity 300ms; }
@@ -315,6 +317,7 @@ body { font-family: "HelveticaNeueCyrRoman"; font-size: 1.3rem; line-height: 1.4
 .system .system__right { overflow: hidden; }
 .system .system__title { display: inline; font-size: 12px; font-family: "HelveticaNeueCyrBold"; text-transform: uppercase; border-bottom: 1px dotted; }
 .system .system__hint { visibility: hidden; margin-left: 70px; padding-top: 15px; color: #453b65; opacity: 0; -moz-transform: translateY(-30px); -ms-transform: translateY(-30px); -webkit-transform: translateY(-30px); transform: translateY(-30px); -moz-transition: opacity 300ms, -moz-transform 300ms, visibility 300ms; -o-transition: opacity 300ms, -o-transform 300ms, visibility 300ms; -webkit-transition: opacity 300ms, -webkit-transform 300ms, visibility 300ms; transition: opacity 300ms, transform 300ms, visibility 300ms; }
+@media only screen and (max-width: 600px) { .system .system__hint { display: none; } }
 .system .system__hint.is-visible { visibility: visible; opacity: 1; -moz-transform: translateY(0); -ms-transform: translateY(0); -webkit-transform: translateY(0); transform: translateY(0); }
 
 @-moz-keyframes sonarEffect1 { 0% { opacity: 0.3; }
@@ -520,17 +523,22 @@ body { font-family: "HelveticaNeueCyrRoman"; font-size: 1.3rem; line-height: 1.4
 
 .usefull { position: relative; min-height: 663px; margin: 0 auto 70px; text-align: center; padding-top: 150px; }
 @media only screen and (max-width: 899px) { .usefull { margin: 0 auto; padding-top: 50px; } }
-@media only screen and (max-width: 600px) { .usefull { min-height: 350px; } }
+@media only screen and (max-width: 600px) { .usefull { min-height: 550px; } }
+@media only screen and (max-width: 480px) { .usefull { min-height: 500px; } }
+@media only screen and (max-width: 414px) { .usefull { min-height: 400px; } }
+@media only screen and (max-width: 320px) { .usefull { min-height: 350px; } }
 .usefull .usefull__img { position: absolute; top: 70px; left: 0; right: 0; font-size: 0; text-align: center; z-index: 1; }
 .usefull .usefull__img img { position: relative; left: 14px; max-width: 100%; }
 .usefull .usefull__lines { position: absolute; top: 113px; left: 50%; width: 912px; height: 456px; margin-left: -456px; background: url(../img/lines.png) 0 0 no-repeat; z-index: 2; }
 @media only screen and (max-width: 980px) { .usefull .usefull__lines { display: none; } }
 .usefull .usefull__list { position: relative; margin-bottom: 45px; text-align: center; font-size: 0; z-index: 3; }
-.usefull .usefull__list li { display: inline-block; vertical-align: top; width: 240px; margin: 0 30px; font-size: 1.3rem; text-align: center; text-transform: uppercase; letter-spacing: 1px; font-family: "HelveticaNeueCyrBold"; }
+.usefull .usefull__list li { position: relative; display: inline-block; vertical-align: top; width: 240px; margin: 0 30px; font-size: 1.3rem; text-align: center; text-transform: uppercase; letter-spacing: 1px; font-family: "HelveticaNeueCyrBold"; }
 .usefull .usefull__list li > i { margin-bottom: 20px; }
+@media only screen and (max-width: 1024px) { .usefull .usefull__list li { -moz-transform: translate(0, 0) !important; -ms-transform: translate(0, 0) !important; -webkit-transform: translate(0, 0) !important; transform: translate(0, 0) !important; } }
 @media only screen and (max-width: 899px) { .usefull .usefull__list li { margin: 0 10px; } }
 @media only screen and (max-width: 600px) { .usefull .usefull__list li { width: 50%; padding: 0 10px; margin: 0 0 20px; } }
-.usefull .usefull__more { position: relative; display: inline-block; font-size: 1.3rem; text-transform: uppercase; font-family: "HelveticaNeueCyrBold"; color: #1a142f; border-bottom: 1px solid; cursor: pointer; z-index: 1; }
+.usefull .usefull__more { position: relative; display: none; font-size: 1.3rem; text-transform: uppercase; font-family: "HelveticaNeueCyrBold"; color: #1a142f; border-bottom: 1px solid; cursor: pointer; z-index: 1; }
+@media only screen and (max-width: 600px) { .usefull .usefull__more { display: inline-block; } }
 @media only screen and (max-width: 600px) { .usefull .usefull__wrap { display: none; } }
 
 .quote { position: relative; width: 656px; height: 173px; margin: 0 auto; padding: 55px 35px; background: url(../img/quote.png); -webkit-background-size: 100% 100%; -o-background-size: 100% 100%; background-size: 100% 100%; background-repeat: no-repeat; text-align: center; font-size: 2rem; font-family: "Playfair Display", serif; font-style: italic; }

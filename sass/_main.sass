@@ -267,7 +267,11 @@
 		+r(768)
 			.human__item
 				height: auto
-				margin-bottom: 20px		
+				margin-left: 0 
+				margin-bottom: 20px
+		+r(600)
+			.human__item
+				padding-left: 0 						
 	.human__right
 		position: relative
 		float: right
@@ -281,7 +285,10 @@
 				margin-bottom: 20px
 				height: auto
 		+r(1280)
-			width: 50%			
+			width: 50%
+		+r(600)
+			.human__item
+				padding-left: 0 		
 	.human__systems
 		position: absolute
 		top: 0
@@ -416,22 +423,6 @@
 		font-size: 0
 		+transition(transform ease-out 0.1s, background 0.2s)
 		&:after
-			// content: ""
-			// position: absolute
-			// top: 0
-			// left: 0
-			// width: 100%
-			// height: 100%
-			// border-radius: 50%
-			// -webkit-box-sizing: content-box
-			// -moz-box-sizing: content-box
-			// box-sizing: content-box
-			// pointer-events: none
-			// padding: 0
-			// box-shadow: 0 0 0 2px rgba(255,255,255,0.1)
-			// opacity: 0
-			// +scale(0.9)
-			// z-index: -1
 			content: ""
 			position: absolute
 			top: 0
@@ -464,6 +455,8 @@
 		opacity: 0
 		+transform(translateY(-30px)) 
 		+transition(opacity 300ms, transform 300ms, visibility 300ms)
+		+r(600)
+			display: none
 		&.is-visible
 			visibility: visible
 			opacity: 1 
@@ -913,7 +906,13 @@
 		margin: 0 auto 
 		padding-top: 50px
 	+r(600)
-		min-height: 350px	
+		min-height: 550px
+	+r(480)
+		min-height: 500px
+	+r(414)
+		min-height: 400px
+	+r(320)
+		min-height: 350px				
 	.usefull__img
 		position: absolute
 		top: 70px
@@ -944,6 +943,7 @@
 		font-size: 0
 		z-index: 3
 		li
+			position: relative
 			display: inline-block
 			vertical-align: top
 			width: 240px
@@ -955,6 +955,11 @@
 			+hb
 			& > i
 				margin-bottom: 20px
+			+r(1024)
+				-moz-transform: translate(0, 0)!important
+				-ms-transform: translate(0, 0)!important
+				-webkit-transform: translate(0, 0)!important
+				transform: translate(0, 0)!important
 			+r(899)
 				margin: 0 10px 
 			+r(600)
@@ -963,7 +968,7 @@
 				margin: 0 0 20px	 
 	.usefull__more
 		position: relative
-		display: inline-block
+		display: none
 		font-size: 1.3rem
 		text-transform: uppercase
 		+hb
@@ -971,6 +976,8 @@
 		border-bottom: 1px solid
 		cursor: pointer
 		z-index: 1   			
+		+r(600)
+			display: inline-block
 	.usefull__wrap
 		+r(600)
 			display: none				

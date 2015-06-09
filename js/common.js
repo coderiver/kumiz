@@ -1,7 +1,5 @@
 $(document).ready(function() {
 
-	// lotos flowers animation
-
 	function lotos () {
 		var item = $('.js-lotos');
 
@@ -14,7 +12,6 @@ $(document).ready(function() {
 		);
 	}
 	lotos();
-	$('.js-lotos')
 
 	// ui slider nav for tabs
 
@@ -416,6 +413,24 @@ $(document).ready(function() {
 		$('.js-form-back').removeClass('is-success');
 
 	 });
+
+	// lotos flowers animation
+
+	if ($('.js-usefull-wrap').length) {
+		$('.js-usefull-wrap').mousemove(function(e) {;
+			
+			$('.js-usefull').each(function() {
+				var speed = $(this).data('speed');
+				speed = parseInt(speed);
+				x = -e.pageX/speed;
+				y = -e.pageY/speed;
+
+				$(this).css({
+					'transform': 'translate('+x+'px, '+y+'px)'
+				});	
+			});
+		})
+	};
 
 	// room animation
 
