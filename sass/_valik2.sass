@@ -349,6 +349,13 @@
 			padding: 0 5px
 			+r(768)
 				padding: 0
+			&.is-active
+				a
+					color: #4c4369
+					background-color: #F6F5F7
+					+border-radius(24px)
+					span
+						border: none	
 		a
 			+pf
 			font-size: 40px
@@ -363,14 +370,8 @@
 				span
 					border-bottom-color: #4c4369
 					color: #4c4369
-			&.is-active
-				color: #4c4369
-				background-color: #F6F5F7
-				+border-radius(24px)
-				span
-					border: none
 			span
-				+transition(all 0.3s)
+				+tr(all 0.3s)
 				border-bottom: 1px dotted #E8C29A
 	&__inner
 		+clr
@@ -407,6 +408,12 @@
 					border-bottom: 1px solid rgba(137, 133, 154, 0.4)
 	&__content
 		overflow: hidden
+		opacity: 0
+		+transform(translateY(-50px))
+		+transition(opacity 300ms, transform 300ms)
+		&.is-active
+			opacity: 1
+			+transform(translateY(0)) 
 	&__img
 		max-width: 350px
 		width: 100%

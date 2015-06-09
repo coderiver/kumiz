@@ -491,11 +491,11 @@ h1, h2, h3, h4, h5, h6, strong { font-weight: normal; }
 .order__tabs { font-size: 0; text-align: center; }
 .order__tabs li { display: inline-block; vertical-align: top; padding: 0 5px; }
 @media only screen and (max-width: 768px) { .order__tabs li { padding: 0; } }
+.order__tabs li.is-active a { color: #4c4369; background-color: #F6F5F7; -moz-border-radius: 24px; -webkit-border-radius: 24px; border-radius: 24px; }
+.order__tabs li.is-active a span { border: none; }
 .order__tabs a { font-family: "Playfair Display", serif; font-size: 40px; line-height: 1; color: #E8C29A; display: inline-block; padding: 3px 22px 8px; }
 @media only screen and (max-width: 768px) { .order__tabs a { font-size: 26px; padding: 11px 22px 13px; } }
 .order__tabs a:hover span { border-bottom-color: #4c4369; color: #4c4369; }
-.order__tabs a.is-active { color: #4c4369; background-color: #F6F5F7; -moz-border-radius: 24px; -webkit-border-radius: 24px; border-radius: 24px; }
-.order__tabs a.is-active span { border: none; }
 .order__tabs a span { -moz-transition: all 0.3s; -o-transition: all 0.3s; -webkit-transition: all 0.3s; transition: all 0.3s; border-bottom: 1px dotted #E8C29A; }
 .order__inner { *zoom: 1; padding: 25px 0 0; }
 .order__inner:after { content: " "; display: table; clear: both; }
@@ -508,7 +508,8 @@ h1, h2, h3, h4, h5, h6, strong { font-weight: normal; }
 .order__filter li a:hover { color: #E8C29A; }
 .order__filter li a:hover span { border-bottom: none; }
 .order__filter li a span { border-bottom: 1px solid rgba(137, 133, 154, 0.4); }
-.order__content { overflow: hidden; }
+.order__content { overflow: hidden; opacity: 0; -moz-transform: translateY(-50px); -ms-transform: translateY(-50px); -webkit-transform: translateY(-50px); transform: translateY(-50px); -moz-transition: opacity 300ms, -moz-transform 300ms; -o-transition: opacity 300ms, -o-transform 300ms; -webkit-transition: opacity 300ms, -webkit-transform 300ms; transition: opacity 300ms, transform 300ms; }
+.order__content.is-active { opacity: 1; -moz-transform: translateY(0); -ms-transform: translateY(0); -webkit-transform: translateY(0); transform: translateY(0); }
 .order__img { max-width: 350px; width: 100%; float: left; margin-right: 90px; }
 .order__img img { width: 100%; }
 @media only screen and (max-width: 768px) { .order__img img { max-width: 90%; } }

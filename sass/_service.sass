@@ -10,6 +10,13 @@
     position: relative
     padding: 9.5rem 0 0
     background: #d2edf6
+    .reviews__cont
+        opacity: 0
+        +transform(translateY(-50px))
+        +transition(transform 300ms, opacity 300ms)
+        &.is-active
+            opacity: 1
+            +transform(translateY(0))
     +r(600)
         padding: 9.5rem 0 45px  
 .customers
@@ -30,9 +37,12 @@
 .cooking__slider
     max-width: 1024px
     margin: 0 auto 65px
+    .slick-list
+        padding: 0 9px 
 .cooking__slide
     text-align: center
-    padding: 10px 0
+    padding: 20px 10px
+    margin: 0 10px 
 .cooking__item
     position: relative
     display: inline-block
@@ -41,7 +51,11 @@
     padding: 19px 19px 48px
     text-align: left
     background: #fff
+    text-decoration: none
     box-shadow: -1px 0 15px rgba(174,158,148,.43)
+    +tr(box-shadow 300ms)
+    &:hover
+        box-shadow: -1px 0 35px rgba(174,158,148,.8) 
 .cooking__img
     margin-bottom: 22px
     width: 100%
