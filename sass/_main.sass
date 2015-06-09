@@ -1176,6 +1176,8 @@
 		position: relative
 		float: left
 		margin-left: 87px
+		+tr(opacity 300ms)
+		cursor: pointer
 		&:before
 			content: ""
 			position: absolute
@@ -1186,6 +1188,8 @@
 			margin-left: 0
 			&:before
 				display: none
+		&.is-hidden
+			opacity: 0.3 		
 		& > p
 			font-size: 12px
 			line-height: 1.8

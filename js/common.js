@@ -1,5 +1,21 @@
 $(document).ready(function() {
 
+	// lotos flowers animation
+
+	function lotos () {
+		var item = $('.js-lotos');
+
+		item.hover(
+			function() {
+				$(this).nextAll('.js-lotos').addClass('is-hidden');
+			}, function() {
+				item.removeClass('is-hidden');
+			}
+		);
+	}
+	lotos();
+	$('.js-lotos')
+
 	// ui slider nav for tabs
 
 		function tab2() {

@@ -582,10 +582,11 @@ body { font-family: "HelveticaNeueCyrRoman"; font-size: 1.3rem; line-height: 1.4
 @media only screen and (max-width: 768px) { .immunity .immunity__text { width: 100%; background: #f7f7f7; border-radius: 20px; padding: 10px 20px; } }
 .immunity .immunity__list { *zoom: 1; }
 .immunity .immunity__list:after { content: " "; display: table; clear: both; }
-.immunity .immunity__item { position: relative; float: left; margin-left: 87px; }
+.immunity .immunity__item { position: relative; float: left; margin-left: 87px; -moz-transition: opacity 300ms; -o-transition: opacity 300ms; -webkit-transition: opacity 300ms; transition: opacity 300ms; cursor: pointer; }
 .immunity .immunity__item:before { content: ""; position: absolute; top: 170px; left: -44px; background: url('../img/icons-se5a7d47aa8.png') 0 -2572px no-repeat; width: 13px; height: 13px; }
 .immunity .immunity__item:first-child { margin-left: 0; }
 .immunity .immunity__item:first-child:before { display: none; }
+.immunity .immunity__item.is-hidden { opacity: 0.3; }
 .immunity .immunity__item > p { font-size: 12px; line-height: 1.8; text-transform: uppercase; font-family: "HelveticaNeueCyrBold"; }
 @media only screen and (max-width: 1280px) { .immunity .immunity__item { margin-left: 75px; } }
 @media only screen and (max-width: 768px) { .immunity .immunity__item { width: 50%; margin-left: 0; }
